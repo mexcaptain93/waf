@@ -1,0 +1,103 @@
+.header
+
+  .top
+    background-color: $violet
+
+
+    font-size: 12px
+    line-height: 21px
+    font-weight: 600
+    color: $white
+
+    &__right
+      display: flex
+      align-items: center
+      height: 100%
+
+    .container
+      display: flex
+      justify-content: space-between
+      align-items: center
+      height: 41px
+
+      
+  &__action
+    text-transform: uppercase
+
+    a
+      &::after
+        content: ''
+        display: inline-block
+        width: 5px
+        height: 6px
+        background-image: url('../img/general/i-triangle-right.png')
+        background-repeat: no-repeat
+        background-size: 100%
+        margin-left: 10px
+        position: relative
+        top: -1px
+
+      &:hover
+        text-decoration: underline
+
+  .links
+
+    &__list
+      height: 100%
+      display: flex
+      align-items: center
+
+    &__item
+      text-transform: uppercase
+      position: relative
+      padding-right: 16px
+      margin-right: 17px
+
+      &:hover
+        text-decoration: underline
+
+      &::after
+        content: ''
+        display: block
+        width: 1px
+        height: 19px
+        background-color: $white
+        position: absolute
+        top: 0
+        right: 0
+
+
+  .cart
+    height: 100%
+
+    &:hover
+
+      .cart__text
+        text-decoration: underline
+
+
+    &__link
+      display: flex
+      align-items: center
+
+      text-transform: uppercase
+
+    &__text
+      margin-right: 15px
+
+
+
+    &__counter
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 40px
+      height: 41px
+      background-color: $yellow
+
+      color: $black
+
+
+
+
+
