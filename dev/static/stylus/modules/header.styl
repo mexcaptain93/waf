@@ -8,6 +8,7 @@
     line-height: 21px
     font-weight: 600
     color: $white
+    letter-spacing: 1px
 
     &__right
       display: flex
@@ -50,8 +51,8 @@
     &__item
       text-transform: uppercase
       position: relative
-      padding-right: 16px
-      margin-right: 17px
+      padding-right: 14px
+      margin-right: 16px
 
       &:hover
         text-decoration: underline
@@ -97,7 +98,82 @@
 
       color: $black
 
+  &__logo
+    width: 93px
+
+  &__bottom
+    padding-top: 19px
+
+    .container
+      display: flex
+      justify-content: space-between
 
 
+  .menu
+    padding-top: 8px
+
+    &__list
+      display: flex
+
+    &__item
+      position: relative
+      margin-right: 51px
+
+      font-size: 16px
+      line-height: 21px
+      color: $gray_dark
+      font-weight: 600
+      text-transform: uppercase
+
+      &:hover
+
+        a
+
+          &::after
+            transform: scale(1)
+
+      a
+        position: relative
+
+        &::after
+          content: ''
+          display: block
+          position: absolute
+          bottom: -10px
+          left: 0
+          right: 0
+          height: 2px
+          background-color: $blue
+          transform: scale(0)
+          transition: .3s ease transform
+
+
+      &:hover
+
+        .submenu
+          display: block
+
+    &__submenu
+      display: none
+
+  .search
+    padding-top: 7px
+
+    &__form
+      position: relative
+
+    &__input
+      width: 278px
+      padding-bottom: 7px
+    
+    &__button
+      position: absolute
+      z-index: 1
+      cursor: pointer
+      top: 5px
+      right: 0
+      width: 12px
+      height: 12px
+      background-image: url('../img/general/i-search.png')
 
 
