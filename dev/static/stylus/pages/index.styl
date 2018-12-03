@@ -1,0 +1,88 @@
+.index
+
+  &__banner
+    max-width: 1920px
+    margin: 0 auto 46px
+    text-align: center
+
+  .blocks
+    max-width: 1920px
+    padding: 0 12px
+    margin: 0 auto
+
+    &__list
+      display: flex
+      justify-content: space-between
+
+      &_3
+
+        .blocks
+
+          &__item
+            width: calc(33.3% - 3px)
+
+        .index-block
+
+          &__name
+            text-transform: none
+
+      &_5
+
+        .blocks
+
+          &__item
+            width: calc(20% - 3px)
+
+        .index-block
+
+          &__text
+            bottom: 19px
+            left: 19px
+
+          &__name
+            margin-bottom: 0
+            font-size: 24px
+            letter-spacing: 0
+            font-weight: 300
+            text-align: left
+            text-transform: none
+
+
+
+    &__item
+      width: calc(50% - 3px)
+
+    &__head
+      display: flex
+      justify-content: space-between
+      padding-top: 13px
+      padding-bottom: 9px
+
+      color: $gray_dark2
+      font-size: 18px
+      line-height: 21px
+      font-weight: 300
+
+    &__heading
+      text-transform: uppercase
+      letter-spacing: 1px
+
+    &__more
+      letter-spacing: 0
+
+      &::after
+        content: ''
+        display: inline-block
+        width: 5px
+        height: 6px
+        background-image: url('../img/general/i-triangle-right-black.png')
+        background-repeat: no-repeat
+        background-size: 100%
+        margin-left: 10px
+        position: relative
+        top: -1px
+
+      &:hover
+        text-decoration: underline
+
+
