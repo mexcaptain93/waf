@@ -2,9 +2,11 @@
   flex 0 0 auto
   justify-content: space-between
   padding-top: 33px
+  padding-bottom: 28px
 
   &__blocks
     display: flex
+    margin-bottom: 38px
 
   &__block
     width: 310px
@@ -61,7 +63,15 @@
       height: 12px
       background-image: url('../img/general/i-subscribe.png')
 
+  &__phone
+    font-weight: 600
+    font-size: 15px
+    line-height: 21px
+    color: $gray_dark
+    letter-spacing: 0
+
   .socials
+    margin-bottom: 25px
 
     &__list
       display: flex
@@ -79,3 +89,23 @@
 
       &:last-child
         margin-right: 0
+
+
+  .copyright
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &:hover
+
+      .copyright__text
+        text-decoration: underline
+
+    &__logo
+      margin-right: 10px
+
+    &__text
+      color: $gray_light3
+      font-size: 13px
+      line-height: 21px
+      letter-spacing: 0

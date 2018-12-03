@@ -106,13 +106,12 @@
       width: 93px
 
   &__bottom
+    position: relative
     padding-top: 19px
-    padding-bottom: 17px
 
     .container
       display: flex
       justify-content: space-between
-      position: relative
 
 
   .menu
@@ -121,8 +120,7 @@
       display: flex
 
     &__item
-      margin-right: 41px
-      padding: 8px 10px 10px
+      padding: 8px 30px 27px
       cursor: pointer
 
       font-size: 16px
@@ -130,9 +128,6 @@
       color: $gray_dark
       font-weight: 600
       text-transform: uppercase
-
-      &:last-child
-        margin-right: 0
 
       &:hover
 
@@ -169,6 +164,8 @@
       left: 0
       right: 0
       padding-top: 22px
+      padding-bottom: 19px
+      background-color: $white
 
       &__list
         display: flex
@@ -179,6 +176,22 @@
 
         &:last-child
           margin-right: 0
+
+        &:hover
+
+          .submenu__text
+            text-decoration: underline
+
+      &__img
+        margin-bottom: 9px
+
+      &__text
+        font-size: 16px
+        line-height: 21px
+        letter-spacing: 0
+        text-align: center
+        text-transform: none
+        font-weight: 400
 
   .search
     padding-top: 7px
@@ -199,5 +212,6 @@
       width: 12px
       height: 12px
       background-image: url('../img/general/i-search.png')
+
 
 
