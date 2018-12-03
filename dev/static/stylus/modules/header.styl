@@ -99,31 +99,40 @@
       color: $black
 
   &__logo
-    width: 93px
+    width: 278px
+
+    a
+      display: inline-block
+      width: 93px
 
   &__bottom
     padding-top: 19px
+    padding-bottom: 17px
 
     .container
       display: flex
       justify-content: space-between
+      position: relative
 
 
   .menu
-    padding-top: 8px
 
     &__list
       display: flex
 
     &__item
-      position: relative
-      margin-right: 51px
+      margin-right: 41px
+      padding: 8px 10px 10px
+      cursor: pointer
 
       font-size: 16px
       line-height: 21px
       color: $gray_dark
       font-weight: 600
       text-transform: uppercase
+
+      &:last-child
+        margin-right: 0
 
       &:hover
 
@@ -153,8 +162,23 @@
         .submenu
           display: block
 
-    &__submenu
+    .submenu
       display: none
+      position: absolute
+      top: 100%
+      left: 0
+      right: 0
+      padding-top: 22px
+
+      &__list
+        display: flex
+        justify-content: center
+
+      &__item
+        margin-right: 46px
+
+        &:last-child
+          margin-right: 0
 
   .search
     padding-top: 7px
