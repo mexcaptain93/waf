@@ -4,6 +4,9 @@ block variables
 	- var title = 'Waf-Waf'
 	- var pageClass = 'index'
 
+block script
+	script(src="static/js/slick.min.js")
+
 block content
 	.index__banner
 		a(href='#')
@@ -30,10 +33,10 @@ block content
 							span Браслеты
 						.index-block__btn
 							span Купить сейчас
-		.blocks__head
-			.blocks__heading
+		.index__head
+			.index__heading
 				span Раскрывайся
-			.blocks__more
+			.index__more
 				a(href='#') Смотреть всё
 		.blocks__list.blocks__list_3
 			.blocks__item
@@ -66,10 +69,10 @@ block content
 							span Оптовые заказы
 						.index-block__btn
 							span Перейти
-		.blocks__head
-			.blocks__heading
+		.index__head
+			.index__heading
 				span В тренде
-			.blocks__more
+			.index__more
 				a(href='#') Смотреть всё
 		.blocks__list.blocks__list_5
 			.blocks__item
@@ -112,3 +115,28 @@ block content
 					.index-block__text
 						.index-block__name
 							span Упаковка
+	.index__since.since
+		.since__img
+			img(src='static/img/general/logo.png' alt='Waf-Waf')
+		.since__text
+			p Мы начали в 2013 году с производства деревянных значков и за несколько лет выросли в полноценный бренд аксессуаров, #[br]прочно закрепившись в сердцах и на одежде тысяч людей по всему миру.
+	.index__video.video
+		.index__head
+			.index__heading
+				span Waf-Waf представляет
+		.video__slider
+			.video__prev.js-index-videos-prev
+			.video__next.js-index-videos-next
+			.video__list.js-index-videos
+				.video__item
+					.video__wrap
+						iframe(width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/D7nEsrMP-Ck" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+				.video__item
+					.video__wrap
+						iframe(width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/D7nEsrMP-Ck" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+				.video__item
+					.video__wrap
+						iframe(width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/D7nEsrMP-Ck" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+				.video__item
+					.video__wrap
+						iframe(width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/D7nEsrMP-Ck" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)

@@ -1,3 +1,14 @@
 $(document).ready(function () {
-    svg4everybody({});
+    indexVideos();
 });
+
+function indexVideos() {
+    var videos =  $('.js-index-videos');
+    if (videos.length) {
+        videos.slick({
+            slidesToShow: 2,
+            slidesToScroll: 2
+        });
+    }
+
+}
