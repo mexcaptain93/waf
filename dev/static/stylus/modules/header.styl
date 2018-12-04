@@ -18,6 +18,9 @@
       align-items: center
       height: 100%
 
+      @media $tablet
+        display: none
+
     .container
       display: flex
       justify-content: space-between
@@ -27,6 +30,9 @@
       
   &__action
     text-transform: uppercase
+
+    @media $tablet
+      display: none
 
     a
       &::after
@@ -114,6 +120,9 @@
   &__bottom
     position: relative
     padding-top: 19px
+
+    @media $tablet
+      display: none
 
     .container
       display: flex
@@ -238,4 +247,54 @@
       background-image: url('../img/general/i-search.png')
 
 
+  .mobile
+    display: none
 
+    @media $tablet
+      display: block
+
+    &__top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 12px 0
+      background-color: $white
+
+    &__logo
+      width: 92px
+
+    .cart
+
+      &:hover
+
+        .cart__text
+          text-decoration: none
+
+      &__wrap
+        display: block
+        position: relative
+        margin-right: 15px
+
+      &__text
+        position: absolute
+        top: -6px
+        right: -10px
+        margin: 0
+        width: 18px
+        height: 18px
+        background-color: $yellow
+        border-radius: 50%
+
+        font-size: 12px
+        line-height: 18px
+        text-align: center
+        font-weight: 600
+
+
+      
+      &__icon
+        width: 22px
+        height: 20px
+        background-size: 100%
+        background-repeat: no-repeat
+        background-image: url('../img/general/i-mobile-cart.png')
