@@ -27,12 +27,18 @@
               font-size: 24px
               font-weight: 300
 
+            @media $small_tablet
+              font-size: 16px
+
           &__text
 
             @media $tablet
               bottom: 31px
               margin-bottom: 20px
               letter-spacing: 0
+
+            @media $small_tablet
+              bottom: 0
 
       &_5
 
@@ -52,6 +58,10 @@
               left: 11px
               right: 11px
 
+            @media $small_tablet
+              left: 3px
+              right: 3px
+
           &__name
             margin-bottom: 0
             font-size: 24px
@@ -63,6 +73,9 @@
             @media $tablet
               font-size: 21px
               font-weight: 300
+
+            @media $small_tablet
+              font-size: 14px
 
 
 
@@ -268,7 +281,6 @@
           &__text
             opacity: 1
 
-
     &__overlay
       position: absolute
       top: 0
@@ -294,6 +306,9 @@
       flex-direction: column
       justify-content: center
       align-items: center
+
+      @media $small_tablet
+        display: none
 
     &__icon
       background-repeat: no-repeat
