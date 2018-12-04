@@ -15,3 +15,25 @@
   appearance: none
   background-repeat: no-repeat
   background-size: 100%
+
+.button
+  color: $white
+  font-size: 14px
+  line-height: 21px
+  text-align: center
+  text-transform: uppercase
+  font-weight: 600
+  transition: .3s ease color
+
+  span
+    width: 150px
+    border: 2px solid #fff;
+    padding: 8px 17px;
+    display: inline-block;
+    transition: .3s ease background-color
+
+  &:hover
+    color: $black
+
+    span
+      background-color: $white
