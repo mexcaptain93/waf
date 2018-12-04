@@ -121,6 +121,7 @@
     &__wrap
       position: relative
       padding-bottom: 56%
+      background-size: contain
 
     &__overlay
       position: absolute
@@ -185,6 +186,7 @@
       padding-bottom: 25%
       position: relative
       cursor: pointer
+      background-size: contain
 
       &:hover
 
@@ -218,14 +220,16 @@
       height: 100%
       opacity: 0
       transition .3s ease opacity
-      padding-top: 154px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
 
     &__icon
       background-repeat: no-repeat
       background-size: 100%
       width: 25px
       height: 25px
-      margin: auto
       margin-bottom: 89px
       background-image: url('../img/general/i-insta-icon.png')
 
