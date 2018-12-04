@@ -149,7 +149,7 @@
 
       &:hover
 
-        a
+        & > a
 
           &::after
             transform: scale(1)
@@ -254,11 +254,16 @@
       display: block
 
     &__top
-      display: flex
-      align-items: center
-      justify-content: space-between
       padding: 12px 0
       background-color: $white
+
+      .container
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &__burger
+      padding: 5px
 
     &__logo
       width: 92px
@@ -298,3 +303,135 @@
         background-size: 100%
         background-repeat: no-repeat
         background-image: url('../img/general/i-mobile-cart.png')
+
+    &__dropdown
+      display: none
+      position: absolute
+      width: 100%
+      background-color: $white
+      z-index: 3
+      top: 103px
+      bottom: 0
+
+    .search
+      background-color: $gray_light4
+      border-top: 2px solid #f3f3f3
+      padding: 9px 23px 4px
+
+      &__input
+        width: 100%
+        background-color: transparent
+        border-bottom: none
+
+    .menu
+
+      &__list
+        flex-direction: column
+
+      &__item
+        position: relative
+        padding: 16px 0 20px
+        border-top: 2px solid #f3f3f3;
+
+        color: $gray_dark2
+
+        &:last-child
+          border-bottom: 2px solid #f3f3f3
+
+        & > a
+          padding: 0 25px
+
+        &:hover
+
+          .submenu
+            display: none
+
+          & > a
+
+            &::after
+              transform: scale(0)
+
+        &_has-sub
+
+          &::after
+            position: absolute
+            top: 25px
+            right: 18px
+            content: ''
+            background-image: url('../img/general/i-arrow-down.png')
+            width: 12px
+            height: 7px
+            background-repeat: no-repeat
+            background-size: 100%
+
+    .submenu
+      position: relative
+      top: 20px
+      padding-top: 12px
+      background-color: $gray_light4
+
+      &__list
+        justify-content: space-between
+        padding: 0 12px 3px
+
+      &__item
+        width: calc(50% - 5px)
+        margin-right: 0
+        margin-bottom: 9px
+
+        a
+          display: block
+
+        &:hover
+
+          .submenu
+
+            &__text
+              text-decoration: none
+
+
+      &__img
+        margin-bottom: 0
+
+        img
+          width: 100%
+
+      &__text
+        position: absolute
+        left: 15px
+        bottom: 11px
+
+        font-size: 18px
+        font-weight: 300
+        color: $white
+
+    .links
+
+      &__list
+        display: flex
+        padding: 20px 25px
+
+      &__item
+        position: relative
+        padding: 0
+        margin: 0
+
+        font-weight: 600
+        font-size: 14px
+        line-height: 21px
+        text-transform: none
+
+        &::after
+          content: ''
+          display: inline-block
+          position: relative
+          width: 1px
+          height: 20px
+          background-color: $gray_dark2
+          margin: 0 23px 0 29px
+          vertical-align: middle
+
+        &:last-child
+
+          &::after
+            content: none

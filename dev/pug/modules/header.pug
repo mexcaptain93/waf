@@ -89,9 +89,9 @@ header.header
                     input.search__input.input(type='text' placeholder='Поиск...')
                     button.search__button.button-input
     .header__mobile.mobile
-        .container
-            .mobile__top
-                .mobile__burger
+        .mobile__top
+             .container
+                .mobile__burger.js-burger
                     a.burger(href='#')
                         span
                 .mobile__logo
@@ -102,6 +102,80 @@ header.header
                         .cart__icon
                         .cart__text
                             span 2
+        .mobile__dropdown.js-dropdown
+            .mobile__search.search
+                form.search__form(action='#')
+                    input.search__input.input(type='text' placeholder='Введите поисковую фразу...')
+                    button.search__button.button-input
+            .mobile__menu.menu
+                ul.menu__list
+                    li.menu__item
+                        a(href='#') О нас
+                    li.menu__item.menu__item_has-sub.js-mobile-menu-has-sub
+                        a(href='#') Каталог
+                        .menu__submenu.submenu.js-mobile-menu-submenu
+                            ul.submenu__list
+                                li.submenu__item
+                                    a(href='#')
+                                        .submenu__img
+                                            img(src='static/img/content/submenu-1.jpg' alt='Значки')
+                                        .submenu__text
+                                            span Значки
+                                li.submenu__item
+                                    a(href='#')
+                                        .submenu__img
+                                            img(src='static/img/content/submenu-2.jpg' alt='Пины')
+                                        .submenu__text
+                                            span Пины
+                                li.submenu__item
+                                    a(href='#')
+                                        .submenu__img
+                                            img(src='static/img/content/submenu-3.jpg' alt='Браслеты')
+                                        .submenu__text
+                                            span Браслеты
+                                li.submenu__item
+                                    a(href='#')
+                                        .submenu__img
+                                            img(src='static/img/content/submenu-4.jpg' alt='Хиты продаж')
+                                        .submenu__text
+                                            span Хиты продаж
+                                li.submenu__item
+                                    a(href='#')
+                                        .submenu__img
+                                            img(src='static/img/content/submenu-5.jpg' alt='Скидки')
+                                        .submenu__text
+                                            span Скидки
+                                li.submenu__item
+                                    a(href='#')
+                                        .submenu__img
+                                            img(src='static/img/content/submenu-6.jpg' alt='Аксессуары')
+                                        .submenu__text
+                                            span Аксессуары
+                                li.submenu__item
+                                    a(href='#')
+                                        .submenu__img
+                                            img(src='static/img/content/submenu-7.jpg' alt='Упаковка')
+                                        .submenu__text
+                                            span Упаковка
+                                li.submenu__item
+                                    a(href='#')
+                                        .submenu__img
+                                            img(src='static/img/content/submenu-7.jpg' alt='Упаковка')
+                                        .submenu__text
+                                            span Упаковка
+                    li.menu__item
+                        a(href='#') На заказ
+                    li.menu__item
+                        a(href='#') Оптом
+                    li.menu__item
+                        a(href='#') Где купить
+            .mobile__links.links
+                ul.links__list
+                    li.links__item
+                        a(href='#') Вход
+                    li.links__item
+                        a(href='#') Помощь
+
 
 
 

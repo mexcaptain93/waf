@@ -23,6 +23,17 @@
           &__name
             text-transform: none
 
+            @media $tablet
+              font-size: 24px
+              font-weight: 300
+
+          &__text
+
+            @media $tablet
+              bottom: 31px
+              margin-bottom: 20px
+              letter-spacing: 0
+
       &_5
 
         .blocks
@@ -36,6 +47,11 @@
             bottom: 19px
             left: 19px
 
+            @media $tablet
+              bottom: 13px
+              left: 11px
+              right: 11px
+
           &__name
             margin-bottom: 0
             font-size: 24px
@@ -43,6 +59,10 @@
             font-weight: 300
             text-align: left
             text-transform: none
+
+            @media $tablet
+              font-size: 21px
+              font-weight: 300
 
 
 
@@ -59,6 +79,12 @@
     font-size: 18px
     line-height: 21px
     font-weight: 300
+
+    @media $tablet
+      padding-top: 11px
+      padding-bottom: 2px
+
+      font-size: 16px
 
   &__heading
     text-transform: uppercase
@@ -90,12 +116,22 @@
       width: 190px
       margin: 0 auto 28px
 
+      @media $tablet
+        width: 267px
+
     &__text
       text-align: center
       color: $gray_dark3
       font-size: 16px
       line-height: 21px
       letter-spacing: 0
+
+      @media $tablet
+        max-width: 620px
+        margin: 0 auto
+
+        br
+          display: none
 
   .video
     margin: 0 auto
@@ -144,9 +180,40 @@
       opacity: .3
       transition: .3s ease opacity
 
+      @media $tablet
+        width: 36px
+        height: 25px
+
 
     &__slider
       position: relative
+
+      .slick-dots
+        display: flex
+        justify-content: center
+        margin-top: 13px
+
+        li
+          margin-right: 9px
+
+          &:last-child
+            margin-right: 0
+
+        .slick-active
+
+          button
+            background-color: $blue
+
+        button
+          display: block
+          border: none
+          appearance: none
+          width: 16px
+          height: 16px
+          font-size: 0
+          line-height: 0
+          background-color: #e8e8e8
+          border-radius: 50%
 
     &__arrow
       position: absolute
@@ -160,6 +227,9 @@
       transition: .3s ease opacity
       opacity: .7
       cursor: pointer
+
+      @media $tablet
+        display: none
 
       &:hover
         opacity 1
