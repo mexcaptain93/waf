@@ -1,8 +1,10 @@
 .footer
-  flex 0 0 auto
-  justify-content: space-between
   padding-top: 33px
   padding-bottom: 28px
+
+  @media $tablet
+    padding-top: 28px
+    padding-bottom: 50px
 
   .container
     max-width: 1624px
@@ -11,12 +13,41 @@
     display: flex
     margin-bottom: 38px
 
+    @media $tablet
+      flex-direction: column
+      margin-bottom: 15px
+
+
   &__block
     width: 310px
     margin-right: 15px
 
+    @media $tablet
+      width: 100%
+      margin-right: 0
+      margin-bottom: 25px
+
     &:last-child
       margin-right: 0
+
+      @media $tablet
+        order: -1
+        margin-bottom: 0
+
+    &_mobile
+      display: none
+
+      @media $tablet
+        display: block
+
+        .footer__heading_socials
+          display: block
+
+        .footer__socials.socials
+          display: block
+          margin-bottom: 0
+
+
 
   &__heading
     margin-bottom: 15px
@@ -27,12 +58,26 @@
     font-weight: 600
     text-transform: uppercase
 
+    &_socials
+
+      @media $tablet
+        display: none
+
+
+  &__list
+
+    @media $tablet
+      columns: 2
+
   &__link
     margin-bottom: 9px
 
     color: $gray
     font-size: 15px
     line-height: 21px
+
+    @media $tablet
+      line-height: 18px
 
     a
 
@@ -73,8 +118,14 @@
     color: $gray_dark
     letter-spacing: 0
 
+    @media $tablet
+      display: none
+
   .socials
     margin-bottom: 25px
+
+    @media $tablet
+      display: none
 
     &__list
       display: flex
