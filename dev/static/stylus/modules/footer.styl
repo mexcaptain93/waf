@@ -9,6 +9,9 @@
   .container
     max-width: 1624px
 
+    @media $mobile
+      padding: 0 12px
+
   &__blocks
     display: flex
     margin-bottom: 38px
@@ -67,7 +70,8 @@
   &__list
 
     @media $tablet
-      columns: 2
+      display: flex
+      flex-wrap: wrap
 
   &__link
     margin-bottom: 9px
@@ -77,6 +81,7 @@
     line-height: 21px
 
     @media $tablet
+      width: 50%
       line-height: 18px
 
     a
@@ -150,6 +155,9 @@
     align-items: center
     justify-content: center
 
+    @media $small_mobile
+      flex-direction: column
+
     &:hover
 
       .copyright__text
@@ -157,6 +165,10 @@
 
     &__logo
       margin-right: 10px
+
+      @media $small_mobile
+        margin-right: 0
+        margin-bottom: 10px
 
     &__text
       color: $gray_light3

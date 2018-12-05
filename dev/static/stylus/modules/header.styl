@@ -1,17 +1,23 @@
 .header
 
+  @media $mobile
+    display: flex
+    flex-direction: column
+
   .container
       max-width: 1624px
 
   .top
     background-color: $violet
 
-
     font-size: 12px
     line-height: 21px
     font-weight: 600
     color: $white
     letter-spacing: 1px
+
+    @media $mobile
+      order: 3
 
     &__right
       display: flex
@@ -26,6 +32,27 @@
       justify-content: space-between
       align-items: center
       height: 41px
+
+    .categories
+      display: none
+      overflow: auto
+
+      @media $mobile
+        display: block
+
+      &__list
+        white-space: nowrap
+        padding: 0 12px
+
+      &__item
+        display: inline-block
+        text-transform: uppercase
+        vertical-align: middle
+        margin-right: 23px
+
+        &:last-child
+          margin-right: 0
+
 
       
   &__action

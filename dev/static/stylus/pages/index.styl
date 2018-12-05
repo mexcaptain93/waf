@@ -5,11 +5,20 @@
     margin: 0 auto 46px
     text-align: center
 
+    @media $tablet
+      margin-bottom: 37px
+
+    @media $mobile
+      margin-bottom: 15px
+
   .blocks
 
     &__list
       display: flex
       justify-content: space-between
+
+      @media $mobile
+        flex-direction: column
 
       &_3
 
@@ -18,7 +27,12 @@
           &__item
             width: calc(33.3% - 3px)
 
+            @media $mobile
+              width: 100%
+              margin-bottom: 10px
+
         .index-block
+          padding-bottom: 100%
 
           &__name
             text-transform: none
@@ -30,6 +44,9 @@
             @media $small_tablet
               font-size: 16px
 
+            @media $mobile
+              font-size: 30px
+
           &__text
 
             @media $tablet
@@ -40,6 +57,10 @@
             @media $small_tablet
               bottom: 0
 
+            @media $mobile
+              bottom: 12px
+
+
       &_5
 
         .blocks
@@ -47,7 +68,14 @@
           &__item
             width: calc(20% - 3px)
 
+            @media $mobile
+              width: 100%
+
         .index-block
+          padding-bottom: 162%
+
+          @media $mobile
+            padding-bottom: 75%
 
           &__text
             bottom: 19px
@@ -61,6 +89,11 @@
             @media $small_tablet
               left: 3px
               right: 3px
+
+            @media $mobile
+              left: 12px
+              right: 12px
+              bottom: 30px
 
           &__name
             margin-bottom: 0
@@ -77,10 +110,24 @@
             @media $small_tablet
               font-size: 14px
 
+            @media $mobile
+              font-size: 30px
+
+
+
 
 
     &__item
       width: calc(50% - 3px)
+
+      @media $mobile
+        width: 100%
+        margin-bottom: 10px
+
+      &:last-child
+
+        @media $mobile
+          margin-bottom: 0
 
   &__head
     display: flex
@@ -99,12 +146,22 @@
 
       font-size: 16px
 
+    @media $mobile
+      justify-content: center
+      padding-top: 22px
+      padding-bottom: 10px
+
+      font-size: 21px
+
   &__heading
     text-transform: uppercase
     letter-spacing: 1px
 
   &__more
     letter-spacing: 0
+
+    @media $mobile
+      display: none
 
     &::after
       content: ''
@@ -125,12 +182,21 @@
     padding-top: 50px
     margin-bottom: 25px
 
+    @media $mobile
+      padding-top: 40px
+      padding-left: 12px
+      padding-right: 12px
+      margin-bottom: 8px
+
     &__img
       width: 190px
       margin: 0 auto 28px
 
       @media $tablet
         width: 267px
+
+      @media $mobile
+        width: 303px
 
     &__text
       text-align: center
@@ -146,8 +212,19 @@
         br
           display: none
 
+      @media $mobile
+        line-height: 23px
+
   .video
     margin: 0 auto
+
+    @media $mobile
+      padding: 0 12px
+
+    .index__head
+
+      @media $mobile
+        font-size: 15px
 
     &__list
       margin: 0 -3.5px
@@ -260,6 +337,11 @@
 
   .instagram
 
+    .index__head
+
+      @media $mobile
+        font-size: 15px
+
     &__list
       display: flex
       flex-wrap: wrap
@@ -270,6 +352,10 @@
       position: relative
       cursor: pointer
       background-size: contain
+
+      @media $mobile
+        width: 50%
+        padding-bottom: 50%
 
       &:hover
 
