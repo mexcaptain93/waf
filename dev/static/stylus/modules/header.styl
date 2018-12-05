@@ -338,7 +338,6 @@
       background-color: $white
       z-index: 3
       top: 103px
-      bottom: 0
 
     .search
       background-color: $gray_light4
@@ -357,8 +356,8 @@
 
       &__item
         position: relative
-        padding: 16px 0 20px
         border-top: 2px solid #f3f3f3;
+        padding: 0
 
         color: $gray_dark2
 
@@ -366,7 +365,8 @@
           border-bottom: 2px solid #f3f3f3
 
         & > a
-          padding: 0 25px
+          display: block
+          padding: 16px 25px 20px
 
         &:hover
 
@@ -393,7 +393,6 @@
 
     .submenu
       position: relative
-      top: 20px
       padding-top: 12px
       background-color: $gray_light4
 

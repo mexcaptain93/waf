@@ -46,12 +46,12 @@ function mobileMenu() {
 
     var burger = $('.js-burger'),
         dropdown = $('.js-dropdown'),
-        item = $('.js-mobile-menu-has-sub'),
+        item = $('.js-mobile-menu-has-sub').find('> a'),
         submenu = $('.js-mobile-menu-submenu');
     
     item.on('click', function (e) {
         e.preventDefault();
-        $(this).find(submenu).slideToggle();
+        $(this).siblings(submenu).slideToggle();
     })
 
     burger.on('click', function(e) {
