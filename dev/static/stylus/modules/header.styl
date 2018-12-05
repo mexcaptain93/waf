@@ -338,17 +338,22 @@
       width: 100%
       background-color: $white
       z-index: 3
-      top: 103px
+      top: 113px
 
     .search
       background-color: $gray_light4
       border-top: 2px solid #f3f3f3
       padding: 9px 23px 4px
 
+      @media $mobile
+        padding: 9px 12px 4px
+
       &__input
         width: 100%
         background-color: transparent
         border-bottom: none
+        padding-left: 0
+        padding-right: 0
 
     .menu
 
@@ -368,6 +373,9 @@
         & > a
           display: block
           padding: 16px 25px 20px
+
+          @media $mobile
+            padding: 16px 12px 20px
 
         &:hover
 
@@ -437,6 +445,9 @@
       &__list
         display: flex
         padding: 20px 25px
+
+        @media $mobile
+          padding: 20px 12px
 
       &__item
         position: relative
