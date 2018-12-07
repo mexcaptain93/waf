@@ -1,4 +1,10 @@
 .header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 3
+  background-color: $white
 
   @media $mobile
     display: flex
@@ -6,6 +12,12 @@
 
   .container
       max-width: 1624px
+      padding: 0 30px
+
+      @media $small_desktop
+        padding: 0
+
+
 
   .top
     background-color: $violet
@@ -177,12 +189,7 @@
       @media $small_desktop
         padding: 8px 25px 27px
 
-      &:hover
 
-        & > a
-
-          &::after
-            transform: scale(1)
 
       a
         position: relative
@@ -198,6 +205,13 @@
           background-color: $blue
           transform: scale(0)
           transition: .3s ease transform
+
+      &:hover, &_active
+
+        & > a
+
+          &::after
+            transform: scale(1)
 
 
       &:hover
@@ -242,10 +256,15 @@
 
         &:hover
 
-          .submenu__text
-            text-decoration: underline
+          .submenu
+
+            &__overlay
+              background-color: alpha($black, 0.3)
+
+
 
       &__img
+        position: relative
         margin-bottom: 9px
 
       &__text
@@ -255,6 +274,15 @@
         text-align: center
         text-transform: none
         font-weight: 400
+
+      &__overlay
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        transition .3s ease background-color
+        background-color: transparent
 
   .search
     padding-top: 7px

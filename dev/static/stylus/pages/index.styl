@@ -132,8 +132,8 @@
   &__head
     display: flex
     justify-content: space-between
-    padding-top: 13px
-    padding-bottom: 9px
+    padding-top: 16px
+    padding-bottom: 6px
 
     color: $gray_dark2
     font-size: 18px
@@ -164,16 +164,17 @@
       display: none
 
     &::after
-      content: ''
+      content: '>'
       display: inline-block
-      width: 5px
-      height: 6px
-      background-image: url('../img/general/i-triangle-right-black.png')
-      background-repeat: no-repeat
-      background-size: 100%
-      margin-left: 10px
-      position: relative
-      top: -1px
+      padding-left: 10px
+      //width: 5px
+      //height: 6px
+      //background-image: url('../img/general/i-triangle-right-black.png')
+      //background-repeat: no-repeat
+      //background-size: 100%
+      //margin-left: 10px
+      //position: relative
+      //top: -1px
 
     &:hover
       text-decoration: underline
@@ -190,14 +191,14 @@
       margin-bottom: 8px
 
     &__img
-      width: 190px
+      max-width: 190px
       margin: 0 auto 28px
 
       @media $tablet
-        width: 267px
+        max-width: 267px
 
       @media $mobile
-        width: 303px
+        max-width: 190px
 
     &__text
       text-align: center
@@ -413,10 +414,4 @@
       @media $tablet
         margin-bottom: 56px
 
-    &__btn
 
-      &:hover
-        color: $white
-
-        span
-          background-color: transparent
