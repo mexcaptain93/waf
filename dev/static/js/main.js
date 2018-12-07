@@ -54,9 +54,37 @@ function mobileMenu() {
         $(this).siblings(submenu).slideToggle();
     })
 
+    var disableScroll = false;
+    var scrollPos = 0;
+    function stopScroll() {
+        disableScroll = true;
+        scrollPos = $(window).scrollTop();
+    }
+    function enableScroll() {
+        disableScroll = false;
+    }
+    $(window).bind('scroll', function(){
+        if(disableScroll) $(window).scrollTop(scrollPos);
+    });
+    $(window).bind('touchmove', function(){
+        $(window).trigger('scroll');
+    });
+
+
     burger.on('click', function(e) {
         e.preventDefault();
         $(this).toggleClass('burger_opened');
         dropdown.toggle();
+
+        $('body').toggleClass('stop-scrolling');
+
+        if ($('body').hasClass('stop-scrolling')) {
+            stopScroll();
+        } else {
+            enableScroll();
+        }
+
+
     })
+
 }
