@@ -2,6 +2,7 @@ $(document).ready(function () {
     indexVideos();
     mobileMenu();
     catalogFilters();
+    mobileFilter();
 });
 
 function indexVideos() {
@@ -78,5 +79,15 @@ function catalogFilters() {
             values.removeClass('value__list_opened');
             values.eq(num).addClass('value__list_opened');
         }
+    });
+}
+
+function mobileFilter() {
+    var opener = $('.js-mobile-filter'),
+        values = $('.js-mobile-filter-value');
+
+    opener.on('click', function (e) {
+        e.preventDefault();
+        $(this).siblings(values).slideToggle();
     });
 }

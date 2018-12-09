@@ -30,6 +30,9 @@
   .filters
     margin-bottom: 13px
 
+    @media $small_tablet
+      display: none
+
     &__names
       display: flex
       justify-content: space-between
@@ -83,6 +86,7 @@
           transform: rotate(90deg)
 
     .value
+      display: block
 
       &__list
         display: none
@@ -147,7 +151,7 @@
       align-items: flex-start
 
       @media $small_tablet
-        flex-direction: column
+        display: none
 
 
 
@@ -180,6 +184,93 @@
         font-size: 13px
         line-height: 21px
         text-decoration: underline
+
+
+
+
+  .filters-sort-mobile
+    display: none
+
+    @media $small_tablet
+      display: block
+
+    &__name
+      position: relative
+      padding: 25px 16px 26px
+      border-bottom: 1px solid $gray_light3
+
+      font-size: 14px
+      line-height: 21px
+      color: $gray_dark
+      letter-spacing: 1.2px
+      text-transform: uppercase
+      font-weight: 600
+
+      &::after
+        content: ''
+        position: absolute
+        top: 30px
+        right: 18px
+        background-image: url('../img/general/i-arrow-down.png')
+        width: 12px
+        height: 7px
+        background-repeat: no-repeat
+        background-size: 100%
+
+    .value
+      @extend .catalog .filters .value
+
+      display: none
+      background-color: $gray_light4
+
+      &__list
+        display: flex
+        flex-wrap: wrap
+        border-top: none
+        margin-bottom: 0
+        justify-content: flex-start
+
+        padding: 18px 15px 31px
+
+        &_color
+          justify-content: space-between
+          padding: 22px 13px
+
+
+          .value__item
+            width: auto
+            margin: 13px 36px
+            padding: 0
+
+            font-size: 14px
+
+            &:first-child
+              margin-left: 36px
+
+            &:last-child
+              margin-right: 36px
+
+            i
+              width: 42px
+              height: 42px
+
+      &__item
+        width: 33.3%
+        margin: 0
+        padding: 15px 0 7px
+
+        letter-spacing: 0
+        white-space: nowrap
+
+
+
+    &__item
+
+      &_opened
+
+        .value
+          display: block
+
 
 
 

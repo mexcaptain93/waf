@@ -142,6 +142,138 @@ block content
                         li.pagination__item
                             a(href='#') Следующая >
 
+    .filters-sort-mobile.tabs
+        form.tabs
+            input.tabs__input(type='radio' id='tab-filters' name='filter-sort')
+            label.tabs__label(for='tab-filters')
+                span Фильтры
+                input.tabs__reset(type='reset')
+
+            input.tabs__input(type='radio' id='tab-sort' name='filter-sort')
+            label.tabs__label(for='tab-sort')
+                span Сортировка
+                input.tabs__reset(type='reset')
+
+            .tabs__content#mobile-filters
+                .filters-sort-mobile__list
+                    .filters-sort-mobile__item.filters-sort-mobile__item_opened
+                        .filters-sort-mobile__name.js-mobile-filter.js-mobile-filter
+                            span Цвет
+                        .filters-sort-mobile__value.value.js-mobile-filter-value.js-mobile-filter-value
+                            ul.value__list.value__list_color
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-color: #000')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-color: #fff; border: 1px solid #b6b6b6')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-image: url("static/img/content/filter-color-1.png");')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-image: url("static/img/content/filter-color-2.png");')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-color: #000')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-color: #fff; border: 1px solid #b6b6b6')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-image: url("static/img/content/filter-color-1.png");')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-image: url("static/img/content/filter-color-2.png");')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-color: #000')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-color: #fff; border: 1px solid #b6b6b6')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-image: url("static/img/content/filter-color-1.png");')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-image: url("static/img/content/filter-color-2.png");')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-color: #000')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-color: #fff; border: 1px solid #b6b6b6')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-image: url("static/img/content/filter-color-1.png");')
+                                li.value__item
+                                    a(href='#')
+                                        i(style='background-image: url("static/img/content/filter-color-2.png");')
+
+                    .filters-sort-mobile__item
+                        .filters-sort-mobile__name.js-mobile-filter
+                            span Материал
+                        .filters-sort-mobile__value.value.js-mobile-filter-value
+                            ul.value__list
+                                li.value__item
+                                    a(href='#') Дерево
+                                li.value__item
+                                    a(href='#') Пластик
+                                li.value__item
+                                    a(href='#') Металл
+                    .filters-sort-mobile__item
+                        .filters-sort-mobile__name.js-mobile-filter
+                            span Тип изделия
+                        .filters-sort-mobile__value.value.js-mobile-filter-value
+                            ul.value__list
+                                li.value__item
+                                    a(href='#') Значки
+                                li.value__item
+                                    a(href='#') Пины
+                                li.value__item
+                                    a(href='#') Браслеты
+                                li.value__item
+                                    a(href='#') Серёжки-гвоздики
+                                li.value__item
+                                    a(href='#') Упаковка
+                    .filters-sort-mobile__item
+                        .filters-sort-mobile__name.js-mobile-filter
+                            span Категория
+                        .filters-sort-mobile__value.value.js-mobile-filter-value
+                            ul.value__list
+                                li.value__item
+                                    a(href='#') Значки
+                                li.value__item
+                                    a(href='#') Пины
+                                li.value__item
+                                    a(href='#') Браслеты
+                                li.value__item
+                                    a(href='#') Серёжки-гвоздики
+                                li.value__item
+                                    a(href='#') Упаковка
+                    .filters-sort-mobile__item
+                        .filters-sort-mobile__name.js-mobile-filter
+                            span По благотворительности
+                        .filters-sort-mobile__value.value.js-mobile-filter-value
+                            ul.value__list
+                                li.value__item
+                                    a(href='#') Благотворительный
+                                li.value__item
+                                    a(href='#') Не благотворительный
+            .tabs__content#mobile-sort
+                .filters-sort-mobile__item.filters-sort-mobile__item_opened
+                    .filters-sort-mobile__value.value.js-mobile-filter-value
+                        ul.value__list
+                            li.value__item
+                                a(href='#') По имени
+                            li.value__item
+                                a(href='#') По цене
+                            li.value__item
+                                a(href='#') По популярности
+                            li.value__item
+                                a(href='#') По еще чему-нибудь
+
+
     .products
         .container
             .products__list
