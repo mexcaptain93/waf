@@ -70,6 +70,9 @@
 .visited
   margin-bottom: 53px
 
+  @media $mobile
+    margin-bottom: 18px
+
   &__heading
     margin-bottom: 35px
 
@@ -84,6 +87,9 @@
     @media $tablet
       max-width: 645px
 
+    @media $mobile
+      flex-wrap: wrap
+
   .product
 
     .product
@@ -91,8 +97,14 @@
       &__image
         height: 150px
 
+        @media $mobile
+          height: 220px
+
   &__item
     width: 25%
+
+    @media $mobile
+      width: 50%
 
 .instagram
 
@@ -100,6 +112,9 @@
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 12px;
+
+    @media @mobile
+      padding: 0
 
   &__list
     display: flex

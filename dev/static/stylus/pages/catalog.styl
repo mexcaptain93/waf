@@ -100,6 +100,8 @@
         @media $tablet
           padding: 6px 15px
           margin-bottom: 39px
+          border-left: none
+          border-right: none
 
         &_opened
           display: flex
@@ -190,6 +192,7 @@
 
   .filters-sort-mobile
     display: none
+    margin-bottom: 55px
 
     @media $small_tablet
       display: block
@@ -197,7 +200,7 @@
     &__name
       position: relative
       padding: 25px 16px 26px
-      border-bottom: 1px solid $gray_light3
+      border-bottom: 1px solid $gray_light5
 
       font-size: 14px
       line-height: 21px
@@ -216,6 +219,7 @@
         height: 7px
         background-repeat: no-repeat
         background-size: 100%
+        will-change: transform
 
     .value
       @extend .catalog .filters .value
@@ -233,7 +237,7 @@
         padding: 18px 15px 31px
 
         &_color
-          justify-content: space-between
+          justify-content: center
           padding: 22px 13px
 
 
@@ -268,6 +272,13 @@
 
       &_opened
 
+        .filters-sort-mobile
+
+          &__name
+
+            &::after
+              transform: rotate(-90deg)
+
         .value
           display: block
 
@@ -291,6 +302,9 @@
 
       @media $tablet
         width: 33.3%
+
+      @media $small_tablet
+        width: 50%
 
       .product
         margin: 0 auto
@@ -347,29 +361,4 @@
     display: flex
     flex-direction: column
     justify-content: center
-
-
-    &__image
-
-    
-    &__btn
-      margin-top: 40px
-
-      text-align: center
-
-      .btn
-        font-size: 14px
-        letter-spacing: 1.68px
-
-      span
-        vertical-align: middle
-      
-      i
-        display: inline-block
-        vertical-align: middle
-        margin-left: 14px
-        width: 5px
-        height: 6px
-        background-repeat: no-repeat
-        background-image: url('../img/general/i-triangle-right.png')
 

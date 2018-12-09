@@ -89,5 +89,6 @@ function mobileFilter() {
     opener.on('click', function (e) {
         e.preventDefault();
         $(this).siblings(values).slideToggle();
+        $(this).parent().toggleClass('filters-sort-mobile__item_opened')
     });
 }
