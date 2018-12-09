@@ -7,6 +7,9 @@
       background-repeat: no-repeat
       background-position: center center
 
+      @media $tablet
+        height: 142px
+
     &__text
       display: flex
       justify-content: center
@@ -15,10 +18,14 @@
 
       font-size: 72px
       color: $white
-      font-weight: bold
+      font-weight: 600
       text-transform: uppercase
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25)
+      letter-spacing: 5.7px
 
+      @media $tablet
+        font-size: 36px
+        letter-spacing: 2.7px
 
   .filters
     margin-bottom: 13px
@@ -28,6 +35,9 @@
       justify-content: space-between
       align-items: flex-start
       margin-bottom: 6px
+
+      @media $tablet
+        margin-bottom: 19px
 
     &__list
       display: flex
@@ -53,9 +63,6 @@
 
       &_wide
         min-width: 258px
-        
-      &_opened
-        background: $gray_light5
 
       &::after 
         content: ''
@@ -67,6 +74,13 @@
         height: 6px
         background-image: url('../img/general/i-triangle-right-black.png')
         background-repeat: no-repeat
+        will-change: transform
+
+      &_opened
+        background: $gray_light5
+
+        &::after
+          transform: rotate(90deg)
 
     .value
 
@@ -79,16 +93,32 @@
         border: 1px solid $gray_light5
         margin-bottom: 20px
 
+        @media $tablet
+          padding: 6px 15px
+          margin-bottom: 39px
+
         &_opened
           display: flex
 
         &_color
           padding: 0 15px
 
+          @media $tablet
+            padding: 9px 6px
+
           .value
 
             &__item
               margin: 15px 12px
+
+              &:first-child
+                margin-left: 0
+
+              &:last-child
+                margin-right: 0
+
+              @media $tablet
+                margin: 12px
 
           i
             display: block
@@ -98,8 +128,16 @@
             background-repeat: no-repeat
             background-size: contain
 
+            @media $tablet
+              width: 22px
+              height: 22px
+
       &__item
         margin: 15px 17px
+
+        @media $tablet
+          font-size: 15px
+
 
 
 
@@ -108,10 +146,17 @@
       justify-content: space-between
       align-items: flex-start
 
+      @media $small_tablet
+        flex-direction: column
+
+
+
     .result
 
       &__wrap
         display: flex
+        flex-wrap: wrap
+        align-items: flex-start
 
       &__text
         margin-right: 13px
@@ -120,19 +165,15 @@
         font-size: 13px
         line-height: 21px
 
-      &__list
-        display: flex
-
       &__item
         margin-right: 15px
+        padding: 3px 10px
+        margin-bottom: 10px
 
-        a
-          padding: 3px 10px
-
-          font-size: 13px
-          font-weight: 600
-          color: $gray_dark2
-          border: 1px solid $gray_dark2
+        font-size: 13px
+        font-weight: 600
+        color: $gray_dark2
+        border: 1px solid $gray_dark2
 
       &__clear
         color: $gray_light
@@ -146,6 +187,9 @@
   .products
     margin-bottom: 50px
 
+    @media $tablet
+      margin-bottom: 10px
+
     &__list
       display: flex
       flex-wrap: wrap
@@ -153,6 +197,9 @@
     &__item
       width: 25%
       margin-bottom: 55px
+
+      @media $tablet
+        width: 33.3%
 
       .product
         margin: 0 auto
@@ -172,6 +219,10 @@
       height: 290px
       margin-bottom: 20px
       text-align: center
+
+      @media $tablet
+        height: 180px
+        margin-bottom: 10px
 
       a
         display: block
@@ -193,6 +244,9 @@
       margin-bottom: 17px
 
       text-align: center
+
+      @media $tablet
+        margin-bottom: 10px
 
     &__btn
       text-align: center
