@@ -1,6 +1,7 @@
 $(document).ready(function () {
     indexVideos();
     mobileMenu();
+    catalogFilters();
 });
 
 function indexVideos() {
@@ -43,7 +44,6 @@ function indexVideos() {
 
 function mobileMenu() {
 
-
     var burger = $('.js-burger'),
         dropdown = $('.js-dropdown'),
         item = $('.js-mobile-menu-has-sub').find('> a'),
@@ -54,16 +54,29 @@ function mobileMenu() {
         $(this).siblings(submenu).slideToggle();
     })
 
-
-
-
     burger.on('click', function(e) {
         e.preventDefault();
         $(this).toggleClass('burger_opened');
         dropdown.toggle();
-
-
-
     })
 
+}
+
+function catalogFilters() {
+    var opener = $('.js-catalog-filters li'),
+        values = $('.js-catalog-filters-value ul');
+
+    opener.on('click', function (e) {
+        if ($(this).hasClass('filters__item_opened')) {
+            $(this).removeClass('filters__item_opened');
+            values.removeClass('value__list_opened');
+        } else {
+            opener.removeClass('filters__item_opened');
+            $(this).addClass('filters__item_opened');
+            e.preventDefault();
+            var num = $(this).index();
+            values.removeClass('value__list_opened');
+            values.eq(num).addClass('value__list_opened');
+        }
+    });
 }

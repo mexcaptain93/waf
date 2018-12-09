@@ -67,3 +67,88 @@
     background-size: cover
 
 
+.visited
+  margin-bottom: 53px
+
+  &__heading
+    margin-bottom: 35px
+
+    text-align: center
+
+  &__list
+    display: flex
+    justify-content: space-between
+    max-width 1220px
+    margin: 0 auto
+
+.instagram
+
+  .container
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 12px;
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    width: 25%
+    padding-bottom: 25%
+    position: relative
+    cursor: pointer
+    background-size: contain
+
+    @media $mobile
+      width: 50%
+      padding-bottom: 50%
+
+    &:hover
+
+      .instagram
+
+        &__overlay
+          background-color: alpha($black, 0.3)
+
+        &__text
+          opacity: 1
+
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    transition .3s ease background-color
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__text
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    transition .3s ease opacity
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    @media $small_tablet
+      display: none
+
+  &__icon
+    background-repeat: no-repeat
+    background-size: 100%
+    width: 25px
+    height: 25px
+    margin-bottom: 89px
+    background-image: url('../img/general/i-insta-icon.png')
+
+    @media $tablet
+      margin-bottom: 56px

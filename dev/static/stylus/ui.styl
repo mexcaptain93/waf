@@ -110,3 +110,96 @@
         bottom: 0
         transform: rotate(-45deg)
         background: $black
+
+.breadcrumbs
+
+  &__list
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 24px 0 26px
+    margin: 0 auto
+
+  &__item
+    margin-right: 18px
+
+    font-size: 12px
+    line-height: 21px
+    color: $gray_light
+    text-transform: uppercase
+
+    &:last-child
+      margin-right: 0
+
+    &:hover
+
+      a
+        text-decoration: underline
+
+    &::after
+      content: '→'
+      margin-left: 17px
+
+    &_active
+      color: $violet
+
+      &::after
+        content: none
+
+.pagination
+
+  &__list
+    display: flex
+
+  &__item
+    margin-right: 11px
+
+    font-weight: 300
+    font-size: 13px
+    color: $gray_dark2
+    border: 1px solid $gray_light5
+
+    a
+      display: block
+      padding: 7px 8px
+      min-width: 30px
+      text-align: center
+
+    &:last-child
+      margin-right: 0
+
+    &:first-child
+
+      a
+        padding-right: 15px
+
+    &_active
+      border-color: transparent
+      margin-right: 4px
+      margin-left: -9px
+
+      a
+        min-width: 27px
+        padding: 7px
+
+.btn
+  display: inline-block
+  background-color: $pink
+  padding: 7px 10px 5px
+  min-width: 239px
+
+  color: $white
+  text-transform: uppercase
+  font-size: 12px
+  line-height: 21px
+  font-weight: 600
+  letter-spacing: 0.96px
+  text-align: center
+
+.like-h2
+  font-size: 24px
+  line-height: 21px
+  font-weight: 300
+  $gray_dark2
+  text-transform: uppercase
+  letter-spacing: 1.92px
