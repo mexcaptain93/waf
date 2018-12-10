@@ -236,27 +236,42 @@
 
         padding: 18px 15px 31px
 
+        @media $small_mobile
+          padding: 6px 15px
+
         &_color
-          justify-content: center
+          justify-content: flex-start
           padding: 22px 13px
 
 
           .value__item
             width: auto
-            margin: 13px 36px
+            margin: 13px 35px
             padding: 0
 
             font-size: 14px
 
+            @media $mobile
+              width: 25%
+              margin: 13px 0
+
+
             &:first-child
-              margin-left: 36px
+              margin-left: 35px
+
+              @media $mobile
+                margin-left: 0
 
             &:last-child
-              margin-right: 36px
+              margin-right: 35px
+
+              @media $mobile
+                margin-right: 0
 
             i
               width: 42px
               height: 42px
+              margin: 0 auto
 
       &__item
         width: 33.3%
@@ -265,6 +280,10 @@
 
         letter-spacing: 0
         white-space: nowrap
+
+        @media $small_mobile
+          width: auto
+          margin-right: 10px
 
 
 
@@ -339,6 +358,11 @@
   .products
     margin-bottom: 50px
 
+    .container
+
+      @media $small_mobile
+        padding: 0 6px
+
     @media $tablet
       margin-bottom: 10px
 
@@ -355,6 +379,7 @@
 
       @media $small_tablet
         width: 50%
+        padding: 0 5px
 
       .product
         margin: 0 auto
