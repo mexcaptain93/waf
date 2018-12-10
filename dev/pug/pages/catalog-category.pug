@@ -1,0 +1,63 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Каталог | Waf-Waf'
+    - var pageClass = 'catalog-category'
+
+block script
+
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item
+                a(href='/') Главная
+            li.breadcrumbs__item
+                a(href='/catalog.html') Каталог
+            li.breadcrumbs__item.breadcrumbs__item_active
+                a(href='/catalog-category.html') Значки
+    .catalog-category__list
+        .container
+            .catalog-category__item
+                a.category(href='#' style='background-image: url("static/img/content/catalog-category-1.jpg")')
+                    .category__overlay
+                    .category__text
+                        span Все значки
+            .catalog-category__item
+                a.category(href='#' style='background-image: url("static/img/content/catalog-category-2.jpg")')
+                    .category__overlay
+                    .category__text
+                        span Новинки
+            .catalog-category__item
+                a.category(href='#' style='background-image: url("static/img/content/catalog-category-3.jpg")')
+                    .category__overlay
+                    .category__text
+                        span Хиты продаж
+            .catalog-category__item
+                a.category(href='#' style='background-image: url("static/img/content/catalog-category-4.jpg")')
+                    .category__overlay
+                    .category__text
+                        span Ориджинал
+            .catalog-category__item
+                a.category(href='#' style='background-image: url("static/img/content/catalog-category-5.jpg")')
+                    .category__overlay
+                    .category__text
+                        span Стильные подборки
+            .catalog-category__item
+                a.category(href='#' style='background-image: url("static/img/content/catalog-category-6.jpg")')
+                    .category__overlay
+                    .category__text
+                        span Значки по скидке
+            .catalog-category__item
+                a.category(href='#' style='background-image: url("static/img/content/catalog-category-7.jpg")')
+                    .category__overlay
+                    .category__text
+                        span Особые значки
+            .catalog-category__item
+                a.category(href='#' style='background-image: url("static/img/content/catalog-category-8.jpg")')
+                    .category__overlay
+                    .category__text
+                        span Значки на заказ
+
+
+
