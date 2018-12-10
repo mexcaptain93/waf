@@ -1,0 +1,161 @@
+.product
+
+  &__top
+
+    .container
+      display: flex
+      justify-content: center
+
+  &__photos
+    max-width: 600px
+    margin-right: 6px
+    position: relative
+    flex-shrink: 0
+    flex-grow: 1
+
+    .slick-arrow
+      display: none !important
+
+    .slick-dots
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: 41px
+
+      li
+        margin-right: 14px
+
+        &:last-child
+          margin-right: 0
+
+      .slick-active
+
+        button
+          background-color: $blue
+          width: 16px
+          height: 16px
+          border-radius: 8px
+
+      button
+        display: block
+        border: none
+        appearance: none
+        width: 10px
+        height: 10px
+        font-size: 0
+        line-height: 0
+        background-color: #e8e8e8
+        border-radius: 5px
+        padding: 0
+
+
+  .photos
+
+    &__item
+      display: flex
+      justify-content: center
+      align-items: center
+      outline: none
+      max-height: 432px
+      padding-bottom: 32px
+      border-bottom: 1px solid $gray_light5
+      overflow: hidden
+
+    &__arrow
+      position: absolute
+      bottom: -12px
+      cursor: pointer
+      z-index: 2
+      width: 40px
+      height: 40px
+      border: 1px solid $gray_light5
+      background-image: url('../img/general/i-arrow-active.png')
+      background-size: auto
+      background-repeat: no-repeat
+      background-position: center center
+      
+      &_prev
+        transform: rotate(180deg)
+        left: 0
+
+      &_next
+        right: 0
+
+        &.photos__arrow_inactive
+          transform: rotate(180deg)
+        
+      &_inactive
+        background-image: url('../img/general/i-arrow-inactive.png')
+        transform: rotate(0)
+
+  &__info
+    max-width: 600px
+    flex-shrink: 0
+    flex-grow: 1
+
+  &__name
+    margin-bottom: 6px
+
+    font-size: 30px
+    font-weight: 600
+    letter-spacing: 0
+    color: $gray_dark
+
+  &__price
+    margin-bottom: 31px
+
+    font-size: 24px
+    color: $gray_dark2
+    font-weight: 300
+
+  &__cart
+    display: flex
+    margin-bottom: 45px
+
+  .cart
+
+    &__quantity
+      margin-right: 16px
+
+    &__btn
+      width: 391px
+
+      .btn
+        max-width: 391px
+        padding: 14px 10px 12px
+
+  &__text
+
+
+    .tabs
+
+      &__label
+        display: inline-block
+        margin-right: -4px
+        padding: 0 28px
+        border-bottom: 2px solid $gray_light
+
+        font-size: 16px
+        line-height: 21px
+        font-weight: 300
+        letter-spacing: 0
+        color: $gray_light
+
+        &_first
+          width: 102px
+          padding: 0
+
+      &__content
+        padding-top: 20px
+
+
+
+      &__input
+        &:checked
+
+          & + .tabs
+
+            &__label
+              color: $gray_dark2
+              border-bottom-color: $gray_dark2
+

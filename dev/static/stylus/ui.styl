@@ -215,57 +215,62 @@
   letter-spacing: 1.92px
 
 .tabs
-  font-size: 0
 
   &__content
     display: none
     width: 100%
 
-  &__label
-    display: inline-block
-    width: 50%
-    padding: 15px 10px 13px
-    border: 1px solid $gray_light5
-    border-left: none
-    position: relative
-    user-select: none
 
-    text-transform: uppercase
-    font-size: 14px
-    line-height: 21px
-    text-align: center
-    letter-spacing: 1.1px
-    color: $gray_dark2
-
-    &:last-child
-      border-right: none
 
   &__input
     display: none
 
-    &:checked
-
-      & + .tabs
-        &__label
-          background-color: $gray_light4
-
-          .tabs__reset
-            display: block
 
 
-  &__reset
-    display: none
-    appearance: none
-    border: none
-    background: url('../img/general/i-close.png')
-    background-repeat: no-repeat
-    width: 13px
-    height: 13px
-    font-size: 0
-    position: absolute
-    top: 19px
-    right: 19px
-    cursor: pointer
+
+
 
   #tab-filters:checked ~ #mobile-filters, #tab-sort:checked ~ #mobile-sort
     display: block;
+
+  #tab-descr:checked ~ #product-descr, #tab-params:checked ~ #product-params
+    display: block;
+
+.quantity
+  display: flex
+
+  &__minus
+    width: 62px
+    height: 47px
+    border: 1px solid $gray_light5
+    text-align: center
+
+    font-size: 16px
+    line-height: 47px
+    font-weight: 300
+
+  &__plus
+    width: 62px
+    height: 47px
+    border: 1px solid $gray_light5
+    text-align: center
+
+    font-size: 16px
+    line-height: 47px
+    font-weight: 300
+
+  &__value
+    width: 64px
+    height: 47px
+    border: 1px solid $gray_light5
+    border-left: none
+    border-right: none
+    text-align: center
+
+.p
+  font-size: 15px
+  line-height: 21px
+  font-weight: 300
+  color: $gray_dark2
+  letter-spacing: 0
+  margin-bottom: 20px

@@ -1,0 +1,64 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Браслет Dream© | Waf-Waf'
+    - var pageClass = 'product'
+
+block script
+    script(src="static/js/slick.min.js")
+
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item
+                a(href='/') Главная
+            li.breadcrumbs__item
+                a(href='/catalog.html') Каталог
+            li.breadcrumbs__item
+                a(href='/catalog-category.html') Браслеты
+            li.breadcrumbs__item.breadcrumbs__item_active
+                a(href='/product.html') Браслет Dream
+
+    .product__top
+        .container
+            .product__photos.photos
+                .photos__arrow.photos__arrow_prev.photos__arrow_inactive.js-product-photos-prev
+                .photos__arrow.photos__arrow_next.js-product-photos-next
+                .photos__list.js-product-photos
+                    .photos__item
+                        img(src='static/img/content/product-1.jpg' alt='Браслет Dream©')
+                    .photos__item
+                        img(src='static/img/content/product-2.jpg' alt='Браслет Dream©')
+                    .photos__item
+                        img(src='static/img/content/product-2.jpg' alt='Браслет Dream©')
+
+            .product__info
+                .product__name
+                    span Браслет Dream©
+                .product__price
+                    span 299 ₽
+                .product__cart.cart
+                    .cart__quantity
+                        .quantity.js-quantity
+                            a(href='#').quantity__minus.js-quantity-minus -
+                            input(type='text' value='1').quantity__value.js-quantity-value
+                            a(href='#').quantity__plus.js-quantity-plus +
+                    .cart__btn
+                        a(href='#').btn В корзину
+                .product__text
+                    .tabs.tabs_product
+                        input.tabs__input(type='radio' id='tab-descr' name='tab-descr-params' checked=)
+                        label.tabs__label.tabs__label_first(for='tab-descr')
+                            span Описание
+
+                        input.tabs__input(type='radio' id='tab-params' name='tab-descr-params')
+                        label.tabs__label(for='tab-params')
+                            span Характеристики
+
+                        .tabs__content#product-descr
+                            .product__descr
+                                p.p Браслет с украшением из нескольких сортов дерева.
+                                p.p Размер браслета меняется — он подходит на любую руку. Величина украшения до 3 см. Сделано в Санкт-Петербурге.
+                        .tabs__content#product-params
+                            span params
