@@ -36,7 +36,7 @@ block content
                         a(href='#') По благотворительности
 
 
-                .filters__sort
+                .filters__sort.js-catalog-sort
                     a(href='#') Сортировать
             .filters__value.value.js-catalog-filters-value
                 ul.value__list.value__list_color
@@ -122,6 +122,16 @@ block content
                         a(href='#') Благотворительный
                     li.value__item
                         a(href='#') Не благотворительный
+                ul.value__list.js-catalog-sort-values
+                    li.value__item
+                        a(href='#') По имени
+                    li.value__item
+                        a(href='#') По цене
+                    li.value__item
+                        a(href='#') По популярности
+                    li.value__item
+                        a(href='#') По ещё чему-нибудь
+
             .filters__result-pagination
                 .filters__result.result
                     .result__wrap

@@ -1,10 +1,15 @@
 .product
 
   &__top
+    margin-bottom: 77px
+    padding-top: 20px
 
     .container
       display: flex
       justify-content: center
+
+      @media $small_tablet
+        flex-direction: column
 
   &__photos
     max-width: 600px
@@ -12,6 +17,13 @@
     position: relative
     flex-shrink: 0
     flex-grow: 1
+
+    @media $small_desktop
+      max-width: 50%
+
+      @media $small_tablet
+        max-width: 100%
+        margin-bottom: 31px
 
     .slick-arrow
       display: none !important
@@ -47,6 +59,10 @@
         background-color: #e8e8e8
         border-radius: 5px
         padding: 0
+        cursor: pointer
+
+        &:hover
+          background-color: $gray_light
 
 
   .photos
@@ -73,6 +89,9 @@
       background-size: auto
       background-repeat: no-repeat
       background-position: center center
+
+      &:hover
+        border-color: $black
       
       &_prev
         transform: rotate(180deg)
@@ -81,7 +100,7 @@
       &_next
         right: 0
 
-        &.photos__arrow_inactive
+        &.photos__arrow_inactive, &.suggest__arrow_inactive
           transform: rotate(180deg)
         
       &_inactive
@@ -93,6 +112,14 @@
     flex-shrink: 0
     flex-grow: 1
 
+    @media $small_desktop
+      max-width: 50%
+
+    @media $small_tablet
+      max-width: 100%
+
+      text-align: center
+
   &__name
     margin-bottom: 6px
 
@@ -101,6 +128,9 @@
     letter-spacing: 0
     color: $gray_dark
 
+    @media $small_tablet
+      margin-bottom: 0
+
   &__price
     margin-bottom: 31px
 
@@ -108,32 +138,71 @@
     color: $gray_dark2
     font-weight: 300
 
+    @media $tablet
+      margin-bottom: 37px
+
+    @media $small_tablet
+      margin-bottom: 55px
+
   &__cart
     display: flex
     margin-bottom: 45px
+
+    @media $tablet
+      margin-bottom: 40px
+
+    @media $small_tablet
+      flex-direction: column
+      margin-bottom: 28px
 
   .cart
 
     &__quantity
       margin-right: 16px
 
+      @media $tablet
+        margin-right: 14px
+
+      @media $small_tablet
+        margin-right: 0
+        margin-bottom: 20px
+
     &__btn
-      width: 391px
+      max-width: 391px
+      width: 100%
+
+      @media $tablet
+        width: 100%
+
+      @media $small_tablet
+        max-width: 100%
 
       .btn
         max-width: 391px
         padding: 14px 10px 12px
 
+        @media $small_tablet
+          max-width: 100%
+
   &__text
+
+    @media $small_tablet
+      text-align: left
 
 
     .tabs
+
+      @media $tablet
+        display: flex
+        flex-direction: column
+        border-bottom: 1px solid $gray_light
 
       &__label
         display: inline-block
         margin-right: -4px
         padding: 0 28px
         border-bottom: 2px solid $gray_light
+        cursor: pointer
 
         font-size: 16px
         line-height: 21px
@@ -141,12 +210,52 @@
         letter-spacing: 0
         color: $gray_light
 
+        @media $tablet
+          width: 100%
+          padding: 19px 22px
+          order: 3
+          border-top: 1px solid $gray_light
+          border-bottom: none
+          position: relative
+
+          font-weight: normal
+          color: $gray_dark2
+
+          &::after
+            position: absolute
+            top: 25px
+            right: 18px
+            content: ''
+            background-image: url('../img/general/i-arrow-down.png')
+            width: 12px
+            height: 7px
+            background-repeat: no-repeat
+            background-size: 100%
+
+        &:hover
+          color: $gray_dark
+          border-bottom-color: $gray_dark
+
         &_first
           width: 102px
           padding: 0
 
+          @media $tablet
+            width: 100%
+            padding: 19px 22px
+            order: 1
+
       &__content
         padding-top: 20px
+
+        @media $tablet
+          order: 4
+          padding-top: 0
+
+        &_first
+
+          @media $tablet
+            order: 2
 
 
 
@@ -159,3 +268,230 @@
               color: $gray_dark2
               border-bottom-color: $gray_dark2
 
+              @media $tablet
+                font-weight: 600
+
+                &::after
+                  transform: rotate(180deg)
+
+  .insta-slider
+    margin-bottom: 40px
+
+    &__wrap
+      position: relative
+      max-width: 1204px
+      margin: 0 auto
+
+    &__arrow
+      width: 56px
+      background-color: alpha($white, .85)
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      z-index: 2
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+
+      @media $tablet
+        display: none
+
+      &::after
+        content: ''
+        display: block
+        width: 8px
+        height: 14px
+        background-image: url('../img/general/i-arrow-active.png')
+        background-size: auto
+        background-repeat: no-repeat
+
+    &__heading
+      margin-bottom: 21px
+
+    .slick-arrow
+      display: none!important
+
+
+
+    &__item
+      width: 253px
+      height: 253px
+      outline: none
+      position: relative
+
+      @media $tablet
+        width: 248px
+        height: 248px
+
+      @media $small_tablet
+        width: 184px
+        height: 184px
+
+      &:hover
+
+        .insta-slider
+
+          &__overlay
+            background-color: alpha($black, 0.3)
+
+          &__icon
+            opacity: 1
+
+      a
+        display: block
+        height: 100%
+        outline: none
+
+    &__overlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 1
+      transition .3s ease background-color
+      display: flex
+      justify-content: center
+      align-items: center
+
+    &__icon
+      position: absolute
+      z-index: 1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      transition .3s ease opacity
+      background-repeat: no-repeat
+      background-size: 100%
+      width: 25px
+      height: 25px
+      background-image: url('../img/general/i-insta-icon.png')
+
+  .advantages
+    padding-top: 45px
+    padding-bottom: 59px
+    margin-bottom: 76px
+    background-color: $gray_light4
+
+    @media $small_tablet
+      padding-bottom: 19px
+
+    &__item
+
+      &:hover
+
+        .advantages__name
+          text-decoration: underline
+
+    &__heading
+      margin-bottom: 40px
+
+    &__list
+      display: flex
+      justify-content: center
+      max-width: 1165px
+      margin: 0 auto
+
+      @media $small_tablet
+        flex-wrap: wrap
+
+    &__image
+      height: 118px
+      margin-bottom: 27px
+      display: flex
+      align-items: center
+      justify-content: center
+
+    &__item
+
+      @media $tablet
+        max-width: 150px
+
+      @media $small_tablet
+        width: 50%
+        max-width: none
+        margin-bottom: 40px
+
+    &__name
+      font-weight: 600
+      font-size: 18px
+      line-height: 21px
+      letter-spacing: 0
+      color: $black
+      text-align: center
+
+      @media $tablet
+        font-size: 12px
+        line-height: 14px
+        font-weight: normal
+
+      @media $small_tablet
+        font-size: 18px
+        line-height: 21px
+
+  .suggest
+    @extend .visited
+
+    margin-bottom: 20px
+
+    &__wrap
+      position: relative
+
+    &__arrow
+      @extend .product .photos__arrow
+
+      display: none
+      top: 50%
+      margin-top: -20px
+
+      @media $mobile
+        display: block
+
+    .slick-arrow
+      display: none!important
+
+    .product
+
+      &:hover
+
+        .product__name
+          text-decoration: underline
+
+      .product
+
+        display: flex
+        flex-direction: column
+
+        &__image
+          height: 300px
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          margin-bottom: 22px
+          text-align: center
+
+          @media $tablet
+            height: 200px
+            max-height: 200px
+
+            a
+              display: block
+              height: 100%
+
+        &__name
+          margin-bottom: 0
+
+          font-size: 15px
+          line-height: 21px
+          text-align: center
+
+        &__price
+          margin-bottom: 0
+
+          font-size: 15px
+          line-height: 21px
+          text-align: center

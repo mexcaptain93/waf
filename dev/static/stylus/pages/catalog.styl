@@ -61,6 +61,9 @@
       font-weight: 600
       color: $gray_dark2
 
+      &:hover
+        border-color: $gray_dark2
+
       &:last-child
         margin-right: 0
 
@@ -140,6 +143,9 @@
 
       &__item
         margin: 15px 17px
+
+        &:hover
+          text-decoration: underline
 
         @media $tablet
           font-size: 15px
@@ -395,10 +401,16 @@
     display: flex
     flex-direction: column
 
+    &:hover
+
+      .product__name
+        text-decoration: underline
+
     &__image
       height: 290px
       margin-bottom: 20px
       text-align: center
+      flex-grow: 1
 
       @media $tablet
         height: 180px

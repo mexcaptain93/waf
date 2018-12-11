@@ -123,6 +123,9 @@
     @media $tablet
       padding: 17px 0 14px
 
+    @media $small_tablet
+      flex-wrap: wrap
+
   &__item
     margin-right: 18px
 
@@ -162,6 +165,9 @@
     color: $gray_dark2
     border: 1px solid $gray_light5
 
+    &:hover
+      border-color: $gray_dark2
+
     a
       display: block
       padding: 7px 8px
@@ -182,6 +188,9 @@
       margin-right: 4px
       margin-left: -9px
 
+      &:hover
+        border-color: transparent
+
       a
         min-width: 27px
         padding: 7px
@@ -192,6 +201,7 @@
   padding: 7px 10px 5px
   width: 100%
   max-width: 239px
+  transition: .3s ease background-color
 
   color: $white
   text-transform: uppercase
@@ -200,6 +210,9 @@
   font-weight: 600
   letter-spacing: 0.96px
   text-align: center
+
+  &:hover
+    background-color: $pink_hover
 
   @media $tablet
     max-width: 175px
@@ -213,6 +226,7 @@
   $gray_dark2
   text-transform: uppercase
   letter-spacing: 1.92px
+  text-align: center
 
 .tabs
 
@@ -220,15 +234,8 @@
     display: none
     width: 100%
 
-
-
   &__input
     display: none
-
-
-
-
-
 
   #tab-filters:checked ~ #mobile-filters, #tab-sort:checked ~ #mobile-sort
     display: block;
@@ -239,33 +246,44 @@
 .quantity
   display: flex
 
-  &__minus
+  &__minus, &__plus
     width: 62px
     height: 47px
     border: 1px solid $gray_light5
-    text-align: center
+    transition: .3s ease background-color
 
+    text-align: center
     font-size: 16px
     line-height: 47px
     font-weight: 300
 
-  &__plus
-    width: 62px
-    height: 47px
-    border: 1px solid $gray_light5
-    text-align: center
+    @media $tablet
+      width: 54px
+      height: 45px
 
-    font-size: 16px
-    line-height: 47px
-    font-weight: 300
+      line-height: 45px
+
+    @media $small_tablet
+      width: 33.3%
+
+    &:hover
+      background-color: $gray_light4
 
   &__value
+    appearance: none;
     width: 64px
     height: 47px
     border: 1px solid $gray_light5
     border-left: none
     border-right: none
     text-align: center
+
+    @media $tablet
+      width: 50px
+      height: 45px
+
+    @media $small_tablet
+      width: 33.3%
 
 .p
   font-size: 15px
@@ -274,3 +292,6 @@
   color: $gray_dark2
   letter-spacing: 0
   margin-bottom: 20px
+
+  @media $small_tablet
+    font-size: 14px
