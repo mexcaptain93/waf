@@ -1,10 +1,11 @@
 extends ../layout/main
 
 block variables
-    - var title = 'Браслет Dream© | Waf-Waf'
+    - var title = 'Браслет Жопка Корги | Waf-Waf'
     - var pageClass = 'product'
 
 block script
+    script(src="static/js/okzoom.min.js")
     script(src="static/js/slick.min.js")
 
 
@@ -27,15 +28,15 @@ block content
                 .photos__arrow.photos__arrow_next.js-product-photos-next
                 .photos__list.js-product-photos
                     .photos__item
-                        img(src='static/img/content/product-1.jpg' alt='Браслет Dream©')
+                        img(src='https://waf-waf.ru/upload/iblock/acc/acc7bb87d7a13747486377d804169c56.jpg' alt='Жопка Корги')
                     .photos__item
-                        img(src='static/img/content/product-2.jpg' alt='Браслет Dream©')
+                        img(src='https://waf-waf.ru/upload/iblock/9e2/9e2d17696a2662ded63bc8b2439b54a1.jpg' alt='Жопка Корги')
                     .photos__item
-                        img(src='static/img/content/product-2.jpg' alt='Браслет Dream©')
+                        img(src='https://waf-waf.ru/upload/iblock/e34/e34c8c2e20459a1eaff602d4e6619fb5.jpg' alt='Жопка Корги')
 
             .product__info
                 .product__name
-                    span Браслет Dream©
+                    span Жопка Корги
                 .product__price
                     span 299 ₽
                 .product__cart.cart
