@@ -204,7 +204,7 @@
         display: inline-block
         margin-right: -4px
         padding: 0 28px
-        border-bottom: 2px solid $gray_light
+        border-bottom: 2px solid $gray_light5
         cursor: pointer
 
         font-size: 16px
@@ -237,7 +237,7 @@
 
         &:hover
           color: $gray_dark
-          border-bottom-color: $gray_dark
+          border-bottom-color: #d5d5d5
 
         &_first
           width: 102px
@@ -287,7 +287,7 @@
 
     &__arrow
       width: 56px
-      background-color: alpha($white, .85)
+      background-color: alpha($white, .65)
       position: absolute
       top: 0
       right: 0
@@ -297,6 +297,9 @@
       align-items: center
       justify-content: center
       cursor: pointer
+
+      &:hover
+        background-color: alpha($white, .85)
 
       @media $tablet
         display: none
