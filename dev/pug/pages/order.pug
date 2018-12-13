@@ -1,0 +1,81 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Оформление заказа | Waf-Waf'
+    - var pageClass = 'order-page'
+
+block script
+
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item
+                a(href='/') Главная
+            li.breadcrumbs__item
+                a(href='catalog.html') Корзина
+            li.breadcrumbs__item.breadcrumbs__item_active
+                a(href='catalog-category.html') Оформление заказа
+    h1.like-h1 Оформление заказа
+
+    .order-page__wrap
+        .container
+            .order-page__details.details
+                .details__block
+                    .details__head.head
+                        .head__count 1
+                        .head__name
+                            span Товары в заказе
+                        .head__change-link
+                            a(href='#') Изменить
+                    .details__table.table
+                        .table__row.details__table-head
+                            .table__td
+                                span Наименование
+                            .table__td
+                                span Кол-во
+                            .table__td
+                                span Сумма
+                        .table__row
+                            .table__td
+                                a(href='#') Браслет Dream
+                            .table__td
+                                span 1 шт.
+                            .table__td
+                                span 299 ₽
+                        .table__row
+                            .table__td
+                                a(href='#') Браслет Листок
+                            .table__td
+                                span 1 шт.
+                            .table__td
+                                span 299 ₽
+                        .table__row
+                            .table__td
+                                a(href='#') Браслет Create
+                            .table__td
+                                span 1 шт.
+                            .table__td
+                                span 299 ₽
+
+
+
+            .order-page__summary.summary
+                .summary__table.table
+                    .table__row.summary__head
+                        .table__td
+                            span Товаров на:
+                        .table__td
+                            span 897 ₽
+                    .table__row
+                        .table__td
+                            span Доставка:
+                        .table__td
+                            span 0 ₽
+                    .table__row.summary__total
+                        .table__td
+                            span Итого
+                        .table__td
+                            span 897 ₽
+
+
