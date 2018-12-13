@@ -2,3 +2,203 @@
 
   .like-h2
     margin-top: -3px
+    margin-bottom: 40px
+
+  &__wrap
+
+    .container
+      display: flex
+      align-items: flex-start
+
+  .summary
+
+    width: 320px
+    padding: 12px 30px 11px
+    border: 1px solid $gray_light5
+
+    .table
+      width: 100%
+
+      font-size: 13px
+      color: $gray_dark2
+
+
+
+      &__td
+        padding: 13px 0 11px
+        border-bottom: 1px solid $gray_light5
+
+        &:last-child
+          text-align: right
+
+    &__head
+
+      .table__td
+        border-color: $gray_light3
+
+      &:first-child
+          font-weight: 600
+
+
+    &__total
+
+      .table__td
+        padding-top: 17px
+        border-bottom: none
+
+        &:last-child
+          font-size: 24px
+          letter-spacing: 0
+
+
+
+
+  .details
+    margin-right: 12px
+
+    &__block
+      width: 869px
+      margin-bottom: 13px
+      border: 1px solid $gray_light5
+      
+    .head
+      display: flex
+      align-items: center
+      background-color: $gray_light4
+      padding: 21px 20px
+
+      &__count
+        width: 14px
+        height: 14px
+        border-radius: 7px
+        border: 1px solid $gray2
+        margin-right: 12px
+
+        font-size: 8px
+        line-height: 14px
+        color: $gray2
+        text-align: center
+
+      &__name
+        flex-grow: 1
+
+        font-weight: 600
+        font-size: 21px
+        line-height: 24px
+        color: $gray_dark
+
+      &__change-link
+        color: $pink
+        font-size: 13px
+        line-height: 24px
+
+        &:hover
+          text-decoration: underline
+
+
+
+    &__content
+      padding: 22px 21px
+
+    .title
+      color: $gray2
+      font-size: 14px
+      line-height: 18px
+
+      &_required
+
+        &::after
+          content: ' *'
+          color: $pink
+
+
+
+    .table
+      margin-bottom: 20px
+
+      &__row
+
+        &:first-child
+
+          .table
+
+            &__td
+              padding: 0 0 10px
+
+      &__td
+        padding: 13px 0
+        border-bottom: 1px dotted $gray_light5
+
+        color: $gray_dark
+        text-align: center
+
+        &:first-child
+          text-align: left
+
+        &:nth-child(2)
+          width: 130px
+
+        &:last-child
+          width: 180px
+
+
+      a
+        color: $pink
+
+        &:hover
+          text-decoration: underline
+
+    .promo
+
+      &__title
+        margin-bottom: 10px
+
+      &__elem
+        position: relative
+        display: inline-block
+
+      &__input
+        width: 299px
+        padding: 14px 17px 13px
+        border: 1px solid $gray_light5
+        background-color: $gray_light4
+
+        font-size: 13px
+        line-height: 18px
+        color: $gray_dark
+        letter-spacing: 0
+
+        &::placeholder
+          color: $gray_light2
+
+      &__btn
+        position: absolute
+        appearance: none
+        border: none
+        cursor: pointer
+        top: 0
+        right: 0
+        width: 47px
+        height: 47px
+        background: url('../img/general/i-arrow-active.png')
+        background-repeat: no-repeat
+        background-position: center center
+
+    &__btns
+      display: flex
+      justify-content: flex-end
+      padding: 22px 20px 20px
+      border-top: 1px solid $gray_light5
+
+      &_both
+        justify-content: space-between
+
+      .btn
+        width: 189px
+
+
+
+
+
+
+

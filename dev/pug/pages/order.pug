@@ -27,39 +27,60 @@ block content
                         .head__name
                             span Товары в заказе
                         .head__change-link
-                            a(href='#') Изменить
-                    .details__table.table
-                        .table__row.details__table-head
-                            .table__td
-                                span Наименование
-                            .table__td
-                                span Кол-во
-                            .table__td
-                                span Сумма
-                        .table__row
-                            .table__td
-                                a(href='#') Браслет Dream
-                            .table__td
-                                span 1 шт.
-                            .table__td
-                                span 299 ₽
-                        .table__row
-                            .table__td
-                                a(href='#') Браслет Листок
-                            .table__td
-                                span 1 шт.
-                            .table__td
-                                span 299 ₽
-                        .table__row
-                            .table__td
-                                a(href='#') Браслет Create
-                            .table__td
-                                span 1 шт.
-                            .table__td
-                                span 299 ₽
+                            a(href='#') изменить
+                    .details__content
+                        .details__table.table
+                            .table__row.details__table-head
+                                .table__td
+                                    span.title Наименование
+                                .table__td
+                                    span.title Кол-во
+                                .table__td
+                                    span.title Сумма
+                            .table__row
+                                .table__td
+                                    a(href='#') Браслет Dream
+                                .table__td
+                                    span 1 шт.
+                                .table__td
+                                    span 299 ₽
+                            .table__row
+                                .table__td
+                                    a(href='#') Браслет Листок
+                                .table__td
+                                    span 1 шт.
+                                .table__td
+                                    span 299 ₽
+                            .table__row
+                                .table__td
+                                    a(href='#') Браслет Create
+                                .table__td
+                                    span 1 шт.
+                                .table__td
+                                    span 299 ₽
 
 
 
+                        .details__promo.promo
+                            .promo__title.title
+                                span Применить купон
+                            .promo__elem
+                                input.promo__input(type='text')
+                                button.promo__btn
+                    .details__btns
+                        .btn.btn_big Далее
+                .details__block
+                    .details__head.head
+                        .head__count 2
+                        .head__name
+                            span Регион доставки
+                        .head__change-link
+                            a(href='#') изменить
+                    .details__content
+                        .title.title_required Местоположение
+                    .details__btns.details__btns_both
+                        a.btn.btn_big.btn_mono(href='#') Назад
+                        a.btn.btn_big(href='#') Далее
             .order-page__summary.summary
                 .summary__table.table
                     .table__row.summary__head
