@@ -195,6 +195,24 @@
         min-width: 27px
         padding: 7px
 
+    &_prev
+
+      a
+        &::after
+          content: '< Предыдущая'
+
+          @media $mobile
+            content: '<'
+
+    &_next
+
+      a
+        &::after
+          content: 'Следующая >'
+
+          @media $mobile
+            content: '>'
+
 .btn
   display: inline-block
   background-color: $pink

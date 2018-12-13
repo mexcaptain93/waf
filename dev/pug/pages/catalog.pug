@@ -132,25 +132,6 @@ block content
                     li.value__item
                         a(href='#') По ещё чему-нибудь
 
-            .filters__result-pagination
-                .filters__result.result
-                    .result__wrap
-                        span.result__text Выбрано
-                        a(href='#').result__item Значки
-                        a(href='#').result__item Хиты продаж
-                        a(href='#').result__clear Очистить фильтры
-                .pagination
-                    ul.pagination__list
-                        li.pagination__item
-                            a(href='#') < Предыдущая
-                        li.pagination__item
-                            a(href='#') 1
-                        li.pagination__item.pagination__item_active
-                            a(href='#') 2
-                        li.pagination__item
-                            a(href='#') 3
-                        li.pagination__item
-                            a(href='#') Следующая >
 
     .filters-sort-mobile
         form.tabs
@@ -166,7 +147,7 @@ block content
 
             .tabs__content#mobile-filters
                 .filters-sort-mobile__list
-                    .filters-sort-mobile__item.filters-sort-mobile__item_opened
+                    .filters-sort-mobile__item
                         .filters-sort-mobile__name.js-mobile-filter.js-mobile-filter
                             span Цвет
                         .filters-sort-mobile__value.value.js-mobile-filter-value.js-mobile-filter-value
@@ -283,6 +264,32 @@ block content
                             li.value__item
                                 a(href='#') По еще чему-нибудь
 
+
+    .filters__result-pagination
+        .container
+            .filters__result.result
+                .result__wrap
+                    span.result__text Выбрано
+                    .result__item
+                        a(href='#') Значки
+                        a(href='#').result__remove
+                    .result__item
+                        a(href='#') Хиты продаж
+                        a(href='#').result__remove
+
+                    a(href='#').result__clear Очистить фильтры
+            .pagination
+                ul.pagination__list
+                    li.pagination__item.pagination__item_prev
+                        a(href='#')
+                    li.pagination__item
+                        a(href='#') 1
+                    li.pagination__item.pagination__item_active
+                        a(href='#') 2
+                    li.pagination__item
+                        a(href='#') 3
+                    li.pagination__item.pagination__item_next
+                        a(href='#')
 
     .products
         .container

@@ -154,44 +154,69 @@
 
 
     &__result-pagination
-      display: flex
-      justify-content: space-between
-      align-items: flex-start
+      margin-bottom: 20px
 
-      @media $small_tablet
-        display: none
-
-
-
-    .result
-
-      &__wrap
+      .container
         display: flex
-        flex-wrap: wrap
+        justify-content: space-between
         align-items: flex-start
 
-      &__text
-        margin-right: 13px
+        @media $tablet
+          flex-direction: column
+          align-items: center
 
-        color: $gray_light
-        font-size: 13px
-        line-height: 21px
 
-      &__item
-        margin-right: 15px
-        padding: 3px 10px
-        margin-bottom: 10px
 
-        font-size: 13px
-        font-weight: 600
-        color: $gray_dark2
-        border: 1px solid $gray_dark2
 
-      &__clear
-        color: $gray_light
-        font-size: 13px
-        line-height: 21px
-        text-decoration: underline
+  .result
+
+    &__wrap
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-start
+
+      @media $tablet
+        margin-bottom: 20px
+
+      @media $small_tablet
+        margin-top: 20px
+        justify-content: center
+
+    &__text
+      margin-right: 13px
+
+      color: $gray_light
+      font-size: 13px
+      line-height: 21px
+
+    &__item
+      margin-right: 15px
+      padding: 3px 10px
+      margin-bottom: 10px
+
+      font-size: 13px
+      font-weight: 600
+      color: $gray_dark2
+      border: 1px solid $gray_dark2
+
+      a, span
+        vertical-align: middle
+
+    &__remove
+      display: inline-block
+      width: 13px
+      height: 13px
+      background-image: url('../img/general/i-close.png')
+      background-repeat: no-repeat
+      margin-left: 10px
+
+
+
+    &__clear
+      color: $gray_light
+      font-size: 13px
+      line-height: 21px
+      text-decoration: underline
 
 
 
@@ -226,6 +251,7 @@
         background-repeat: no-repeat
         background-size: 100%
         will-change: transform
+
 
     .value
       @extend .catalog .filters .value
@@ -417,6 +443,11 @@
           top: 40px
           left: -10px
 
+          @media $small_tablet
+            width: 60px
+            background-size: contain
+
+
     &_hit
 
       .product__image a
@@ -433,6 +464,10 @@
           top: 40px
           left: -10px
 
+          @media $small_tablet
+            width: 25px
+            background-size: contain
+
     &_discount
 
       .product__image a
@@ -448,6 +483,10 @@
           position: absolute
           top: 40px
           left: -10px
+
+          @media $small_tablet
+            width: 27px
+            background-size: contain
 
     &:hover
 
@@ -479,6 +518,9 @@
       font-size: 15px
       line-height: 21px
       font-weight: 600
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
 
     &__price
       margin-bottom: 17px
