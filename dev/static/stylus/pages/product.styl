@@ -16,17 +16,19 @@
 
   &__photos
     max-width: 600px
-    margin-right: 6px
+    margin-right: 30px
     position: relative
     flex-shrink: 0
     flex-grow: 1
 
     @media $small_desktop
       max-width: 50%
+      margin-right: 6px
 
       @media $small_tablet
         max-width: 100%
         margin-bottom: 31px
+        margin-right: 0
 
     .slick-arrow
       display: none !important
@@ -85,6 +87,16 @@
 
       @media $small_mobile
         max-height: 200px
+
+        img
+          max-height: 100%
+
+          @media $mobile
+            max-height: 300px
+
+          @media $small_mobile
+            max-height: 200px
+
 
     &__arrow
       position: absolute
