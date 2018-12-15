@@ -173,6 +173,10 @@
     .location
       position: relative
 
+      &__input
+        position: relative
+        margin-bottom: 23px
+
       &__clear
         position: absolute
         appearance: none
@@ -182,15 +186,68 @@
         right: 0
         width: 47px
         height: 47px
-        background: url('../img/general/i-arrow-active.png')
+        background: url('../img/general/i-close.png')
         background-repeat: no-repeat
         background-position: center center
 
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 17px
+        left: 17px
+        width: 14px
+        height: 14px
+        background: url('../img/general/i-search-big.png')
+        background-repeat: no-repeat
+        background-position: center center
+
+      &__dropdown
+        display: none
+        border: 1px solid $gray_light5
+        border-top: none
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+
+      &__item
+        padding: 15px 45px
+        background-color: $gray_light4
+        border-bottom: 1px solid $gray_light5
+        cursor: pointer
+
+        font-size: 13px
+        line-height: 18px
+        color: $gray_light
+
+        span
+          color: $gray_dark
+
+        &:last-child
+          border-bottom: 0
+
+        &:hover
+          background-color: $gray_light5
+
+      .textfield
+        padding-left: 45px
+
+        &:focus
+
+          & ~ .location__dropdown
+            display: block
+
+    &__hint
+      font-size: 13px
+      line-height: 18px
+      color: $gray_light
 
     &__btns
       display: flex
       justify-content: flex-end
-      padding: 22px 20px 20px
+      padding: 22px 20px 0
+      margin: 22px -20px 0
       border-top: 1px solid $gray_light5
 
       &_both
@@ -198,6 +255,8 @@
 
       .btn
         width: 189px
+
+
 
 
 

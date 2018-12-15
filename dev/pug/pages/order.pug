@@ -67,8 +67,8 @@ block content
                             .promo__elem
                                 input.textfield(type='text')
                                 button.promo__btn
-                    .details__btns
-                        .btn.btn_big Далее
+                        .details__btns
+                            .btn.btn_big Далее
                 .details__block
                     .details__head.head
                         .head__count 2
@@ -79,11 +79,19 @@ block content
                     .details__content
                         .title.title_required Местоположение
                         .details__location.location
-                            input.textfield.textfield_wide
-                            a(href='#').location__clear
-                    .details__btns.details__btns_both
-                        a.btn.btn_big.btn_mono(href='#') Назад
-                        a.btn.btn_big(href='#') Далее
+                            .location__input
+                                input.textfield.textfield_wide
+                                a(href='#').location__clear
+                                .location__dropdown
+                                    .location__list
+                                        .location__item #[span Москва], Центр, Россия
+                                        .location__item #[span Москва], Центр, Россия
+                                        .location__item #[span Москва], Центр, Россия
+                            .details__hint
+                                span Выберите свой город в списке
+                        .details__btns.details__btns_both
+                            a.btn.btn_big.btn_mono(href='#') Назад
+                            a.btn.btn_big(href='#') Далее
 
             .order-page__summary.summary
                 .summary__table.table
