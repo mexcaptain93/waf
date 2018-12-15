@@ -93,6 +93,61 @@ block content
                             a.btn.btn_big.btn_mono(href='#') Назад
                             a.btn.btn_big(href='#') Далее
 
+                .details__block
+                    .details__head.head
+                        .head__count 3
+                        .head__name
+                            span Доставка
+                        .head__change-link
+                            a(href='#') изменить
+                    .details__content
+                        .details__delivery.delivery
+                            .delivery__list
+                                .delivery__item
+                                    input(type='radio' id='delivery-1' name='order-delivery' checked)
+                                    label(for='delivery-1')
+                                        .delivery__top
+                                            .delivery__img(style='background-image: url("static/img/content/delivery-1.jpg")')
+                                            .delivery__price
+                                                span 0 ₽
+                                        .delivery__name
+                                            span Самовывоз со склада
+                                .delivery__item
+                                    input(type='radio' id='delivery-2' name='order-delivery')
+                                    label(for='delivery-2')
+                                        .delivery__top
+                                            .delivery__img(style='background-image: url("static/img/content/delivery-2.jpg")')
+                                            .delivery__price
+                                                span 310 ₽
+                                        .delivery__name
+                                            span СДЭК (доставка курьером)
+                                .delivery__item
+                                    input(type='radio' id='delivery-3' name='order-delivery')
+                                    label(for='delivery-3')
+                                        .delivery__top
+                                            .delivery__img(style='background-image: url("static/img/content/delivery-2.jpg")')
+                                            .delivery__price
+                                                span 170 ₽
+                                        .delivery__name
+                                            span СДЭК (самовывоз)
+
+
+                            .delivery__result.result
+                                .result__name
+                                    span Самовывоз со склада
+                                .result__img
+                                    img(src='static/img/content/delivery-1.jpg' alt='Самовывоз со склада')
+                                .result__hint
+                                    span Вы можете самостоятельно забрать заказ из нашего магазина
+                                .result__price
+                                    span Стоимость 0 ₽
+                                .result__time
+                                    span Срок доставки: от 3 до 10 дней
+
+                        .details__btns.details__btns_both
+                            a.btn.btn_big.btn_mono(href='#') Назад
+                            a.btn.btn_big(href='#') Далее
+
             .order-page__summary.summary
                 .summary__table.table
                     .table__row.summary__head

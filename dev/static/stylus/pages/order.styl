@@ -177,6 +177,18 @@
         position: relative
         margin-bottom: 23px
 
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          top: 17px
+          left: 17px
+          width: 14px
+          height: 14px
+          background: url('../img/general/i-search-big.png')
+          background-repeat: no-repeat
+          background-position: center center
+
       &__clear
         position: absolute
         appearance: none
@@ -190,17 +202,7 @@
         background-repeat: no-repeat
         background-position: center center
 
-      &::before
-        content: ''
-        display: block
-        position: absolute
-        top: 17px
-        left: 17px
-        width: 14px
-        height: 14px
-        background: url('../img/general/i-search-big.png')
-        background-repeat: no-repeat
-        background-position: center center
+
 
       &__dropdown
         display: none
@@ -255,6 +257,103 @@
 
       .btn
         width: 189px
+
+  .delivery
+    display: flex
+
+    &__list
+      display: flex
+      flex-wrap: wrap
+      padding-top: 7px
+      margin-bottom: -10px
+
+    &__item
+      width: 205px
+      margin-right: 19px
+      margin-bottom: 18px
+      cursor: pointer
+
+      font-size: 14px
+      line-height: 18px
+      color: $black
+
+      &:nth-child(2n)
+        margin-right: 0
+
+      input[type='radio']
+        display: none
+
+        &:checked
+
+          & + label
+
+            .delivery
+
+              &__top
+                border-color: $pink
+
+              &__img
+                border-color: $pink
+
+              &__name
+                color: $pink
+
+    &__top
+      border: 1px solid $gray_light5
+      margin-bottom: 6px
+
+    &__img
+      height: 117px
+      background-position: center center
+      background-repeat: no-repeat
+      border-bottom: 1px solid $gray_light5
+
+    &__price
+      display: block
+      padding: 12px
+      text-align: center
+      background-color: $gray_light4
+
+    &__name
+      text-align: center
+
+    .result
+      margin-top: 12px
+      flex-shrink: 0
+      width: 374px
+      padding: 18px 24px 50px
+      background-color: $gray_light4
+
+      &__name
+        margin-bottom: 16px
+
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0
+        color: $gray_dark
+        font-weight: 600
+
+      &__img
+        margin-bottom: 16px
+
+      &__hint
+        margin-bottom: 10px
+
+        font-size: 13px
+        line-height: 18px
+        color: #777777
+
+      &__price
+        font-size: 14px
+        line-height: 24px
+        color: $gray_dark
+        letter-spacing: 0
+
+      &__time
+        font-size: 14px
+        line-height: 24px
+        color: $gray_dark
+        letter-spacing: 0
 
 
 
