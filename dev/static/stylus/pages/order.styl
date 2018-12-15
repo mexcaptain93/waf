@@ -104,6 +104,7 @@
       color: $gray2
       font-size: 14px
       line-height: 18px
+      margin-bottom: 10px
 
       &_required
 
@@ -148,28 +149,12 @@
         &:hover
           text-decoration: underline
 
-    .promo
 
-      &__title
-        margin-bottom: 10px
+    .promo
 
       &__elem
         position: relative
         display: inline-block
-
-      &__input
-        width: 299px
-        padding: 14px 17px 13px
-        border: 1px solid $gray_light5
-        background-color: $gray_light4
-
-        font-size: 13px
-        line-height: 18px
-        color: $gray_dark
-        letter-spacing: 0
-
-        &::placeholder
-          color: $gray_light2
 
       &__btn
         position: absolute
@@ -183,6 +168,24 @@
         background: url('../img/general/i-arrow-active.png')
         background-repeat: no-repeat
         background-position: center center
+
+
+    .location
+      position: relative
+
+      &__clear
+        position: absolute
+        appearance: none
+        border: none
+        cursor: pointer
+        top: 0
+        right: 0
+        width: 47px
+        height: 47px
+        background: url('../img/general/i-arrow-active.png')
+        background-repeat: no-repeat
+        background-position: center center
+
 
     &__btns
       display: flex

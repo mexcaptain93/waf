@@ -65,7 +65,7 @@ block content
                             .promo__title.title
                                 span Применить купон
                             .promo__elem
-                                input.promo__input(type='text')
+                                input.textfield(type='text')
                                 button.promo__btn
                     .details__btns
                         .btn.btn_big Далее
@@ -78,9 +78,13 @@ block content
                             a(href='#') изменить
                     .details__content
                         .title.title_required Местоположение
+                        .details__location.location
+                            input.textfield.textfield_wide
+                            a(href='#').location__clear
                     .details__btns.details__btns_both
                         a.btn.btn_big.btn_mono(href='#') Назад
                         a.btn.btn_big(href='#') Далее
+
             .order-page__summary.summary
                 .summary__table.table
                     .table__row.summary__head
