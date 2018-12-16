@@ -5,6 +5,7 @@ block variables
     - var pageClass = 'order-page'
 
 block script
+    script(src='https://unpkg.com/imask')
 
 
 block content
@@ -18,136 +19,247 @@ block content
                 a(href='catalog-category.html') Оформление заказа
     h1.like-h1 Оформление заказа
 
-    .order-page__wrap
-        .container
-            .order-page__details.details
-                .details__block
-                    .details__head.head
-                        .head__count 1
-                        .head__name
-                            span Товары в заказе
-                        .head__change-link
-                            a(href='#') изменить
-                    .details__content
-                        .details__table.table
-                            .table__row.details__table-head
+    .order-page__wrap.container
+            .order-page__details.details.js-order-details
+                form
+                    .details__block.details__block_opened
+                        .details__head.head
+                            .head__count 1
+                            .head__name
+                                span Товары в заказе
+                            .head__change-link
+                                a(href='#') изменить
+                        .details__content
+                            .details__table.table
+                                .table__row.details__table-head
+                                    .table__td
+                                        span.title Наименование
+                                    .table__td
+                                        span.title Кол-во
+                                    .table__td
+                                        span.title Сумма
+                                .table__row
+                                    .table__td
+                                        a(href='#') Браслет Dream
+                                    .table__td
+                                        span 1 шт.
+                                    .table__td
+                                        span 299 ₽
+                                .table__row
+                                    .table__td
+                                        a(href='#') Браслет Листок
+                                    .table__td
+                                        span 1 шт.
+                                    .table__td
+                                        span 299 ₽
+                                .table__row
+                                    .table__td
+                                        a(href='#') Браслет Create
+                                    .table__td
+                                        span 1 шт.
+                                    .table__td
+                                        span 299 ₽
+
+
+
+                            .details__promo.promo
+                                .promo__title.title
+                                    span Применить купон
+                                .promo__elem
+                                    input.textfield(type='text')
+                                    button.promo__btn
+                            .details__btns
+                                .btn.btn_big Далее
+                        .details__summary Выбрано #[span 3 товара]
+                    .details__block
+                        .details__head.head
+                            .head__count 2
+                            .head__name
+                                span Регион доставки
+                            .head__change-link
+                                a(href='#') изменить
+                        .details__content
+                            .title.title_required Местоположение
+                            .details__location.location
+                                .location__input
+                                    input(type='text' autocomplete="nope").textfield.textfield_wide
+                                    a(href='#').location__clear
+                                    .location__dropdown
+                                        .location__list
+                                            .location__item #[span Москва], Центр, Россия
+                                            .location__item #[span Москва], Центр, Россия
+                                            .location__item #[span Москва], Центр, Россия
+                                .details__hint
+                                    span Выберите свой город в списке
+                            .details__btns.details__btns_both
+                                a.btn.btn_big.btn_mono(href='#') Назад
+                                a.btn.btn_big(href='#') Далее
+
+                        .details__summary Местоположение #[span Москва], Центр, Россия
+                    .details__block
+                        .details__head.head
+                            .head__count 3
+                            .head__name
+                                span Доставка
+                            .head__change-link
+                                a(href='#') изменить
+                        .details__content
+                            .details__delivery.delivery
+                                .delivery__list
+                                    .delivery__item
+                                        input(type='radio' id='delivery-1' name='order-delivery' checked)
+                                        label(for='delivery-1')
+                                            .delivery__top
+                                                .delivery__img(style='background-image: url("static/img/content/delivery-1.jpg")')
+                                                .delivery__price
+                                                    span 0 ₽
+                                            .delivery__name
+                                                span Самовывоз со склада
+                                    .delivery__item
+                                        input(type='radio' id='delivery-2' name='order-delivery')
+                                        label(for='delivery-2')
+                                            .delivery__top
+                                                .delivery__img(style='background-image: url("static/img/content/delivery-2.jpg")')
+                                                .delivery__price
+                                                    span 310 ₽
+                                            .delivery__name
+                                                span СДЭК (доставка курьером)
+                                    .delivery__item
+                                        input(type='radio' id='delivery-3' name='order-delivery')
+                                        label(for='delivery-3')
+                                            .delivery__top
+                                                .delivery__img(style='background-image: url("static/img/content/delivery-2.jpg")')
+                                                .delivery__price
+                                                    span 170 ₽
+                                            .delivery__name
+                                                span СДЭК (самовывоз)
+
+
+                                .delivery__result.result
+                                    .result__name
+                                        span Самовывоз со склада
+                                    .result__img
+                                        img(src='static/img/content/delivery-1.jpg' alt='Самовывоз со склада')
+                                    .result__hint
+                                        span Вы можете самостоятельно забрать заказ из нашего магазина
+                                    .result__price
+                                        span Стоимость 0 ₽
+                                    .result__time
+                                        span Срок доставки: от 3 до 10 дней
+
+                            .details__btns.details__btns_both
+                                a.btn.btn_big.btn_mono(href='#') Назад
+                                a.btn.btn_big(href='#') Далее
+
+
+                        .details__summary Доставка #[span Самовывоз со склада]
+                    .details__block
+                        .details__head.head
+                            .head__count 4
+                            .head__name
+                                span Оплата
+                            .head__change-link
+                                a(href='#') изменить
+                        .details__content
+                            .details__payment.payment
+                                .payment__list
+                                    .payment__item
+                                        input(type='radio' id='payment-1' name='order-payment' checked)
+                                        label(for='payment-1')
+                                            .payment__img(style='background-image: url("static/img/content/payment-1.jpg")')
+                                            .payment__name
+                                                span Банковская карта
+                                    .payment__item
+                                        input(type='radio' id='payment-2' name='order-payment')
+                                        label(for='payment-2')
+                                            .payment__img(style='background-image: url("static/img/content/payment-2.jpg")')
+                                            .payment__name
+                                                span Сбербанк Онлайн
+                                    .payment__item
+                                        input(type='radio' id='payment-3' name='order-payment')
+                                        label(for='payment-3')
+                                            .payment__img(style='background-image: url("static/img/content/payment-3.jpg")')
+                                            .payment__name
+                                                span Альфа-клик
+                                    .payment__item
+                                        input(type='radio' id='payment-4' name='order-payment')
+                                        label(for='payment-4')
+                                            .payment__img(style='background-image: url("static/img/content/payment-4.jpg")')
+                                            .payment__name
+                                                span Яндекс.деньги
+                                    .payment__item
+                                        input(type='radio' id='payment-5' name='order-payment')
+                                        label(for='payment-5')
+                                            .payment__img(style='background-image: url("static/img/content/payment-5.jpg")')
+                                            .payment__name
+                                                span Оплата при получении
+
+
+                                .payment__result.result
+                                    .result__name
+                                        span Банковская карта
+                                    .result__img
+                                        img(src='static/img/content/payment-1.jpg' alt='Банковская карта')
+                                    .result__hint
+                                        span Сразу после оформления заказа Вы увидите ссылку для его оплаты. Не забудьте оплатить заказ
+
+                            .details__btns.details__btns_both
+                                a.btn.btn_big.btn_mono(href='#') Назад
+                                a.btn.btn_big(href='#') Далее
+
+                        .details__summary Оплата #[span Банковская карта]
+                    .details__block
+                        .details__head.head
+                            .head__count 5
+                            .head__name
+                                span Контактные данные
+                            .head__change-link
+                                a(href='#') изменить
+                        .details__content
+                            .details__contacts.contacts
+                                .contacts__item
+                                    .title.title_required Ваши фамилия, имя, отчество
+                                    input(type='text').textfield.textfield_wide
+                                .contacts__item
+                                    .title.title_required Контактный телефон
+                                    input(type='text' placeholder='+7 (___)___-__-__').textfield.textfield_wide.js-phone-input
+                                .contacts__item
+                                    .title.title_required Электронная почта (E-mail)
+                                    input(type='text' placeholder='например, вашапочта@домен.рф').textfield.textfield_wide
+                                .contacts__item
+                                    .title.title_required Адрес формата: индекс, город, улица, дом, квартира
+                                    input(type='text').textfield.textfield_wide
+                                .contacts__item
+                                    .title.title_required Почтовый индекс
+                                    input(type='text').textfield.textfield_wide
+                                .contacts__item.contacts__item_textarea
+                                    .title Комментарий к заказу
+                                    textarea.textarea
+                            .details__btns.details__btns_both
+                                a.btn.btn_big.btn_mono(href='#') Назад
+                                a.btn.btn_big(href='#') Далее
+
+                        .details__summary #[span Свойства заказа]
+
+                    .order-page__summary.summary.summary_mobile
+                        .summary__table.table
+                            .table__row.summary__head
                                 .table__td
-                                    span.title Наименование
+                                    span Товаров на:
                                 .table__td
-                                    span.title Кол-во
-                                .table__td
-                                    span.title Сумма
+                                    span 897 ₽
                             .table__row
                                 .table__td
-                                    a(href='#') Браслет Dream
+                                    span Доставка:
                                 .table__td
-                                    span 1 шт.
+                                    span 0 ₽
+                            .table__row.summary__total
                                 .table__td
-                                    span 299 ₽
-                            .table__row
+                                    span Итого
                                 .table__td
-                                    a(href='#') Браслет Листок
-                                .table__td
-                                    span 1 шт.
-                                .table__td
-                                    span 299 ₽
-                            .table__row
-                                .table__td
-                                    a(href='#') Браслет Create
-                                .table__td
-                                    span 1 шт.
-                                .table__td
-                                    span 299 ₽
-
-
-
-                        .details__promo.promo
-                            .promo__title.title
-                                span Применить купон
-                            .promo__elem
-                                input.textfield(type='text')
-                                button.promo__btn
-                        .details__btns
-                            .btn.btn_big Далее
-                .details__block
-                    .details__head.head
-                        .head__count 2
-                        .head__name
-                            span Регион доставки
-                        .head__change-link
-                            a(href='#') изменить
-                    .details__content
-                        .title.title_required Местоположение
-                        .details__location.location
-                            .location__input
-                                input.textfield.textfield_wide
-                                a(href='#').location__clear
-                                .location__dropdown
-                                    .location__list
-                                        .location__item #[span Москва], Центр, Россия
-                                        .location__item #[span Москва], Центр, Россия
-                                        .location__item #[span Москва], Центр, Россия
-                            .details__hint
-                                span Выберите свой город в списке
-                        .details__btns.details__btns_both
-                            a.btn.btn_big.btn_mono(href='#') Назад
-                            a.btn.btn_big(href='#') Далее
-
-                .details__block
-                    .details__head.head
-                        .head__count 3
-                        .head__name
-                            span Доставка
-                        .head__change-link
-                            a(href='#') изменить
-                    .details__content
-                        .details__delivery.delivery
-                            .delivery__list
-                                .delivery__item
-                                    input(type='radio' id='delivery-1' name='order-delivery' checked)
-                                    label(for='delivery-1')
-                                        .delivery__top
-                                            .delivery__img(style='background-image: url("static/img/content/delivery-1.jpg")')
-                                            .delivery__price
-                                                span 0 ₽
-                                        .delivery__name
-                                            span Самовывоз со склада
-                                .delivery__item
-                                    input(type='radio' id='delivery-2' name='order-delivery')
-                                    label(for='delivery-2')
-                                        .delivery__top
-                                            .delivery__img(style='background-image: url("static/img/content/delivery-2.jpg")')
-                                            .delivery__price
-                                                span 310 ₽
-                                        .delivery__name
-                                            span СДЭК (доставка курьером)
-                                .delivery__item
-                                    input(type='radio' id='delivery-3' name='order-delivery')
-                                    label(for='delivery-3')
-                                        .delivery__top
-                                            .delivery__img(style='background-image: url("static/img/content/delivery-2.jpg")')
-                                            .delivery__price
-                                                span 170 ₽
-                                        .delivery__name
-                                            span СДЭК (самовывоз)
-
-
-                            .delivery__result.result
-                                .result__name
-                                    span Самовывоз со склада
-                                .result__img
-                                    img(src='static/img/content/delivery-1.jpg' alt='Самовывоз со склада')
-                                .result__hint
-                                    span Вы можете самостоятельно забрать заказ из нашего магазина
-                                .result__price
-                                    span Стоимость 0 ₽
-                                .result__time
-                                    span Срок доставки: от 3 до 10 дней
-
-                        .details__btns.details__btns_both
-                            a.btn.btn_big.btn_mono(href='#') Назад
-                            a.btn.btn_big(href='#') Далее
-
+                                    span 897 ₽
+                    .details__btn
+                        button.btn.btn_big Оформить заказ
             .order-page__summary.summary
                 .summary__table.table
                     .table__row.summary__head
@@ -165,5 +277,6 @@ block content
                             span Итого
                         .table__td
                             span 897 ₽
+
 
 

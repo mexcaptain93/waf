@@ -9,6 +9,8 @@ $(document).ready(function () {
     suggestSlider();
     zoomProductImg();
     productTabs();
+    phoneMask();
+    orderPage();
 });
 
 function indexVideos() {
@@ -278,4 +280,24 @@ function productTabs() {
            }
         });
     }
+}
+
+function phoneMask() {
+
+    $('.js-phone-input').each(function (index, elem) {
+        new IMask(elem, {
+            mask: '+{7}(000)000-00-00'
+        });
+    });
+}
+
+function orderPage() {
+    var details = $('.js-order-details');
+
+    details.find('.details__head').on('click', function (e) {
+        e.preventDefault();
+        $(this).siblings('.details__content').slideToggle();
+        $(this).siblings('.details__summary').toggle();
+    })
+
 }
