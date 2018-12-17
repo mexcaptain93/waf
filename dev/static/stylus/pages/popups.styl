@@ -20,6 +20,10 @@
     width: 390px
     background-color: $white
 
+    @media $small_tablet
+      width: 100%
+      left: 0
+
   &__head
     padding: 0 15px
     background-color: $violet
@@ -185,6 +189,9 @@
         font-weight: 300
         color: $gray_dark
 
+        @media $small_mobile
+          padding: 17px 5px
+
         a:hover
           text-decoration: underline
 
@@ -204,12 +211,20 @@
         font-weight: 400
         color: $gray_light
 
+      &__quantity
+        width: 100px
+        padding-right: 15px
+
+        @media $small_mobile
+          width: 82px
+          padding-right: 0
+
   &__actions
     margin-bottom: 20px
 
   .action
     width: 100%
-    height: auto
+    height: 118px
     margin-bottom: 12px
     display: flex
     justify-content: space-between
@@ -218,13 +233,28 @@
     background-color: $gray_light4
     border: 1px dashed $gray_light
 
+    @media $mobile
+      height: auto
+
     &__img
       width: 60px
+
+      @media $small_tablet
+        width: 110px
+
+      @media $mobile
+        width: 60px
+
+      @media $small_mobile
+        width: 40px
 
     &__text
       flex-grow: 1
       margin-left: 16px
       padding-top: 0
+
+      @media $mobile
+        margin-left: 5px
 
     &__name
       color: $violet_dark
@@ -240,8 +270,30 @@
       width: 36px
       height: 36px
 
+      @media $small_tablet
+        width: 121px
+
+      @media $mobile
+        width: 36px
+
       .btn
         padding-bottom: 7px
+
+        @media $small_tablet
+          display: none
+
+        @media $mobile
+          display: block
+
+        &_tablet
+          display: none
+
+          @media $small_tablet
+            display: block
+
+          @media $mobile
+            display: none
+
 
   &__sum
     display: flex
