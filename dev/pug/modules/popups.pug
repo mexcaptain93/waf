@@ -25,3 +25,147 @@
 //                                span WAF-wAF   //   ИНСТАГРАМ   //    2 НОЯБРЯ 2018
 //
 //
+.cart-popup
+    .cart-popup__overlay
+        .cart-popup__wrap
+            .cart-popup__head
+                .cart-popup__icon-cart
+                .cart-popup__heading
+                    span Корзина
+                .cart-popup__close
+                    a(href='#')
+            .cart-popup__content
+                .cart-popup__message.message
+                    .message__copy &copy;
+                    .message__text
+                        //span Упс! Твоя корзина выглядит немного пустой!
+                        span Добавь товаров для бесплатной доставки на сумму 999 ₽
+
+                .cart-popup__with-products.with-products
+                    .cart-popup__products
+                        .products__list.table
+                            .products__item.table__row
+                                .products__img.table__td
+                                    a(href='product.html')
+                                        img(src='static/img/content/product-1.jpg' alt='Браслет Dream')
+                                .products__name.table__td
+                                    a(href='product.html') Браслет Dream
+                                    .products__price
+                                        span 299 ₽
+                                    .products__delete
+                                        a(href='#') Убрать из корзины
+                                .products__quantity.table__td
+                                    .quantity.quantity_round.js-quantity
+                                        a(href='#').quantity__minus.js-quantity-minus -
+                                        input(type='text' value='1').quantity__value.js-quantity-value.input
+                                        a(href='#').quantity__plus.js-quantity-plus +
+
+                            .products__item.table__row
+                                .products__img.table__td
+                                    a(href='product.html')
+                                        img(src='static/img/content/product-2.jpg' alt='Браслет Листик')
+                                .products__name.table__td
+                                    a(href='product.html') Браслет Листик
+                                    .products__price
+                                        span 299 ₽
+                                    .products__delete
+                                        a(href='#') Убрать из корзины
+                                .products__quantity.table__td
+                                    .quantity.quantity_round.js-quantity
+                                        a(href='#').quantity__minus.js-quantity-minus -
+                                        input(type='text' value='1').quantity__value.js-quantity-value.input
+                                        a(href='#').quantity__plus.js-quantity-plus +
+
+                            .products__item.table__row
+                                .products__img.table__td
+                                    a(href='product.html')
+                                        img(src='static/img/content/product-3.jpg' alt='Браслет Create')
+                                .products__name.table__td
+                                    a(href='product.html') Браслет Create
+                                    .products__price
+                                        span 299 ₽
+                                    .products__delete
+                                        a(href='#') Убрать из корзины
+                                .products__quantity.table__td
+                                    .quantity.quantity_round.js-quantity
+                                        a(href='#').quantity__minus.js-quantity-minus -
+                                        input(type='text' value='1').quantity__value.js-quantity-value.input
+                                        a(href='#').quantity__plus.js-quantity-plus +
+                    .cart-popup__actions
+                        .cart-popup__action.action
+                            .action__img
+                                img(src='static/img/content/cart-action-1.png' alt='Таинственный браслет')
+                            .action__text
+                                .action__name
+                                    span Таинственный браслет
+                                .action__info
+                                    span Только сегодня за 230 ₽
+                            .action__btn
+                                a(href='#').btn +
+                        .cart-popup__action.action
+                            .action__img
+                                img(src='static/img/content/cart-action-2.png' alt='Таинственный значок')
+                            .action__text
+                                .action__name
+                                    span Таинственный значок
+                                .action__info
+                                    span Только сегодня за 170 ₽
+                            .action__btn
+                                a(href='#').btn +
+
+
+
+                    .cart-popup__sum
+                        span Итого:
+                        span 897 ₽
+                    .cart-popup__btns
+                        a(href='cart.html').btn.btn_big.btn_blue Перейти в мою корзину
+                        a(href='order.html').btn.btn_big Оформление заказа
+                    .cart-popup__gift.gift
+                        a(href='#')
+                            .gift__heading
+                                span Бесплатные стикеры к каждому заказу
+                            .gift__img
+                                img(src='static/img/content/gift.jpg' alt='Бесплатные стикеры к каждому заказу')
+                //.cart-popup__empty.empty
+                //    .empty__heading
+                //        span Начни выбор здесь...
+                //    .empty__categories.categories
+                //        ul.categories__list
+                //            li.categories__item
+                //                a(href='#')
+                //                    .categories__img
+                //                        img(src='static/img/content/submenu-1.jpg' alt='Значки')
+                //                    .categories__text
+                //                        span Значки
+                //            li.categories__item
+                //                a(href='#')
+                //                    .categories__img
+                //                        img(src='static/img/content/submenu-2.jpg' alt='Пины')
+                //                    .categories__text
+                //                        span Пины
+                //            li.categories__item
+                //                a(href='#')
+                //                    .categories__img
+                //                        img(src='static/img/content/submenu-3.jpg' alt='Браслеты')
+                //                    .categories__text
+                //                        span Браслеты
+                //            li.categories__item
+                //                a(href='#')
+                //                    .categories__img
+                //                        img(src='static/img/content/submenu-4.jpg' alt='Хиты продаж')
+                //                    .categories__text
+                //                        span Хиты продаж
+                //    .empty__product
+                //        .product.product_new
+                //            .product__image
+                //                a(href='#')
+                //                    img(src='static/img/content/product-2.jpg' alt='Браслет Dream')
+                //            .product__text
+                //                .product__name
+                //                    a(href='#') Браслет Dream
+                //            .product__btn
+                //                a(href='#').btn.btn_mono Купить сейчас
+
+
+

@@ -1,0 +1,285 @@
+.cart-popup
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 11
+
+  &__overlay
+    width: 100%
+    height: 100%
+    position: relative
+    background-color: alpha($black, 0.5)
+
+  &__wrap
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    width: 390px
+    background-color: $white
+
+  &__head
+    padding: 0 15px
+    background-color: $violet
+    height: 41px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__icon-cart
+    width: 16px
+    height: 15px
+    display: block
+    background-image: url('../img/general/i-cart-white.png')
+    background-repeat: no-repeat
+
+  &__heading
+    color: $white
+    text-transform: uppercase
+    font-size: 12px
+    line-height: 21px
+    font-weight: 600
+
+  &__close
+    width: 15px
+
+    a
+      padding: 15px
+      width: 13px
+      height: 13px
+      display: block
+      background-image: url('../img/general/i-close-white.png')
+      background-repeat: no-repeat
+      background-position: center center
+
+  &__content
+    padding: 0 15px 15px
+    height: calc(100% - 41px)
+    overflow: auto
+
+  .message
+    position: relative
+    border-bottom: 1px solid $gray_light5
+    padding: 15px 0
+
+    &__copy
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+
+    &__text
+      padding: 0 60px
+
+      text-align: center
+      color: $red
+      font-size: 12px
+      line-height: 16px
+      font-weight: 600
+
+  .empty
+
+    &__heading
+      padding: 15px 0
+      font-size: 14px
+      line-height: 16px
+      color: $gray_dark
+      text-align: center
+
+    .categories
+      margin-bottom: 55px
+
+      &__list
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+      &__item
+        width: calc(50% - 6px)
+        margin-bottom: 12px
+
+        &:hover
+
+          .categories__text
+            text-decoration: underline
+
+      &__img
+        margin-bottom: 6px
+
+      &__text
+        text-align: center
+
+    .product
+
+      &:hover
+
+        .product__name
+          text-decoration: underline
+
+      &_hit
+        @extend .catalog .product_hit
+
+      &_new
+        @extend .catalog .product_new
+
+      &_discount
+        @extend .catalog .product_discount
+
+      &__image
+        margin-bottom: 14px
+
+        text-align: center
+
+        a::after
+          left: auto!important
+          right: 100% !important
+          top: 0!important
+
+        img
+          height: 102px
+
+      &__name
+        margin-bottom: 17px
+
+        text-align: center
+        font-size: 16px
+        line-height: 21px
+        color: #161616
+        letter-spacing: 0
+        font-weight: 300
+
+      &__btn
+        text-align: center
+
+        .btn
+          width: 205px
+          padding: 12px 10px 12px
+
+
+
+
+
+  .with-products
+
+    .table
+
+      &__td
+        height: 104px
+        border-bottom: 1px solid $gray_light5
+        vertical-align: middle
+
+    .products
+      margin-bottom: 20px
+
+      &__img
+        width: 65px
+        padding: 17px 10px
+        text-align: center
+
+      &__name
+        padding: 17px 10px
+        font-size: 14px
+        line-height: 21px
+        font-weight: 300
+        color: $gray_dark
+
+        a:hover
+          text-decoration: underline
+
+      &__price
+        margin-top: -3px
+
+        font-size: 13px
+        line-height: 21px
+        font-weight: 300
+        color: $gray_dark2
+
+      &__delete
+        margin-top: -1px
+
+        font-size: 12px
+        line-height: 21px
+        font-weight: 400
+        color: $gray_light
+
+  &__actions
+    margin-bottom: 20px
+
+  .action
+    width: 100%
+    height: auto
+    margin-bottom: 12px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 14px 14px
+    background-color: $gray_light4
+    border: 1px dashed $gray_light
+
+    &__img
+      width: 60px
+
+    &__text
+      flex-grow: 1
+      margin-left: 16px
+      padding-top: 0
+
+    &__name
+      color: $violet_dark
+      font-size: 14px
+      line-height: 21px
+
+    &__info
+      color: $pink2
+      font-size: 14px
+      font-weight: 600
+
+    &__btn
+      width: 36px
+      height: 36px
+
+      .btn
+        padding-bottom: 7px
+
+  &__sum
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+
+    font-size: 13px
+    line-height: 21px
+    color: $gray_dark
+    font-weight: 600
+    text-transform: uppercase
+
+  &__btns
+    margin-bottom: 25px
+
+    .btn
+      width: 100%
+      max-width: none
+      margin-bottom: 10px
+
+      &:last-child
+        margin-bottom: 0
+
+  .gift
+
+    &__heading
+      margin-bottom: 16px
+
+      text-align: center
+      font-weight: 300
+      font-size: 14px
+      line-height: 16px
+      color: $gray_dark
+
+    &__img
+      text-align: center
+
+
+
+
+
