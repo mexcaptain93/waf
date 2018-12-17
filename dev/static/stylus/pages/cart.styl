@@ -38,103 +38,103 @@
       .table__td
         border-bottom: 1px solid $gray_light3
 
-  .table
+    .table
 
-    &__td
-      height: 160px
+      &__td
+        height: 160px
 
-      border-top: 1px solid $gray_light3
-      vertical-align: middle
+        border-top: 1px solid $gray_light3
+        vertical-align: middle
 
-      @media $tablet
-        height: 157px
+        @media $tablet
+          height: 157px
+
+        @media $mobile
+          height: 104px
+
+    &__img
+      width: 168px
+      padding: 17px 10px
+      text-align: center
 
       @media $mobile
-        height: 104px
+        width: 80px
 
-  &__img
-    width: 168px
-    padding: 17px 10px
-    text-align: center
+      @media $small_mobile
+        width: 65px
 
-    @media $mobile
-      width: 80px
-
-    @media $small_mobile
-      width: 65px
-
-  &__name
-    padding: 17px 10px
-    font-size: 18px
-    line-height: 21px
-    font-weight: 300
-    color: $gray_dark
-
-    @media $mobile
-      font-size: 14px
-
-    a:hover
-      text-decoration: underline
-
-  &__price
-    width: 196px
-    padding: 26px 10px
-
-    font-size: 18px
-    line-height: 21px
-    color: $gray_dark2
-
-    @media $mobile
-      display: none
-
-  &__quantity
-    width: 237px
-
-    @media $mobile
-      width: 85px
-      padding-right: 15px
-
-
-  &__delete
-    width: 47px
-    padding-left: 17px
-    padding-right: 17px
-    text-align: right
-
-    @media $mobile
-      display: none
-
-    a
-      display: block
-      width: 13px
-      height: 13px
-      background-image: url('../img/general/i-close.png')
-      background-repeat: no-repeat
-
-  &__mobile-price
-    display: none
-
-    @media $mobile
-      display: block
-      margin-top: -3px
-
-      font-size: 13px
+    &__name
+      padding: 17px 10px
+      font-size: 18px
       line-height: 21px
       font-weight: 300
+      color: $gray_dark
+
+      @media $mobile
+        font-size: 14px
+
+      a:hover
+        text-decoration: underline
+
+    &__price
+      width: 196px
+      padding: 26px 10px
+
+      font-size: 18px
+      line-height: 21px
       color: $gray_dark2
 
+      @media $mobile
+        display: none
 
-  &__mobile-delete
-    display: none
+    &__quantity
+      width: 237px
 
-    @media $mobile
-      display: block
-      margin-top: -1px
+      @media $mobile
+        width: 85px
+        padding-right: 15px
 
-      font-size: 12px
-      line-height: 21px
-      font-weight: 400
-      color: $gray_light
+
+    &__delete
+      width: 47px
+      padding-left: 17px
+      padding-right: 17px
+      text-align: right
+
+      @media $mobile
+        display: none
+
+      a
+        display: block
+        width: 13px
+        height: 13px
+        background-image: url('../img/general/i-close.png')
+        background-repeat: no-repeat
+
+    &__mobile-price
+      display: none
+
+      @media $mobile
+        display: block
+        margin-top: -3px
+
+        font-size: 13px
+        line-height: 21px
+        font-weight: 300
+        color: $gray_dark2
+
+
+    &__mobile-delete
+      display: none
+
+      @media $mobile
+        display: block
+        margin-top: -1px
+
+        font-size: 12px
+        line-height: 21px
+        font-weight: 400
+        color: $gray_light
 
   &__actions-summary
     display: flex
