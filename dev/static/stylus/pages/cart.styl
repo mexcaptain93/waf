@@ -1,0 +1,180 @@
+.cart
+
+  .like-h1
+    margin-bottom: 9px
+
+  .like-h2
+    margin-bottom: 16px
+
+    font-size: 20px
+
+  &__wrap
+    width: 1260px
+
+  &__free-hint
+    margin-bottom: 32px
+
+    text-align: center
+    font-weight: 600
+    text-transform: uppercase
+    font-size: 13px
+
+  &__list
+    margin-bottom: 40px
+
+
+  &__item
+
+    &:last-child
+
+      .table__td
+        border-bottom: 1px solid $gray_light3
+
+  .table
+
+    &__td
+      height: 160px
+
+      border-top: 1px solid $gray_light3
+      vertical-align: middle
+
+  &__img
+    width: 168px
+    padding: 26px 10px
+    text-align: center
+
+  &__name
+    padding: 26px 10px
+    font-size: 18px
+    line-height: 21px
+    font-weight: 300
+    color: $gray_dark
+
+    &:hover
+      text-decoration: underline
+
+  &__price
+    width: 196px
+    padding: 26px 10px
+
+    font-size: 18px
+    line-height: 21px
+    color: $gray_dark2
+
+  &__quantity
+    width: 237px
+
+
+  &__delete
+    width: 47px
+    padding-left: 17px
+    padding-right: 17px
+    text-align: right
+
+    a
+      display: block
+      width: 13px
+      height: 13px
+      background-image: url('../img/general/i-close.png')
+      background-repeat: no-repeat
+
+
+
+  &__actions-summary
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 67px
+
+    .action
+      width: 633px
+      height: 101px
+      margin-bottom: 12px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 14px 30px
+      background-color: $gray_light4
+      border: 1px dashed $gray_light
+
+      &:last-child
+        margin-bottom: 0
+
+      &__text
+        width: 285px
+        padding-top: 5px
+
+      &__name
+        color: $violet_dark
+        font-size: 21px
+        line-height: 21px
+
+      &__info
+        color: $pink2
+        font-size: 22px
+        font-weight: 600
+
+      &__btn
+        width: 116px
+        padding-top: 5px
+
+        .btn
+          padding-bottom: 7px
+
+    .summary
+      margin-top: -4px
+
+      text-align: right
+
+      &__text
+        margin-bottom: 4px
+
+        font-size: 18px
+        text-transform: uppercase
+        color: $gray_dark
+
+      &__sum
+        margin-bottom: 14px
+
+        font-size: 34px
+
+      &__btn
+        width: 312px
+
+        .btn
+          max-width: 100%
+
+  .advantages
+    @extend .product .advantages
+
+    margin-bottom: 51px
+
+    .like-h2
+      font-size: 24px
+
+  .suggest
+    @extend .product .suggest
+
+    margin-bottom: 28px
+
+    &__list
+      flex-wrap: wrap
+      justify-content: flex-start
+
+    &__item
+      width: 20%
+      padding: 0 5px
+      margin-bottom: 32px
+
+    .product
+
+      .product
+
+        &__image
+          height: 210px
+
+  &__instagram
+
+    .like-h2
+      font-size: 24px
+      margin-bottom: 22px

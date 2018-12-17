@@ -1,0 +1,317 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Корзина | Waf-Waf'
+    - var pageClass = 'cart'
+
+block script
+
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item
+                a(href='/') Главная
+            li.breadcrumbs__item
+                a(href='catalog.html') Каталог
+            li.breadcrumbs__item.breadcrumbs__item_active
+                a(href='cart.html') Корзина
+
+    .cart__wrap.container
+        h1.like-h1 Корзина
+        h2.like-h2 Добавьте товаров для бесплатной доставки на сумму 999 ₽
+        .cart__free-hint
+            span Бесплатная доставка при заказе на сумму свыше 2 500 ₽
+
+    .cart__wrap.container
+        .cart__list.table
+            .cart__item.table__row
+                .cart__img.table__td
+                    a(href='product.html')
+                        img(src='static/img/content/product-1.jpg' alt='Браслет Dream')
+                .cart__name.table__td
+                    a(href='product.html') Браслет Dream
+                .cart__quantity.table__td
+                    .quantity.quantity_round.js-quantity
+                        a(href='#').quantity__minus.js-quantity-minus -
+                        input(type='text' value='1').quantity__value.js-quantity-value.input
+                        a(href='#').quantity__plus.js-quantity-plus +
+                .cart__price.table__td
+                    span 299 ₽
+                .cart__delete.table__td
+                    a(href='#')
+            .cart__item.table__row
+                .cart__img.table__td
+                    a(href='product.html')
+                        img(src='static/img/content/product-2.jpg' alt='Браслет Листок')
+                .cart__name.table__td
+                    a(href='product.html') Браслет Листок
+                .cart__quantity.table__td
+                    .quantity.quantity_round.js-quantity
+                        a(href='#').quantity__minus.js-quantity-minus -
+                        input(type='text' value='1').quantity__value.js-quantity-value.input
+                        a(href='#').quantity__plus.js-quantity-plus +
+                .cart__price.table__td
+                    span 299 ₽
+                .cart__delete.table__td
+                    a(href='#')
+            .cart__item.table__row
+                .cart__img.table__td
+                    a(href='product.html')
+                        img(src='static/img/content/product-3.jpg' alt='Браслет Create')
+                .cart__name.table__td
+                    a(href='product.html') Браслет Create
+                .cart__quantity.table__td
+                    .quantity.quantity_round.js-quantity
+                        a(href='#').quantity__minus.js-quantity-minus -
+                        input(type='text' value='1').quantity__value.js-quantity-value.input
+                        a(href='#').quantity__plus.js-quantity-plus +
+                .cart__price.table__td
+                    span 299 ₽
+                .cart__delete.table__td
+                    a(href='#')
+        .cart__actions-summary
+            .cart__actions
+                .cart__action.action
+                    .action__img
+                        img(src='static/img/content/cart-action-1.png' alt='Таинственный браслет')
+                    .action__text
+                        .action__name
+                            span Таинственный браслет
+                        .action__info
+                            span Только сегодня за 230 ₽
+                    .action__btn
+                        a(href='#').btn Добавить
+                .cart__action.action
+                    .action__img
+                        img(src='static/img/content/cart-action-2.png' alt='Таинственный значок')
+                    .action__text
+                        .action__name
+                            span Таинственный значок
+                        .action__info
+                            span Только сегодня за 170 ₽
+                    .action__btn
+                        a(href='#').btn Добавить
+            .cart__summary.summary
+                .summary__text
+                    span Итого
+                .summary__sum
+                    span 897 ₽
+                .summary__btn
+                    a.btn.btn_big(href='order.html') Оформление заказа
+
+    .cart__wrap.container
+        .cart__suggest.suggest
+            .container
+                .suggest__heading
+                    .container
+                        .like-h2 С этим товаром также покупают
+                .suggest__wrap
+                    .suggest__arrow.suggest__arrow_prev.suggest__arrow_inactive.js-suggest-slider-prev
+                    .suggest__arrow.suggest__arrow_next.js-suggest-slider-next
+                    .suggest__list.js-suggest-slider
+                        .suggest__item
+                            .product
+                                .product__image
+                                    a(href='#')
+                                        img(src='static/img/content/product-1.jpg' alt='Браслет Dream')
+                                .product__text
+                                    .product__name
+                                        a(href='#') Браслет Dream
+                                    .product__price
+                                        span 299 ₽
+
+                        .suggest__item
+                            .product
+                                .product__image
+                                    a(href='#')
+                                        img(src='static/img/content/product-2.jpg' alt='Браслет Dream')
+                                .product__text
+                                    .product__name
+                                        a(href='#') Браслет Dream
+                                    .product__price
+                                        span 299 ₽
+
+                        .suggest__item
+                            .product
+                                .product__image
+                                    a(href='#')
+                                        img(src='static/img/content/product-1.jpg' alt='Браслет Dream')
+                                .product__text
+                                    .product__name
+                                        a(href='#') Браслет Dream
+                                    .product__price
+                                        span 299 ₽
+
+                        .suggest__item
+                            .product
+                                .product__image
+                                    a(href='#')
+                                        img(src='static/img/content/product-2.jpg' alt='Браслет Dream')
+                                .product__text
+                                    .product__name
+                                        a(href='#') Браслет Dream
+                                    .product__price
+                                        span 299 ₽
+
+
+                        .suggest__item
+                            .product
+                                .product__image
+                                    a(href='#')
+                                        img(src='static/img/content/product-2.jpg' alt='Браслет Dream')
+                                .product__text
+                                    .product__name
+                                        a(href='#') Браслет Dream
+                                    .product__price
+                                        span 299 ₽
+
+
+                        .suggest__item
+                            .product
+                                .product__image
+                                    a(href='#')
+                                        img(src='static/img/content/product-1.jpg' alt='Браслет Dream')
+                                .product__text
+                                    .product__name
+                                        a(href='#') Браслет Dream
+                                    .product__price
+                                        span 299 ₽
+
+                        .suggest__item
+                            .product
+                                .product__image
+                                    a(href='#')
+                                        img(src='static/img/content/product-2.jpg' alt='Браслет Dream')
+                                .product__text
+                                    .product__name
+                                        a(href='#') Браслет Dream
+                                    .product__price
+                                        span 299 ₽
+
+                        .suggest__item
+                            .product
+                                .product__image
+                                    a(href='#')
+                                        img(src='static/img/content/product-1.jpg' alt='Браслет Dream')
+                                .product__text
+                                    .product__name
+                                        a(href='#') Браслет Dream
+                                    .product__price
+                                        span 299 ₽
+
+                        .suggest__item
+                            .product
+                                .product__image
+                                    a(href='#')
+                                        img(src='static/img/content/product-2.jpg' alt='Браслет Dream')
+                                .product__text
+                                    .product__name
+                                        a(href='#') Браслет Dream
+                                    .product__price
+                                        span 299 ₽
+
+
+                        .suggest__item
+                            .product
+                                .product__image
+                                    a(href='#')
+                                        img(src='static/img/content/product-2.jpg' alt='Браслет Dream')
+                                .product__text
+                                    .product__name
+                                        a(href='#') Браслет Dream
+                                    .product__price
+                                        span 299 ₽
+
+
+    .cart__advantages.advantages
+        .advantages__heading
+            .container
+                .like-h2 Почему покупают Waf-Waf
+        .advantages__list
+            a(href='#').advantages__item
+                .advantages__image
+                    img(src='static/img/content/advantage-1.png' alt='Преимущество под номером 1')
+                .advantages__name
+                    span Преимущество под номером 1
+            a(href='#').advantages__item
+                .advantages__image
+                    img(src='static/img/content/advantage-2.png' alt='Преимущество под номером 2')
+                .advantages__name
+                    span Преимущество под номером 2
+            a(href='#').advantages__item
+                .advantages__image
+                    img(src='static/img/content/advantage-3.png' alt='Преимущество под номером 3')
+                .advantages__name
+                    span Преимущество под номером 3
+            a(href='#').advantages__item
+                .advantages__image
+                    img(src='static/img/content/advantage-4.png' alt='Преимущество под номером 4')
+                .advantages__name
+                    span Преимущество под номером 4
+            a(href='#').advantages__item
+                .advantages__image
+                    img(src='static/img/content/advantage-1.png' alt='Преимущество под номером 1')
+                .advantages__name
+                    span Преимущество под номером 5
+    .cart__instagram
+        .like-h2 Инста Шоппинг
+        .instagram
+            .container
+                .instagram__list
+                    a.instagram__item(href='#' style='background-image: url("static/img/content/insta-1.jpg")')
+                        .instagram__overlay
+                        .instagram__text
+                            .instagram__icon
+                            .instagram__btn.button
+                                span Купить look
+                    a.instagram__item(href='#' style='background-image: url("static/img/content/insta-2.jpg")')
+                        .instagram__overlay
+                        .instagram__text
+                            .instagram__icon
+                            .instagram__btn.button
+                                span Купить look
+                    a.instagram__item(href='#' style='background-image: url("static/img/content/insta-3.jpg")')
+                        .instagram__overlay
+                        .instagram__text
+                            .instagram__icon
+                            .instagram__btn.button
+                                span Купить look
+                    a.instagram__item(href='#' style='background-image: url("static/img/content/insta-4.jpg")')
+                        .instagram__overlay
+                        .instagram__text
+                            .instagram__icon
+                            .instagram__btn.button
+                                span Купить look
+                    a.instagram__item(href='#' style='background-image: url("static/img/content/insta-5.jpg")')
+                        .instagram__overlay
+                        .instagram__text
+                            .instagram__icon
+                            .instagram__btn.button
+                                span Купить look
+                    a.instagram__item(href='#' style='background-image: url("static/img/content/insta-6.jpg")')
+                        .instagram__overlay
+                        .instagram__text
+                            .instagram__icon
+                            .instagram__btn.button
+                                span Купить look
+                    a.instagram__item(href='#' style='background-image: url("static/img/content/insta-7.jpg")')
+                        .instagram__overlay
+                        .instagram__text
+                            .instagram__icon
+                            .instagram__btn.button
+                                span Купить look
+                    a.instagram__item(href='#' style='background-image: url("static/img/content/insta-8.jpg")')
+                        .instagram__overlay
+                        .instagram__text
+                            .instagram__icon
+                            .instagram__btn.button
+                                span Купить look
+
+
+
+
+
+
+
+
