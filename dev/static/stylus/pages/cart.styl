@@ -8,8 +8,13 @@
 
     font-size: 20px
 
+    @media $tablet
+      max-width: 580px
+      margin: 0 auto 18px
+
   &__wrap
     width: 1260px
+    max-width: 100%
 
   &__free-hint
     margin-bottom: 32px
@@ -18,6 +23,9 @@
     font-weight: 600
     text-transform: uppercase
     font-size: 13px
+
+    @media $tablet
+      margin-bottom: 25px
 
   &__list
     margin-bottom: 40px
@@ -38,19 +46,34 @@
       border-top: 1px solid $gray_light3
       vertical-align: middle
 
+      @media $tablet
+        height: 157px
+
+      @media $mobile
+        height: 104px
+
   &__img
     width: 168px
-    padding: 26px 10px
+    padding: 17px 10px
     text-align: center
 
+    @media $mobile
+      width: 80px
+
+    @media $small_mobile
+      width: 65px
+
   &__name
-    padding: 26px 10px
+    padding: 17px 10px
     font-size: 18px
     line-height: 21px
     font-weight: 300
     color: $gray_dark
 
-    &:hover
+    @media $mobile
+      font-size: 14px
+
+    a:hover
       text-decoration: underline
 
   &__price
@@ -61,8 +84,15 @@
     line-height: 21px
     color: $gray_dark2
 
+    @media $mobile
+      display: none
+
   &__quantity
     width: 237px
+
+    @media $mobile
+      width: 85px
+      padding-right: 15px
 
 
   &__delete
@@ -71,6 +101,9 @@
     padding-right: 17px
     text-align: right
 
+    @media $mobile
+      display: none
+
     a
       display: block
       width: 13px
@@ -78,13 +111,47 @@
       background-image: url('../img/general/i-close.png')
       background-repeat: no-repeat
 
+  &__mobile-price
+    display: none
 
+    @media $mobile
+      display: block
+      margin-top: -3px
+
+      font-size: 13px
+      line-height: 21px
+      font-weight: 300
+      color: $gray_dark2
+
+
+  &__mobile-delete
+    display: none
+
+    @media $mobile
+      display: block
+      margin-top: -1px
+
+      font-size: 12px
+      line-height: 21px
+      font-weight: 400
+      color: $gray_light
 
   &__actions-summary
     display: flex
     justify-content: space-between
     align-items: flex-start
     margin-bottom: 67px
+
+    @media $tablet
+
+      flex-direction: column
+
+  &__actions
+
+    @media $tablet
+      width: 100%
+      margin-bottom: 36px
+
 
     .action
       width: 633px
@@ -97,6 +164,13 @@
       background-color: $gray_light4
       border: 1px dashed $gray_light
 
+      @media $tablet
+        width: 100%
+        height: auto
+
+      @media $mobile
+        padding: 14px 14px
+
       &:last-child
         margin-bottom: 0
 
@@ -104,45 +178,71 @@
         width: 285px
         padding-top: 5px
 
+        @media $tablet
+          flex-grow: 1
+          margin-left: 33px
+          padding-top: 0
+
+        @media $mobile
+          margin-left: 16px
+
       &__name
         color: $violet_dark
         font-size: 21px
         line-height: 21px
+
+        @media $mobile
+          font-size: 16px
 
       &__info
         color: $pink2
         font-size: 22px
         font-weight: 600
 
+        @media $mobile
+          font-size: 16px
+
       &__btn
         width: 116px
         padding-top: 5px
 
+        @media $mobile
+          padding-top: 0
+
         .btn
           padding-bottom: 7px
 
-    .summary
-      margin-top: -4px
 
-      text-align: right
+  .summary
+    margin-top: -4px
 
-      &__text
-        margin-bottom: 4px
+    text-align: right
 
-        font-size: 18px
-        text-transform: uppercase
-        color: $gray_dark
+    @media $tablet
+      width: 100%
+      text-align: center
 
-      &__sum
-        margin-bottom: 14px
+    &__text
+      margin-bottom: 4px
 
-        font-size: 34px
+      font-size: 18px
+      text-transform: uppercase
+      color: $gray_dark
 
-      &__btn
-        width: 312px
+    &__sum
+      margin-bottom: 14px
 
-        .btn
-          max-width: 100%
+      font-size: 34px
+
+    &__btn
+      width: 312px
+      margin: 0 auto
+
+      @media $mobile
+        width: 100%
+
+      .btn
+        max-width: 100%
 
   .advantages
     @extend .product .advantages
@@ -157,9 +257,16 @@
 
     margin-bottom: 28px
 
+    @media $mobile
+      display: none
+
     &__list
       flex-wrap: wrap
       justify-content: flex-start
+
+      @media $tablet
+        width: 100%
+        max-width: 100%
 
     &__item
       width: 20%
@@ -172,6 +279,15 @@
 
         &__image
           height: 210px
+
+          @media $small_tablet
+            height: 150px
+
+          a
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
 
   &__instagram
 

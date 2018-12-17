@@ -31,6 +31,10 @@ block content
                         img(src='static/img/content/product-1.jpg' alt='Браслет Dream')
                 .cart__name.table__td
                     a(href='product.html') Браслет Dream
+                    .cart__mobile-price
+                        span 299 ₽
+                    .cart__mobile-delete
+                        a(href='#') Убрать из корзины
                 .cart__quantity.table__td
                     .quantity.quantity_round.js-quantity
                         a(href='#').quantity__minus.js-quantity-minus -
@@ -46,6 +50,10 @@ block content
                         img(src='static/img/content/product-2.jpg' alt='Браслет Листок')
                 .cart__name.table__td
                     a(href='product.html') Браслет Листок
+                    .cart__mobile-price
+                        span 299 ₽
+                    .cart__mobile-delete
+                        a(href='#') Убрать из корзины
                 .cart__quantity.table__td
                     .quantity.quantity_round.js-quantity
                         a(href='#').quantity__minus.js-quantity-minus -
@@ -61,6 +69,10 @@ block content
                         img(src='static/img/content/product-3.jpg' alt='Браслет Create')
                 .cart__name.table__td
                     a(href='product.html') Браслет Create
+                    .cart__mobile-price
+                        span 299 ₽
+                    .cart__mobile-delete
+                        a(href='#') Убрать из корзины
                 .cart__quantity.table__td
                     .quantity.quantity_round.js-quantity
                         a(href='#').quantity__minus.js-quantity-minus -
@@ -107,9 +119,7 @@ block content
                     .container
                         .like-h2 С этим товаром также покупают
                 .suggest__wrap
-                    .suggest__arrow.suggest__arrow_prev.suggest__arrow_inactive.js-suggest-slider-prev
-                    .suggest__arrow.suggest__arrow_next.js-suggest-slider-next
-                    .suggest__list.js-suggest-slider
+                    .suggest__list
                         .suggest__item
                             .product
                                 .product__image
