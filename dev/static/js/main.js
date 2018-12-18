@@ -13,6 +13,7 @@ $(document).ready(function () {
     orderPage();
     popupCart();
     whereBuyMap();
+    selects();
 });
 var places = [];
 function indexVideos() {
@@ -356,13 +357,25 @@ function whereBuyMap() {
                 myMap.geoObjects.add(clusterer)
                 if (dataMap.items.length > 0) {
                     dataMap.items.forEach(function (item) {
+                        var custom_html = '';
+                        if (item.custom) {
+                            custom_html = '<div class=\"shop__custom\">' + item.custom + '</div>';
+                        }
+                        var hours = '';
+                        if (item.hours) {
+                            hours = item.hours;
+                        }
+
                         myPlacemark = new ymaps.Placemark(item.coordinates,
+
+
+
 
                             {balloonContentBody: "<div class=\"shop\">\n" +
                                     "                  <div class=\"shop__info\">\n" +
                                     "                    <div class=\"shop__name\"><span>" + item.name + "</span></div>\n" +
-                                    "                    <div class=\"shop__address\"><span>" + item.address + "</span></div>\n" +
-                                    "                    <div class=\"shop__phone\">Тел: " + item.phone + "</div>" +
+                                    custom_html + "                    <div class=\"shop__address\"><span>" + item.address + "</span></div>\n" +
+                                    hours + "                    <div class=\"shop__phone\">Тел: " + item.phone + "</div>" +
                                     "                  </div>\n" +
                                     "                </div>"},
 
@@ -393,4 +406,10 @@ function whereBuyMap() {
         }
     });
 
+}
+
+function selects() {
+    $('.js-select').select2({
+        minimumResultsForSearch: -1
+    });
 }

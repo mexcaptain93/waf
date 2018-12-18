@@ -1,0 +1,182 @@
+extends ../layout/main
+
+
+block variables
+    - var title = 'Друзья | Waf-Waf'
+    - var pageClass = 'contacts'
+
+block script
+    script(src='//api-maps.yandex.ru/2.1/?lang=ru_RU')
+    script(src='static/js/select2.min.js')
+
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item
+                a(href='/') Главная
+            li.breadcrumbs__item.breadcrumbs__item_active
+                a(href='/contacts.html') Друзья Waf-Waf
+
+    .container
+        h1.like-h1 Друзья #[nobr Waf-Waf]
+
+    .contacts__content
+        .container
+            .contacts__left.contacts__left_friends
+                .contacts__search.search
+                    .search__title
+                        span Выберите город
+                    .search__select
+                        select.js-select.select
+                            option Москва
+                            option Санкт-Петербург
+                .contacts__list
+                    .contacts__item.shop
+                        .shop__image
+                            img(src='static/img/content/friends-shop-1.jpg' alt='Hungry bags')
+                        .shop__info
+                            .shop__name
+                                span Hungry bags
+                            .shop__address
+                                span Санкт-Петербург, Московский пр. 20А
+                            .shop__hours.hours
+                                .hours__item Ежедневно: #[span с 11:00 до 21:30]
+                            .shop__phone
+                                a(href='tel:+78005553535') 8 800 555-35-35
+                            .shop__show
+                                a(href='#' data-shop-id='1').js-map-show-shop Посмотреть на карте
+                    .contacts__item.shop
+                        .shop__image
+
+                        .shop__info
+                            .shop__name
+                                span 2A CONCEPT. COFFEE, CAKE & SHOP
+                            .shop__address
+                                span Санкт-Петербург, Гороховая ул, 49
+                            .shop__phone Тел #[a(href='tel:+78005553535') 8 800 555-35-35]
+                            .shop__show
+                                a(href='#' data-shop-id='2').js-map-show-shop Посмотреть на карте
+                    .contacts__item.shop
+                        .shop__image
+
+                        .shop__info
+                            .shop__name
+                                span Sweetside
+                            .shop__address
+                                span ул. Васильевская, 3
+                            .shop__hours.hours
+                                .hours__item Ежедневно: #[span с 12:00 до 21:00]
+                            .shop__phone Тел #[a(href='tel:+78005553535') 8 800 555-35-35]
+                            .shop__show
+                                a(href='#').js-map-show-shop Посмотреть на карте
+                    .contacts__item.shop
+                        .shop__image
+                            img(src='static/img/content/friends-shop-1.jpg' alt='Hungry bags')
+                        .shop__info
+                            .shop__name
+                                span Hungry bags
+                            .shop__address
+                                span Санкт-Петербург, Московский пр. 20А
+                            .shop__hours.hours
+                                .hours__item Ежедневно: #[span с 11:00 до 21:30]
+                            .shop__phone
+                                a(href='tel:+78005553535') 8 800 555-35-35
+                            .shop__show
+                                a(href='#' data-shop-id='1').js-map-show-shop Посмотреть на карте
+                    .contacts__item.shop
+                        .shop__image
+
+                        .shop__info
+                            .shop__name
+                                span 2A CONCEPT. COFFEE, CAKE & SHOP
+                            .shop__address
+                                span Санкт-Петербург, Гороховая ул, 49
+                            .shop__phone Тел #[a(href='tel:+78005553535') 8 800 555-35-35]
+                            .shop__show
+                                a(href='#' data-shop-id='2').js-map-show-shop Посмотреть на карте
+                    .contacts__item.shop
+                        .shop__image
+
+                        .shop__info
+                            .shop__name
+                                span Sweetside
+                            .shop__address
+                                span ул. Васильевская, 3
+                            .shop__hours.hours
+                                .hours__item Ежедневно: #[span с 12:00 до 21:00]
+                            .shop__phone Тел #[a(href='tel:+78005553535') 8 800 555-35-35]
+                            .shop__show
+                                a(href='#').js-map-show-shop Посмотреть на карте
+                    .contacts__item.shop
+                        .shop__image
+                            img(src='static/img/content/friends-shop-1.jpg' alt='Hungry bags')
+                        .shop__info
+                            .shop__name
+                                span Hungry bags
+                            .shop__address
+                                span Санкт-Петербург, Московский пр. 20А
+                            .shop__hours.hours
+                                .hours__item Ежедневно: #[span с 11:00 до 21:30]
+                            .shop__phone
+                                a(href='tel:+78005553535') 8 800 555-35-35
+                            .shop__show
+                                a(href='#' data-shop-id='1').js-map-show-shop Посмотреть на карте
+                    .contacts__item.shop
+                        .shop__image
+
+                        .shop__info
+                            .shop__name
+                                span 2A CONCEPT. COFFEE, CAKE & SHOP
+                            .shop__address
+                                span Санкт-Петербург, Гороховая ул, 49
+                            .shop__phone Тел #[a(href='tel:+78005553535') 8 800 555-35-35]
+                            .shop__show
+                                a(href='#' data-shop-id='2').js-map-show-shop Посмотреть на карте
+                    .contacts__item.shop
+                        .shop__image
+
+                        .shop__info
+                            .shop__name
+                                span Sweetside
+                            .shop__address
+                                span ул. Васильевская, 3
+                            .shop__hours.hours
+                                .hours__item Ежедневно: #[span с 12:00 до 21:00]
+                            .shop__phone Тел #[a(href='tel:+78005553535') 8 800 555-35-35]
+                            .shop__show
+                                a(href='#').js-map-show-shop Посмотреть на карте
+            .contacts__map
+                .contacts__map-elem#map-wherebuy
+
+                script.
+                    var dataMap = {
+                        "center": [59.930150, 30.374750],
+                        "zoom": "12",
+                        "items": [
+                            {
+                                "id": 1,
+                                "coordinates": [59.930150, 30.374750],
+                                "name": "Hungry bags",
+                                "address": "ул. Васильевская, 3",
+                                "phone": "<a href='+78005553535'>8 800 555-35-35</a>",
+                                "hours": "<div class=\"shop__hours hours\"><div class=\"hours__item\">Ежедневно: <span>с 11:00 до 21:30</span></div></div>",
+                                "custom": "Каждый покупатель со значком waf-waf получает скидку 10%."
+
+                            },
+                            {
+                                "id": 2,
+                                "coordinates": [59.939150, 30.304750],
+                                "name": "Мир кино",
+                                "address": "Москва, ул. Маросейка 6/8 (м. Китай-Город) Москва, ул. Маросейка 6/8 (м. Китай-Город)",
+                                "phone": "<a href='+78005553535'>8 800 555-35-35</a>"
+
+                            }
+                        ]
+                    }
+
+
+
+
+
+
