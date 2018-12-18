@@ -197,6 +197,18 @@
         font-weight: 300
         color: $gray_dark
 
+        & > a::after
+          display: inline-block
+          content: ''
+          background-image: url('../img/general/copyright.png')
+          background-repeat: no-repeat
+          background-size: contain
+          width: 14px
+          height: 14px
+          position: relative
+          top: -2px
+          left: 2px
+
         @media $small_mobile
           padding: 17px 5px
 

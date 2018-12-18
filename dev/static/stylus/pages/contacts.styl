@@ -1,0 +1,202 @@
+.contacts
+
+  .like-h1
+    margin-bottom: 33px
+
+    @media $small_tablet
+      margin-bottom: 31px
+
+  &__content
+    border-top: 1px solid $gray_light4
+
+    .container
+      width: 1260px
+      display: flex
+      align-items: flex-start
+
+      @media $small_desktop
+        width: 100%
+        padding: 0
+
+  &__left
+    width: 485px
+    height: 616px
+    overflow: auto
+    padding: 20px 42px 20px 6px
+
+    @media $small_desktop
+      width: 50%
+      padding-left: 12px
+      padding-right: 20px
+
+    @media $small_tablet
+      width: 100%
+      height: auto
+      overflow: visible
+
+    @media $mobile
+      padding-right: 12px
+
+  &__search
+    margin-bottom: 26px
+
+  .search
+
+    &__title
+      margin-bottom: 12px
+
+      font-size: 14px
+      line-height: 21px
+      color: $gray_dark2
+
+    &__input
+      @extend .order-page .details .location__input
+
+      margin-bottom: 16px
+
+      &::before
+
+        @media $tablet
+          top: 14px
+          left: 12px
+
+
+
+      .textfield
+        padding: 12px 17px 11px 45px
+
+        @media $tablet
+          padding-left: 36px
+
+        &:focus
+
+          & ~ .search__dropdown
+            display: block
+
+    &__dropdown
+      @extend .order-page .details .location__dropdown
+
+    &__clear
+      @extend .order-page .details .location__clear
+
+    &__item
+      @extend .order-page .details .location__item
+
+      padding-left: 35px
+
+    &__btn
+
+      .btn
+        width: 189px
+
+        @media $tablet
+          max-width 189px
+
+
+  &__item
+    display: flex
+    align-content: flex-start
+    padding-bottom: 16px
+    margin-bottom: 20px
+    border-bottom: 1px solid $gray_light4
+
+    @media $tablet
+      padding-bottom: 15px
+      margin-bottom: 19px
+
+    &:last-child
+      margin-bottom: 0
+
+  .shop
+    font-family: mainFont !important
+
+    &__image
+      width: 125px
+      flex-shrink: 0
+      margin-right: 21px
+
+      @media $tablet
+        width: 32px
+        margin-right: 16px
+
+      &:empty
+        margin-right: 0
+        width: 0
+
+    &__name
+      margin-bottom: 6px
+
+      font-size: 21px
+      line-height: 21px
+      letter-spacing: 0
+      color: $gray_dark2
+      font-weight: 600
+      text-transform: uppercase
+
+    &__address
+      margin-bottom: 6px
+
+      font-size: 14px
+      line-height: 18px
+      color: $gray2
+      letter-spacing: 0
+
+    &__hours
+      margin-bottom: 6px
+
+      font-size: 14px
+      line-height: 18px
+      color: $gray2
+      letter-spacing: 0
+
+      span
+        color: $gray_dark2
+
+    &__show
+      font-size: 12px
+      line-height: 18px
+      color: $pink
+
+      @media $small_tablet
+        display: none
+
+      a
+
+        &_:hover
+          text-decoration: underline
+
+    &__phone
+      margin-bottom: 6px
+
+      font-size: 14px
+      line-height: 18px
+      color: $gray2
+      letter-spacing: 0
+
+      a
+        color: $gray_dark2
+        text-decoration: underline
+
+        &:hover
+          text-decoration: none
+
+
+
+
+
+
+
+  &__map
+    flex-grow: 1
+
+    @media $small_desktop
+      width: 50%
+      padding-right: 1px
+
+    @media $small_tablet
+      display: none
+
+  &__map-elem
+    height: 616px
+
+

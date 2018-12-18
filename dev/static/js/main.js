@@ -12,8 +12,9 @@ $(document).ready(function () {
     phoneMask();
     orderPage();
     popupCart();
+    whereBuyMap();
 });
-
+var places = [];
 function indexVideos() {
     var videos =  $('.js-index-videos'),
         prev = $('.js-index-videos-prev'),
@@ -324,4 +325,72 @@ function popupCart() {
            cartPopup.hide();
        }
     })
+}
+
+function whereBuyMap() {
+
+    var myMap = false;
+
+    if ($('#map-wherebuy').length && $(window).width() > 767) {
+        initMap();
+    }
+
+    $(window).on('resize', function () {
+        if (!myMap && $(window).width() > 767) {
+            initMap();
+        }
+    });
+
+    function initMap() {
+        ymaps.ready(function () {
+            if (!myMap && dataMap) {
+                myMap = new ymaps.Map('map-wherebuy', {
+                    center: dataMap.center,
+                    zoom: dataMap.zoom,
+                    behaviors: ['default', 'scrollZoom'],
+                    controls: ['zoomControl']
+                }, {
+                    searchControlProvider: 'yandex#search'
+                });
+                clusterer = new ymaps.Clusterer();
+                myMap.geoObjects.add(clusterer)
+                if (dataMap.items.length > 0) {
+                    dataMap.items.forEach(function (item) {
+                        myPlacemark = new ymaps.Placemark(item.coordinates,
+
+                            {balloonContentBody: "<div class=\"shop\">\n" +
+                                    "                  <div class=\"shop__info\">\n" +
+                                    "                    <div class=\"shop__name\"><span>" + item.name + "</span></div>\n" +
+                                    "                    <div class=\"shop__address\"><span>" + item.address + "</span></div>\n" +
+                                    "                    <div class=\"shop__phone\">Тел: " + item.phone + "</div>" +
+                                    "                  </div>\n" +
+                                    "                </div>"},
+
+                            {
+
+                                iconImageSize: [66, 90],
+                                iconImageOffset: [-33, -90]
+                            });
+                        places[item.id] = myPlacemark;
+
+
+                    });
+
+                    places.forEach(function (shop) {
+                        clusterer.add(shop);
+                    })
+
+                }
+            }
+        });
+    }
+
+    $('.js-map-show-shop').on('click', function (e) {
+        e.preventDefault();
+        if ($(this).data('shop-id') && myMap) {
+            var id_shop = $(this).data('shop-id');
+            places[id_shop].balloon.open()
+        }
+    });
+
 }
