@@ -348,7 +348,7 @@ function whereBuyMap() {
                     center: dataMap.center,
                     zoom: dataMap.zoom,
                     behaviors: ['default', 'scrollZoom'],
-                    controls: ['zoomControl']
+                    controls: ['zoomControl', 'fullscreenControl']
                 }, {
                     searchControlProvider: 'yandex#search'
                 });
