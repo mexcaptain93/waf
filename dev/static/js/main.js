@@ -409,7 +409,15 @@ function whereBuyMap() {
 }
 
 function selects() {
-    $('.js-select').select2({
-        minimumResultsForSearch: -1
-    });
+    function init() {
+        $('.js-select').select2({
+            minimumResultsForSearch: -1
+        });
+    }
+
+    init();
+
+    $(window).on('resize', function () {
+        init();
+    })
 }
