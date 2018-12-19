@@ -1,0 +1,234 @@
+extends ../layout/main
+
+
+block variables
+    - var title = 'Оптовые заказы | Waf-Waf'
+    - var pageClass = 'wholesale'
+
+block script
+    script(src='https://unpkg.com/imask')
+    script(src="static/js/slick.min.js")
+
+block content
+
+    .banner
+        .container.container_full
+            .banner__bg(style="background-image: url('static/img/content/banner-bg-1.jpg')")
+                .banner__text
+                    span Оптовые заказы
+
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item
+                a(href='/') Главная
+            li.breadcrumbs__item.breadcrumbs__item_active
+                a(href='/wholesale.html') Оптовые заказы
+
+    .container
+        h1.like-h1 Значки и аксессуары
+        .wholesale__text
+            p Наша продукция - значки и аксессуары, сделанные с любовью. В 2013 году мы возродили моду на значки и до сих пор остаемся первыми в этом сегменте рынка.
+            p Популярность и узнаваемость нашей продукции продолжают расти. Поэтому, добавив ее в свой ассортимент, вы не только порадуете своих клиентов интересной новинкой, но и привлечете в свою торговую точку новых клиентов: существующих поклонников бренда и просто любителей значков
+            p Мы разработали отдельный сайт, на котором сделать оптовый заказ вам будет так же легко, как заказать что-то в обычном интернет-магазине. И даже со смартфона.
+            p Кроме этого, на сайте waf-waf.ru в разделе “Где купить waf-waf” мы отметим ваш магазин на карте. Так аудитория бренда в вашем городе откроет для себя ваш магазин.
+
+    .wholesale__reasons.reasons
+        .like-h1 Почему сотни магазинов выбирают нас
+        .reasons__list
+            .reasons__item.reason.js-wholesale-reason
+                .reason__wrap(style='background-image: url("static/img/content/friends.jpg")')
+                    .reason__overlay
+                    .reason__main
+                        .reason__title
+                            span Брендовая продукция с лояльной аудиторией
+                        .reason__btn
+                            .button
+                                span Подробнее
+                    .reason__more.more
+                        .more__title
+                            span Брендовая продукция с лояльной аудиторией
+                        .more__close
+                        .more__text
+                            p Наша продукция - значки и аксессуары, сделанные с любовью. В 2013 году мы возродили моду на значки и до сих пор остаемся первыми в этом сегменте рынка.
+                            p А вот примерная схема заработка с продажи значков:
+                            ul
+                                li 1. Продаете 150 значков по РРЦ 300 р. — получаете 45 000 р.
+                                li 2. Покупаете 150 значков по 130,5 р. — тратите 19 575 р.
+                                li 3. Прибыль 25 425 р
+
+            .reasons__item.reason.js-wholesale-reason
+                .reason__wrap(style='background-image: url("static/img/content/cooperation.jpg")')
+                    .reason__overlay
+                    .reason__main
+                        .reason__title
+                            span Высокомаржинальные товары
+                        .reason__btn
+                            .button
+                                span Подробнее
+                    .reason__more.more
+                        .more__title
+                            span Высокомаржинальные товары
+                        .more__close
+                        .more__text
+                            p Наша продукция - значки и аксессуары, сделанные с любовью. В 2013 году мы возродили моду на значки и до сих пор остаемся первыми в этом сегменте рынка.
+                            p А вот примерная схема заработка с продажи значков:
+                            ul
+                                li 1. Продаете 150 значков по РРЦ 300 р. — получаете 45 000 р.
+                                li 2. Покупаете 150 значков по 130,5 р. — тратите 19 575 р.
+                                li 3. Прибыль 25 425 р
+
+            .reasons__item.reason.js-wholesale-reason
+                .reason__wrap(style='background-image: url("static/img/content/opt.jpg")')
+                    .reason__overlay
+                    .reason__main
+                        .reason__title
+                            span Брендовая продукция с лояльной аудиторией
+                        .reason__btn
+                            .button
+                                span Подробнее
+                    .reason__more.more
+                        .more__title
+                            span Брендовая продукция с лояльной аудиторией
+                        .more__close
+                        .more__text
+                            p Наша продукция - значки и аксессуары, сделанные с любовью. В 2013 году мы возродили моду на значки и до сих пор остаемся первыми в этом сегменте рынка.
+                            p А вот примерная схема заработка с продажи значков:
+                            ul
+                                li 1. Продаете 150 значков по РРЦ 300 р. — получаете 45 000 р.
+                                li 2. Покупаете 150 значков по 130,5 р. — тратите 19 575 р.
+                                li 3. Прибыль 25 425 р
+            .reasons__item.reason.js-wholesale-reason
+                .reason__wrap(style='background-image: url("static/img/content/friends.jpg")')
+                    .reason__overlay
+                    .reason__main
+                        .reason__title
+                            span Брендовая продукция с лояльной аудиторией
+                        .reason__btn
+                            .button
+                                span Подробнее
+                    .reason__more.more
+                        .more__title
+                            span Брендовая продукция с лояльной аудиторией
+                        .more__close
+                        .more__text
+                            p Наша продукция - значки и аксессуары, сделанные с любовью. В 2013 году мы возродили моду на значки и до сих пор остаемся первыми в этом сегменте рынка.
+                            p А вот примерная схема заработка с продажи значков:
+                            ul
+                                li 1. Продаете 150 значков по РРЦ 300 р. — получаете 45 000 р.
+                                li 2. Покупаете 150 значков по 130,5 р. — тратите 19 575 р.
+                                li 3. Прибыль 25 425 р
+
+            .reasons__item.reason.js-wholesale-reason
+                .reason__wrap(style='background-image: url("static/img/content/cooperation.jpg")')
+                    .reason__overlay
+                    .reason__main
+                        .reason__title
+                            span Высокомаржинальные товары
+                        .reason__btn
+                            .button
+                                span Подробнее
+                    .reason__more.more
+                        .more__title
+                            span Высокомаржинальные товары
+                        .more__close
+                        .more__text
+                            p Наша продукция - значки и аксессуары, сделанные с любовью. В 2013 году мы возродили моду на значки и до сих пор остаемся первыми в этом сегменте рынка.
+                            p А вот примерная схема заработка с продажи значков:
+                            ul
+                                li 1. Продаете 150 значков по РРЦ 300 р. — получаете 45 000 р.
+                                li 2. Покупаете 150 значков по 130,5 р. — тратите 19 575 р.
+                                li 3. Прибыль 25 425 р
+
+            .reasons__item.reason.js-wholesale-reason
+                .reason__wrap(style='background-image: url("static/img/content/opt.jpg")')
+                    .reason__overlay
+                    .reason__main
+                        .reason__title
+                            span Брендовая продукция с лояльной аудиторией
+                        .reason__btn
+                            .button
+                                span Подробнее
+                    .reason__more.more
+                        .more__title
+                            span Брендовая продукция с лояльной аудиторией
+                        .more__close
+                        .more__text
+                            p Наша продукция - значки и аксессуары, сделанные с любовью. В 2013 году мы возродили моду на значки и до сих пор остаемся первыми в этом сегменте рынка.
+                            p А вот примерная схема заработка с продажи значков:
+                            ul
+                                li 1. Продаете 150 значков по РРЦ 300 р. — получаете 45 000 р.
+                                li 2. Покупаете 150 значков по 130,5 р. — тратите 19 575 р.
+                                li 3. Прибыль 25 425 р
+    .wholesale__form.form
+        .form__heading
+            span Оставьте заявку
+        .form__hint
+            span Заполните эту форму, и мы свяжемся с вами, для уточнения деталей, или напишите нам в соцсети
+            a.form__vk-img(href='http://vk.com/' target='_blank')
+        form.form__wrap
+            .form__list(action='/')
+                .form__item
+                    .form__label
+                        span Город
+                    .form__input
+                        input.textfield(placeholder='Введите город')
+                .form__item
+                    .form__label
+                        span Ваши фамилия, имя, отчество
+                    .form__input
+                        input.textfield(placeholder='Введите имя')
+                .form__item
+                    .form__label
+                        span Телефон
+                    .form__input
+                        input.textfield.js-phone-input(placeholder='+7 (___) ___-__-__')
+                .form__item
+                    .form__label
+                        span Электронная почта
+                    .form__input
+                        input.textfield.js-email-input(placeholder='_______@_____.__')
+                .form__item
+                    .form__label
+                        span Ссылка на сайт или сообщество ВК
+                    .form__input
+                        input.textfield(placeholder='Вставьте ссылку сюда')
+                .form__item
+                    .form__label
+                        span Комментарий
+                    .form__input
+                        textarea.textarea(placeholder='Ваш комментарий')
+            .form__privacy
+                span Нажимая на кнопку, вы соглашаетесь с нашей #[a(href='#') политикой конфиденциальности]
+            .form__btn
+                button.btn.btn_big Отправить заявку
+    .container
+        h1.like-h1 Значки и аксессуары
+        .wholesale__text
+            p Наша продукция - значки и аксессуары, сделанные с любовью. В 2013 году мы возродили моду на значки и до сих пор остаемся первыми в этом сегменте рынка.
+            p Популярность и узнаваемость нашей продукции продолжают расти. Поэтому, добавив ее в свой ассортимент, вы не только порадуете своих клиентов интересной новинкой, но и привлечете в свою торговую точку новых клиентов: существующих поклонников бренда и просто любителей значков
+            p Мы разработали отдельный сайт, на котором сделать оптовый заказ вам будет так же легко, как заказать что-то в обычном интернет-магазине. И даже со смартфона.
+            p Кроме этого, на сайте waf-waf.ru в разделе “Где купить waf-waf” мы отметим ваш магазин на карте. Так аудитория бренда в вашем городе откроет для себя ваш магазин.
+    .index__video.video
+        .container
+            .like-h1 О нас говорят
+            .video__slider
+                .video__arrow.video__arrow_prev.js-index-videos-prev
+                .video__arrow.video__arrow_next.js-index-videos-next
+                .video__list.js-index-videos
+                    .video__item
+                        .video__wrap(style='background-image: url("static/img/content/video-1.jpg")')
+                            .video__overlay
+                                .video__icon
+                    .video__item
+                        .video__wrap(style='background-image: url("static/img/content/video-2.jpg")')
+                            .video__overlay
+                                .video__icon
+                    .video__item
+                        .video__wrap(style='background-image: url("static/img/content/video-1.jpg")')
+                            .video__overlay
+                                .video__icon
+                    .video__item
+                        .video__wrap(style='background-image: url("static/img/content/video-2.jpg")')
+                            .video__overlay
+                                .video__icon
+

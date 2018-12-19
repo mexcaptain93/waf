@@ -9,13 +9,13 @@ $(document).ready(function () {
     suggestSlider();
     zoomProductImg();
     productTabs();
-    phoneMask();
+    masks();
     orderPage();
     popupCart();
     whereBuyMap();
     selects();
+    wholesalePage();
 });
-var places = [];
 function indexVideos() {
     var videos =  $('.js-index-videos'),
         prev = $('.js-index-videos-prev'),
@@ -286,11 +286,17 @@ function productTabs() {
     }
 }
 
-function phoneMask() {
+function masks() {
 
     $('.js-phone-input').each(function (index, elem) {
         new IMask(elem, {
             mask: '+{7}(000)000-00-00'
+        });
+    });
+
+    $('.js-email-input').each(function (index, elem) {
+        new IMask(elem, {
+            mask: /^\S*@?\S*$/
         });
     });
 }
@@ -330,6 +336,7 @@ function popupCart() {
 
 function whereBuyMap() {
 
+    var places = [];
     var myMap = false;
 
     if ($('#map-wherebuy').length && $(window).width() > 767) {
@@ -337,7 +344,7 @@ function whereBuyMap() {
     }
 
     $(window).on('resize', function () {
-        if (!myMap && $(window).width() > 767) {
+        if (!myMap && $(window).width() > 767 && $('#map-wherebuy').length) {
             initMap();
         }
     });
@@ -410,9 +417,13 @@ function whereBuyMap() {
 
 function selects() {
     function init() {
-        $('.js-select').select2({
-            minimumResultsForSearch: -1
-        });
+
+        if ($('.js-select2').length) {
+
+            $('.js-select').select2({
+                minimumResultsForSearch: -1
+            });
+        }
     }
 
     init();
@@ -420,4 +431,20 @@ function selects() {
     $(window).on('resize', function () {
         init();
     })
+}
+
+function wholesalePage() {
+    $('.js-wholesale-reason').find('.reason__btn').on('click', function (e) {
+        e.preventDefault();
+        $('.reason_opened').removeClass('reason_opened');
+
+        $(this).closest('.js-wholesale-reason').addClass('reason_opened');
+    });
+
+    $('.js-wholesale-reason').find('.more__close').on('click', function (e) {
+        e.preventDefault();
+        $(this).closest('.js-wholesale-reason').removeClass('reason_opened');
+    });
+
+
 }
