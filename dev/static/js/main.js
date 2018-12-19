@@ -177,7 +177,8 @@ function instaSlider() {
         instaSlider.slick({
             slidesToShow: 5,
             slidesToScroll: 1,
-            variableWidth: true
+            variableWidth: true,
+            touchThreshold: 450
         });
 
         next.on('click', function (e)  {
@@ -396,9 +397,18 @@ function whereBuyMap() {
 
                     });
 
-                    places.forEach(function (shop) {
+                    places.forEach(function (shop, index) {
                         clusterer.add(shop);
-                    })
+
+                        shop.events.add('click', function (e) {
+                            if (index) {
+                                $('.shop_bordered').removeClass('shop_bordered');
+                                $('[data-shop-id=' + index +']').closest('.shop').addClass('shop_bordered');
+                            }
+                        })
+                    });
+
+
 
                 }
             }
@@ -409,7 +419,9 @@ function whereBuyMap() {
         e.preventDefault();
         if ($(this).data('shop-id') && myMap) {
             var id_shop = $(this).data('shop-id');
-            places[id_shop].balloon.open()
+            places[id_shop].balloon.open();
+            $('.shop_bordered').removeClass('shop_bordered');
+            $(this).closest('.shop').addClass('shop_bordered');
         }
     });
 
@@ -446,5 +458,10 @@ function wholesalePage() {
         $(this).closest('.js-wholesale-reason').removeClass('reason_opened');
     });
 
+    $('.js-wholesale-reason .more__text').each(function (index, elem) {
+        new SimpleBar(elem,  {
+            autoHide: false
+        });
+    });
 
 }

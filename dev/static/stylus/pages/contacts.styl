@@ -52,6 +52,13 @@
       line-height: 21px
       color: $gray_dark2
 
+    &__error
+      margin-bottom: 12px
+
+      color: $pink
+      font-size: 14px
+      line-height: 21px
+
     &__input
       @extend .order-page .details .location__input
 
@@ -95,6 +102,10 @@
         @media $tablet
           max-width 189px
 
+  &__list
+    display: flex
+    flex-direction: column
+
 
   &__item
     display: flex
@@ -112,6 +123,10 @@
 
   .shop
     font-family: mainFont !important
+
+    &_bordered
+      border: 1px solid $pink
+      order: -1
 
     &__image
       width: 125px
