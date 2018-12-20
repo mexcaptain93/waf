@@ -1,0 +1,227 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Акции | Waf-Waf'
+    - var pageClass = 'blog-page'
+
+block script
+
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item
+                a(href='/') Главная
+            li.breadcrumbs__item.breadcrumbs__item_active
+                a(href='/stock.html') Акции
+    .pagination
+        ul.pagination__list
+            li.pagination__item.pagination__item_prev
+                a(href='#')
+            li.pagination__item
+                a(href='#') 1
+            li.pagination__item.pagination__item_active
+                a(href='#') 2
+            li.pagination__item
+                a(href='#') 3
+            li.pagination__item.pagination__item_next
+                a(href='#')
+
+    .blog-page__wrap.blog
+        .blog__list
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-1.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 30.10.2018
+                        .blog-elem__category
+                            a(href='#') Акции
+                        .blog-elem__views
+                            span 121
+                    .blog-elem__name
+                        a(href='#') Акция на Хэллоуин!
+                    .blog-elem__descr
+                        span Дарим лимитированный значок за покупки в период акции.
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-2.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 14.09.2018
+                        .blog-elem__category
+                            a(href='#') Новинки
+                        .blog-elem__views
+                            span 1221
+                    .blog-elem__name
+                        a(href='#') Новинки сентября
+                    .blog-elem__descr
+                        span Не пропустите большое осеннее пополнение значков и пинов waf-waf!
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-3.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 31.08.2018
+                        .blog-elem__category
+                            a(href='#') Новости
+                        .blog-elem__views
+                            span 121
+                    .blog-elem__name
+                        a(href='#') Стикер в подарок к заказу
+                    .blog-elem__descr
+                        span Новый фирменный стикер waf-waf в подарок к каждому заказу этой осенью!
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-4.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 09.08.2018
+                        .blog-elem__category
+                            a(href='#') Новости
+                        .blog-elem__views
+                            span 645
+                    .blog-elem__name
+                        a(href='#') Творческий конкурс
+                    .blog-elem__descr
+                        span Нарисуй эскиз значка и выиграй 3000 руб. на покупки в waf-waf и другие призы
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-5.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 30.10.2018
+                        .blog-elem__category
+                            a(href='#') Акции
+                        .blog-elem__views
+                            span 121
+                    .blog-elem__name
+                        a(href='#') Акция на Хэллоуин!
+                    .blog-elem__descr
+                        span Дарим лимитированный значок за покупки в период акции.
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-6.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 14.09.2018
+                        .blog-elem__category
+                            a(href='#') Новинки
+                        .blog-elem__views
+                            span 1221
+                    .blog-elem__name
+                        a(href='#') Новинки сентября
+                    .blog-elem__descr
+                        span Не пропустите большое осеннее пополнение значков и пинов waf-waf!
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-7.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 31.08.2018
+                        .blog-elem__category
+                            a(href='#') Новости
+                        .blog-elem__views
+                            span 121
+                    .blog-elem__name
+                        a(href='#') Стикер в подарок к заказу
+                    .blog-elem__descr
+                        span Новый фирменный стикер waf-waf в подарок к каждому заказу этой осенью!
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-8.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 09.08.2018
+                        .blog-elem__category
+                            a(href='#') Новости
+                        .blog-elem__views
+                            span 645
+                    .blog-elem__name
+                        a(href='#') Творческий конкурс
+                    .blog-elem__descr
+                        span Нарисуй эскиз значка и выиграй 3000 руб. на покупки в waf-waf и другие призы
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-1.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 30.10.2018
+                        .blog-elem__category
+                            a(href='#') Акции
+                        .blog-elem__views
+                            span 121
+                    .blog-elem__name
+                        a(href='#') Акция на Хэллоуин!
+                    .blog-elem__descr
+                        span Дарим лимитированный значок за покупки в период акции.
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-2.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 14.09.2018
+                        .blog-elem__category
+                            a(href='#') Новинки
+                        .blog-elem__views
+                            span 1221
+                    .blog-elem__name
+                        a(href='#') Новинки сентября
+                    .blog-elem__descr
+                        span Не пропустите большое осеннее пополнение значков и пинов waf-waf!
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-3.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 31.08.2018
+                        .blog-elem__category
+                            a(href='#') Новости
+                        .blog-elem__views
+                            span 121
+                    .blog-elem__name
+                        a(href='#') Стикер в подарок к заказу
+                    .blog-elem__descr
+                        span Новый фирменный стикер waf-waf в подарок к каждому заказу этой осенью!
+            .blog__item
+                .blog-elem
+                    a.blog-elem__img(href='#' style='background-image: url("static/img/content/stock-4.jpg")')
+                        .blog-elem__overlay
+                    .blog-elem__info
+                        .blog-elem__date
+                            span 09.08.2018
+                        .blog-elem__category
+                            a(href='#') Новости
+                        .blog-elem__views
+                            span 645
+                    .blog-elem__name
+                        a(href='#') Творческий конкурс
+                    .blog-elem__descr
+                        span Нарисуй эскиз значка и выиграй 3000 руб. на покупки в waf-waf и другие призы
+
+    .pagination
+        ul.pagination__list
+            li.pagination__item.pagination__item_prev
+                a(href='#')
+            li.pagination__item
+                a(href='#') 1
+            li.pagination__item.pagination__item_active
+                a(href='#') 2
+            li.pagination__item
+                a(href='#') 3
+            li.pagination__item.pagination__item_next
+                a(href='#')
+
+
+
