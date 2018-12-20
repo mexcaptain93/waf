@@ -15,6 +15,7 @@ $(document).ready(function () {
     whereBuyMap();
     selects();
     wholesalePage();
+    textPagePopup();
 });
 function indexVideos() {
     var videos =  $('.js-index-videos'),
@@ -430,7 +431,7 @@ function whereBuyMap() {
 function selects() {
     function init() {
 
-        if ($('.js-select2').length) {
+        if ($('.js-select').length) {
 
             $('.js-select').select2({
                 minimumResultsForSearch: -1
@@ -464,4 +465,16 @@ function wholesalePage() {
         });
     });
 
+}
+
+function textPagePopup() {
+    $('.js-text-page-btn').on('click', function (e) {
+        e.preventDefault();
+        $(this).parent().siblings('.js-text-page-popup').show();
+    });
+
+    $('.js-text-page-popup-close').on('click', function (e) {
+       e.preventDefault();
+       $(this).parent().hide();
+    });
 }
