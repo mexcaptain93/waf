@@ -155,6 +155,18 @@
     overflow: hidden
     text-overflow: ellipsis
 
+    & > span::after
+      display: inline-block
+      content: ''
+      background-image: url('../img/general/copyright.png')
+      background-repeat: no-repeat
+      background-size: contain
+      width: 22px
+      height: 22px
+      position: relative
+      top: -10px
+      left: 5px
+
     @media $small_tablet
       margin-bottom: 0
 
@@ -171,7 +183,7 @@
     @media $small_tablet
       margin-bottom: 55px
 
-  &__cart
+  &__add-to-cart
     display: flex
     margin-bottom: 45px
 
@@ -182,7 +194,7 @@
       flex-direction: column
       margin-bottom: 28px
 
-  .cart
+  .add-to-cart
 
     &__quantity
       margin-right: 16px
@@ -359,6 +371,9 @@
         width: 184px
         height: 184px
 
+      @media $mobile
+        margin-right: 1px
+
       &:hover
 
         .insta-slider
@@ -483,6 +498,9 @@
     .slick-arrow
       display: none!important
 
+    .slick-slide img
+      margin: 0 auto
+
     .product
 
       &:hover
@@ -518,6 +536,18 @@
           font-size: 15px
           line-height: 21px
           text-align: center
+
+          & > a::after
+            display: inline-block
+            content: ''
+            background-image: url('../img/general/copyright.png')
+            background-repeat: no-repeat
+            background-size: contain
+            width: 14px
+            height: 14px
+            position: relative
+            top: -2px
+            left: 2px
 
         &__price
           margin-bottom: 0

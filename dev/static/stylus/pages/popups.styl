@@ -1,10 +1,12 @@
 .cart-popup
+  display: none
   position: fixed
   top: 0
   left: 0
   bottom: 0
   right: 0
   z-index: 11
+  -webkit-overflow-scrolling:touch;
 
   &__overlay
     width: 100%
@@ -19,6 +21,10 @@
     bottom: 0
     width: 390px
     background-color: $white
+
+    @media $small_tablet
+      width: 100%
+      left: 0
 
   &__head
     padding: 0 15px
@@ -173,6 +179,12 @@
     .products
       margin-bottom: 20px
 
+      &__list
+        display: table
+
+      &__item
+        width: 100%
+
       &__img
         width: 65px
         padding: 17px 10px
@@ -184,6 +196,21 @@
         line-height: 21px
         font-weight: 300
         color: $gray_dark
+
+        & > a::after
+          display: inline-block
+          content: ''
+          background-image: url('../img/general/copyright.png')
+          background-repeat: no-repeat
+          background-size: contain
+          width: 14px
+          height: 14px
+          position: relative
+          top: -2px
+          left: 2px
+
+        @media $small_mobile
+          padding: 17px 5px
 
         a:hover
           text-decoration: underline
@@ -204,12 +231,20 @@
         font-weight: 400
         color: $gray_light
 
+      &__quantity
+        width: 100px
+        padding-right: 15px
+
+        @media $small_mobile
+          width: 82px
+          padding-right: 0
+
   &__actions
     margin-bottom: 20px
 
   .action
     width: 100%
-    height: auto
+    height: 118px
     margin-bottom: 12px
     display: flex
     justify-content: space-between
@@ -218,13 +253,28 @@
     background-color: $gray_light4
     border: 1px dashed $gray_light
 
+    @media $mobile
+      height: auto
+
     &__img
       width: 60px
+
+      @media $small_tablet
+        width: 110px
+
+      @media $mobile
+        width: 60px
+
+      @media $small_mobile
+        width: 40px
 
     &__text
       flex-grow: 1
       margin-left: 16px
       padding-top: 0
+
+      @media $mobile
+        margin-left: 5px
 
     &__name
       color: $violet_dark
@@ -240,8 +290,30 @@
       width: 36px
       height: 36px
 
+      @media $small_tablet
+        width: 121px
+
+      @media $mobile
+        width: 36px
+
       .btn
         padding-bottom: 7px
+
+        @media $small_tablet
+          display: none
+
+        @media $mobile
+          display: block
+
+        &_tablet
+          display: none
+
+          @media $small_tablet
+            display: block
+
+          @media $mobile
+            display: none
+
 
   &__sum
     display: flex
@@ -279,6 +351,185 @@
     &__img
       text-align: center
 
+
+
+.insta-popup
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 11
+  -webkit-overflow-scrolling:touch;
+
+  .slick-arrow
+    display: none !important
+
+  &__overlay
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    background-color: alpha($black, 0.5)
+
+  &__wrap
+    padding: 66px 0
+    max-height: 726px
+    height: 100%
+    width: 100%
+    background-color: $white
+
+    @media $tablet
+      max-height: 100%
+      padding: 45px 60px
+      overflow: auto
+
+    @media $mobile
+      padding: 20px 0
+
+
+  &__container
+    max-width: 1040px
+    padding: 0 20px
+    margin: 0 auto
+    height: 100%
+
+
+  &__list
+    height: 100%
+
+  .product
+    display: flex
+    max-width: 100%
+    width: 100%
+    flex-direction: row
+    height: 100%
+    outline: none
+
+    @media $tablet
+      flex-direction: column
+
+    &:hover
+
+      .product__name
+        text-decoration: none
+
+    &__data
+      text-align: center
+
+    &__look
+      width: 607px
+      height: 100%
+      margin-right: 37px
+
+      @media $tablet
+        width: 100%
+        margin-right: 0
+        margin-bottom: 30px
+
+      img
+        margin: 0 auto
+
+    &__controls
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 70px
+
+      @media $tablet
+        padding: 0 25px
+
+      @media $mobile
+        margin-bottom: 50px
+
+    &__arrows
+      display: flex
+      width: 77px
+      justify-content: space-between
+      align-items: center
+
+    &__arrow
+      width: 15px
+      height: 30px
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+      cursor: pointer
+
+      &_inactive
+        opacity: .5
+
+      &_prev
+        background-image: url('../img/general/i-left.png')
+
+      &_next
+        background-image: url('../img/general/i-right.png')
+
+    &__close
+      background-image: url('../img/general/i-close-thin.png')
+      width: 30px
+      height: 30px
+      background-repeat: no-repeat
+      cursor: pointer
+
+    &__photo
+      max-height: 140px
+      margin-bottom: 70px
+
+      @media $mobile
+        margin-bottom: 30px
+
+      img
+        max-height: inherit
+        margin: 0 auto
+
+    &__price
+      margin-bottom: 0
+
+      font-size: 12px
+      line-height: 21px
+      letter-spacing: .5px
+      color: $gray_dark2
+
+    &__btn
+      margin-bottom: 38px
+
+      .button
+        font-size: 12px
+        line-height: 21px
+        max-width: 124px
+
+        span
+          padding: 4px
+          color: $white
+          background-color: $black
+
+    &__name
+      font-size: 12px
+      line-height: 21px
+      letter-spacing: .5px
+      color: $gray_dark2
+      text-transform: uppercase
+
+      &:hover
+        text-decoration: underline
+
+      span::after
+        width: 14px;
+        height: 14px;
+        top: -2px;
+        left: 2px;
+
+    &__text
+      margin-bottom: 40px
+      font-size: 13px
+      line-height: 21px
+      letter-spacing: .5px
+      color: $gray_dark2
+      text-align: center
 
 
 

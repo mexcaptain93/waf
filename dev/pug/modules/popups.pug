@@ -1,38 +1,60 @@
-//.popup.insta-popup
-//    .popup__overlay
-//        .popup__wrap
-//            .insta-popup
-//                .insta-popup__list
-//                    .insta-popup__item.product
-//                        .product__look
-//                        .product__right
-//                            .product__controls
-//                                .product__arrows
-//                                    .product__arrow.product__arrow_prev
-//                                    .product__arrow.product__arrow_next
-//                                .product__close
-//                            .product__data
-//                                .product__photo
-//                                    img(src='static/img/content/insta-look-product.png' alt='Значок компас')
-//                                .product__price
-//                                    span 299 ₽
-//                                .product__name
-//                                    span Значок компас
-//                                .product__btn
-//                                    .button
-//                                        span Купить
-//                            .product__text
-//                                span WAF-wAF   //   ИНСТАГРАМ   //    2 НОЯБРЯ 2018
+.insta-popup.js-insta-popup
+    .insta-popup__overlay
+        .insta-popup__wrap
+            .insta-popup__container
+                .insta-popup__list.js-insta-popup-slick
+                    .insta-popup__item.product
+                        .product__look
+                            img(src='static/img/content/compass-big.jpg' alt='Компас')
+                        .product__right
+                            .product__controls
+                                .product__arrows
+                                    .product__arrow.product__arrow_prev
+                                    .product__arrow.product__arrow_next
+                                .product__close.js-insta-popup-close
+                            .product__data
+                                .product__photo
+                                    img(src='static/img/content/compass.jpg' alt='Значок компас')
+                                .product__price
+                                    span 299 ₽
+                                .product__name
+                                    a(href='product.html') Значок компас
+                                .product__btn
+                                    a(href='cart.html').button
+                                        span Купить
+                            .product__text
+                                span WAF-WAF   //   ИНСТАГРАМ   //    2 НОЯБРЯ 2018
+                    .insta-popup__item.product
+                        .product__look
+                            img(src='static/img/content/compass-big.jpg' alt='Компас')
+                        .product__right
+                            .product__controls
+                                .product__arrows
+                                    .product__arrow.product__arrow_prev
+                                    .product__arrow.product__arrow_next
+                                .product__close
+                            .product__data
+                                .product__photo
+                                    img(src='static/img/content/compass.jpg' alt='Значок компас')
+                                .product__price
+                                    span 299 ₽
+                                .product__name
+                                    a(href='product.html') Значок компас
+                                .product__btn
+                                    a(href='cart.html').button
+                                        span Купить
+                            .product__text
+                                span WAF-WAF   //   ИНСТАГРАМ   //    2 НОЯБРЯ 2018
 //
 //
-.cart-popup
+.cart-popup.js-cart-popup
     .cart-popup__overlay
         .cart-popup__wrap
             .cart-popup__head
                 .cart-popup__icon-cart
                 .cart-popup__heading
                     span Корзина
-                .cart-popup__close
+                .cart-popup__close.js-cart-popup-close
                     a(href='#')
             .cart-popup__content
                 .cart-popup__message.message
@@ -42,7 +64,7 @@
                         span Добавь товаров для бесплатной доставки на сумму 999 ₽
 
                 .cart-popup__with-products.with-products
-                    .cart-popup__products
+                    .cart-popup__products.products
                         .products__list.table
                             .products__item.table__row
                                 .products__img.table__td
@@ -102,6 +124,7 @@
                                     span Только сегодня за 230 ₽
                             .action__btn
                                 a(href='#').btn +
+                                a(href='#').btn.btn_tablet Добавить
                         .cart-popup__action.action
                             .action__img
                                 img(src='static/img/content/cart-action-2.png' alt='Таинственный значок')
@@ -112,6 +135,7 @@
                                     span Только сегодня за 170 ₽
                             .action__btn
                                 a(href='#').btn +
+                                a(href='#').btn.btn_tablet Добавить
 
 
 

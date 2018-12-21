@@ -524,6 +524,18 @@
       text-overflow: ellipsis
       overflow: hidden
 
+      & > a::after
+        display: inline-block
+        content: ''
+        background-image: url('../img/general/copyright.png')
+        background-repeat: no-repeat
+        background-size: contain
+        width: 14px
+        height: 14px
+        position: relative
+        top: -2px
+        left: 2px
+
     &__price
       margin-bottom: 17px
 
