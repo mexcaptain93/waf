@@ -289,20 +289,32 @@
         background-color: transparent
 
   .search
-    padding-top: 7px
+    width: 278px
 
     &__form
       position: relative
 
-    &__input
+    &__wrap
+      padding: 7px 0 7px 7px
+      position: absolute
+      top: 0
+      right: 0
       width: 278px
+      transition: .3s ease width
+      background-color: $white
+
+      &.opened
+        width: 400px
+
+    &__input
+      width: 100%
       padding-bottom: 7px
     
     &__button
       position: absolute
       z-index: 1
       cursor: pointer
-      top: 5px
+      top: 12px
       right: 0
       width: 12px
       height: 12px

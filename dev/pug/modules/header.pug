@@ -111,7 +111,8 @@ header.header
 
             .header__search.search
                 form.search__form(action='#')
-                    input.search__input.input(type='text' placeholder='Поиск...')
+                    .search__wrap.js-header-search
+                        input.search__input.input(type='text' placeholder='Поиск...')
                     button.search__button.button-input
     .header__mobile.mobile
         .mobile__top

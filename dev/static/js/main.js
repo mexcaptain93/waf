@@ -17,6 +17,7 @@ $(document).ready(function () {
     wholesalePage();
     textPagePopup();
     instaPopup();
+    headerSearch();
 });
 
 function indexVideos() {
@@ -544,3 +545,24 @@ function instaPopup() {
     })
 }
 
+function headerSearch() {
+    var search = $('.js-header-search'),
+        searchInput = search.find('.input');
+
+    searchInput.on('focus', function (e) {
+        search.addClass('opened');
+        searchInput.attr('placeholder', 'Введите поисковую фразу...');
+    });
+
+
+    searchInput.on('blur', function (e) {
+        search.removeClass('opened');
+        searchInput.attr('placeholder', 'Поиск...');
+    });
+
+    if ($(window).width() > 1024) {
+        if (search.length) {
+
+        }
+    }
+}
