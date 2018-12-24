@@ -547,22 +547,39 @@ function instaPopup() {
 
 function headerSearch() {
     var search = $('.js-header-search'),
-        searchInput = search.find('.input');
+        searchInput = search.find('.input'),
+        searchPopup = $('.js-search-popup');
 
     searchInput.on('focus', function (e) {
         search.addClass('opened');
         searchInput.attr('placeholder', 'Введите поисковую фразу...');
+        searchPopup.show();
     });
 
 
     searchInput.on('blur', function (e) {
-        search.removeClass('opened');
-        searchInput.attr('placeholder', 'Поиск...');
+        setTimeout(function () {
+            search.removeClass('opened');
+            searchInput.attr('placeholder', 'Поиск...');
+            searchPopup.hide();
+        }, 100);
+
     });
 
-    if ($(window).width() > 1024) {
-        if (search.length) {
+    var searchInputMobile = $('.js-search-input-mobile'),
+        searchInputPopup = $('.js-search-popup-mobile');
 
-        }
-    }
+    searchInputMobile.on('focus', function (e) {
+        searchInputMobile.attr('placeholder', 'Введите поисковую фразу...');
+        searchInputPopup.show();
+    });
+
+
+    searchInputMobile.on('blur', function (e) {
+        setTimeout(function () {
+            searchInputMobile.attr('placeholder', 'Поиск...');
+            searchInputPopup.hide();
+        }, 100);
+
+    });
 }

@@ -293,9 +293,74 @@
 
     &__form
       position: relative
+      
+    &__popup
+      display: none
+      position: absolute
+      top: 100%
+      left: 0
+      right: 0
+
+    .search-popup
+
+      &__wrap
+        flex-direction: column
+        border-top: 1px solid $gray_light5
+
+      &__group
+        display: flex
+        justify-content: space-between
+        border-bottom: 1px solid $gray_light5
+
+        &:last-child
+          box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.07);
+
+      &__name
+        padding: 23px
+        background-color: $gray_light4
+        width: 423px
+        font-size: 18px
+        line-height: 21px
+        color: $black
+
+        a
+          text-decoration: underline
+
+          &:hover
+           text-decoration: none
+
+      &__list
+        flex-grow: 1
+        padding: 18px 28px
+        background-color: $white
+
+      &__item
+        font-size: 16px
+        line-height: 30px
+        color: $black
+        text-align: right
+
+        a
+          &:hover
+            text-decoration: underline
+
+        span
+         font-weight: 600
+
+        &_more
+          font-size: 14px
+          color: $gray2
+
+          a
+            text-decoration: underline
+
+            &:hover
+              text-decoration: none
+
+
 
     &__wrap
-      padding: 7px 0 7px 7px
+      padding: 7px 0 7px 23px
       position: absolute
       top: 0
       right: 0
@@ -304,7 +369,7 @@
       background-color: $white
 
       &.opened
-        width: 400px
+        width: 423px
 
     &__input
       width: 100%
@@ -394,9 +459,30 @@
       background-color: $gray_light4
       border-top: 2px solid #f3f3f3
       padding: 9px 23px 4px
+      width: 100%
 
       @media $mobile
         padding: 9px 12px 4px
+
+      &__popup
+        display: none
+        position: relative
+
+        .search-popup
+
+          &__list
+            padding-left: 0
+            padding-right: 0
+            background-color: $gray_light4
+
+          &__item
+            text-align: left
+
+          &__group
+
+            &:last-child
+              border-bottom: none
+              box-shadow: none
 
       &__input
         width: 100%
@@ -404,6 +490,9 @@
         border-bottom: none
         padding-left: 0
         padding-right: 0
+
+      &__button
+        top: 7px
 
     .menu
 

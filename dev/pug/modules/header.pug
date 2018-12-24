@@ -114,6 +114,39 @@ header.header
                     .search__wrap.js-header-search
                         input.search__input.input(type='text' placeholder='Поиск...')
                     button.search__button.button-input
+                .container
+                    .search__popup.search-popup.js-search-popup
+                        .search-popup__wrap.container
+                            .search-popup__group
+                                .search-popup__list
+                                    .search-popup__item
+                                        a(href='product.html') Значок #[span Кор]ги особенный
+                                    .search-popup__item
+                                        a(href='product.html') Значок Котик в #[span кор]обке
+                                    .search-popup__item
+                                        a(href='product.html') Значок #[span Кор]ги особенный
+                                    .search-popup__item
+                                        a(href='product.html') Значок Котик в #[span кор]обке
+                                    .search-popup__item
+                                        a(href='product.html') Значок #[span Кор]ги особенный
+                                    .search-popup__item.search-popup__item_more
+                                        a(href='#') остальные
+                                .search-popup__name
+                                    a(href='catalog.html') Товары
+                            .search-popup__group
+                                .search-popup__list
+                                    .search-popup__item
+                                        a(href='wholesale.html') Корпоративные заказы
+                                .search-popup__name
+                                    a(href='blog.html') Блог
+                            .search-popup__group
+                                .search-popup__list
+                                    .search-popup__item
+                                        a(href='cart.html') Корзина
+                                .search-popup__name
+                                    a(href='#.html') Прочее
+
+
     .header__mobile.mobile
         .mobile__top
              .container
@@ -131,8 +164,32 @@ header.header
         .mobile__dropdown.js-dropdown
             .mobile__search.search
                 form.search__form(action='#')
-                    input.search__input.input(type='text' placeholder='Введите поисковую фразу...')
+                    input.search__input.input(type='text' placeholder='Поиск...').js-search-input-mobile
                     button.search__button.button-input
+                .search__popup.search-popup.js-search-popup-mobile
+                    .search-popup__group
+                        .search-popup__list
+                            .search-popup__item
+                                a(href='product.html') Значок #[span Кор]ги особенный
+                            .search-popup__item
+                                a(href='product.html') Значок Котик в #[span кор]обке
+                            .search-popup__item
+                                a(href='product.html') Значок #[span Кор]ги особенный
+                            .search-popup__item
+                                a(href='product.html') Значок Котик в #[span кор]обке
+                            .search-popup__item
+                                a(href='product.html') Значок #[span Кор]ги особенный
+                            .search-popup__item.search-popup__item_more
+                                a(href='#') остальные
+                    .search-popup__group
+                        .search-popup__list
+                            .search-popup__item
+                                a(href='wholesale.html') Корпоративные заказы
+                    .search-popup__group
+                        .search-popup__list
+                            .search-popup__item
+                                a(href='cart.html') Корзина
+
             .mobile__menu.menu
                 ul.menu__list
                     li.menu__item
