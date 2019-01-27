@@ -503,15 +503,23 @@ function instaPopup() {
         }
     });
 
-    $('.instagram__btn, .insta-slider__item, .instagram__item').on('click', function (e) {
+    $('.insta-slider__item, .instagram__item').on('click', function (e) {
         e.preventDefault();
+
+        var index = $(this).index();
+
         if ($('.js-insta-popup').length) {
             $('.js-insta-popup').show();
 
             if (instaPopupSlider) {
+
                 instaPopupSlider.slick({
                     infinite: false
                 });
+
+                if (index) {
+                    instaPopupSlider.slick('slickGoTo', index);
+                }
 
                 var prev = instaPopupSlider.find('.product__arrow_prev'),
                     next = instaPopupSlider.find('.product__arrow_next')
